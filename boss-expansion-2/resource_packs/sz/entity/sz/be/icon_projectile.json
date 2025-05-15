@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.icon_projectile"
+      },
+      "identifier": "sz_workshop:icon_projectile",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.sz_workshop_icon_projectile"
+      ],
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      },
+      "textures": {
+        "tomb_seal": "textures/sz/be/items/tomb_seal",
+        "temple_seal": "textures/sz/be/items/temple_seal",
+        "cave_seal": "textures/sz/be/items/cave_seal"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "geometry": {
+        "default": "geometry.boss_expansion.knarfy_claw"
+      },
+      "animations": {
+        "root.fp": "controller.animation.boss_expansion.knarfy_claw.fp",
+        "fpp_idle": "animation.boss_expansion.knarfy_claw.fpp_idle",
+        "tpp_idle": "animation.boss_expansion.knarfy_claw.tpp_idle",
+        "fpp_attack1": "animation.boss_expansion.knarfy_claw.fpp_attack1",
+        "fpp_attack2": "animation.boss_expansion.knarfy_claw.fpp_attack2"
+      },
+      "particle_effects": {
+        "knarfy_claw_attack2_hit_04": "sz_workshop:knarfy_claw_attack2_hit_04",
+        "knarfy_claw_attack2_hit_06": "sz_workshop:knarfy_claw_attack2_hit_06"
+      },
+      "scripts": {
+        "animate": [
+          {"root.fp": "c.is_first_person"},
+          {"tpp_idle": "!c.is_first_person"}
+        ]
+      },
+      "identifier": "sz_workshop:knarfy_claw",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "armor_enchanted"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "textures": {
+        "default": "textures/sz/be/attachable/knarfy_claw",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      }
+    }
+  }
+}

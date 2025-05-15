@@ -1,0 +1,166 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.unlimited_void.white_box": {
+			"animation_length": 10.5,
+			"bones": {
+				"particle": {
+					"position": [0, 662, 0]
+				},
+				"particle2": {
+					"position": [0, 334, -321]
+				},
+				"particle3": {
+					"position": [306, 350, 0]
+				},
+				"particle4": {
+					"position": [0, 334, 278]
+				},
+				"particle5": {
+					"position": [-301, 350, 0]
+				},
+				"particle6": {
+					"position": [0, 6, 0]
+				},
+				"particle7": {
+					"position": [0, 308, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "unlimited_void_white_wall_x_p",
+						"locator": "locator2"
+					},
+					{
+						"effect": "unlimited_void_white_wall_y_p",
+						"locator": "locator3"
+					},
+					{
+						"effect": "unlimited_void_white_wall_x_p",
+						"locator": "locator4"
+					},
+					{
+						"effect": "unlimited_void_white_floor_p",
+						"locator": "locator"
+					},
+					{
+						"effect": "unlimited_void_white_floor_p",
+						"locator": "locator6"
+					},
+					{
+						"effect": "unlimited_void_white_wall_y_p",
+						"locator": "locator5"
+					}
+				],
+				"5.0": {
+					"effect": "unlimited_void_travel_p",
+					"locator": "locator7"
+				}
+			}
+		},
+		"animation.unlimited_void.unlimted_void": {
+			"loop": true,
+			"bones": {
+				"particle": {
+					"position": [0, 662, 0]
+				},
+				"particle2": {
+					"position": [0, 334, -321]
+				},
+				"particle3": {
+					"position": [306, 350, 0]
+				},
+				"particle4": {
+					"position": [0, 334, 278]
+				},
+				"particle5": {
+					"position": [-301, 350, 0]
+				},
+				"particle7": {
+					"position": [0, 308, 0]
+				},
+				"particle6": {
+					"position": [0, 6, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "unlimited_void_eye"
+					},
+					{
+						"effect": "unlimited_void_eye_ring_p"
+					},
+					{
+						"effect": "unlimited_void_inside_floor_p",
+						"locator": "locator6"
+					},
+					{
+						"effect": "unlimited_void_inside_floor_p2",
+						"locator": "locator7"
+					},
+					{
+						"effect": "unlimited_void_inside_star_p"
+					},
+					{
+						"effect": "unlimited_void_inside_wall_x_p",
+						"locator": "locator2"
+					},
+					{
+						"effect": "unlimited_void_inside_wall_x_p",
+						"locator": "locator4"
+					},
+					{
+						"effect": "unlimited_void_inside_wall_y_p",
+						"locator": "locator3"
+					},
+					{
+						"effect": "unlimited_void_inside_wall_y_p",
+						"locator": "locator5"
+					},
+					{
+						"effect": "unlimited_void_domain_p",
+						"locator": "locator4"
+					},
+					{
+						"effect": "unlimited_void_p2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "unlimited_void_p3",
+						"locator": "locator7"
+					},
+					{
+						"effect": "unlimited_void_p4",
+						"locator": "locator7"
+					},
+					{
+						"effect": "unlimited_void_star_floor_p",
+						"locator": "locator"
+					},
+					{
+						"effect": "unlimited_void_star_floor_p",
+						"locator": "locator6"
+					},
+					{
+						"effect": "unlimited_void_star_wall_x_p",
+						"locator": "locator2"
+					},
+					{
+						"effect": "unlimited_void_star_wall_x_p",
+						"locator": "locator4"
+					},
+					{
+						"effect": "unlimited_void_star_wall_y_p",
+						"locator": "locator3"
+					},
+					{
+						"effect": "unlimited_void_star_wall_y_p",
+						"locator": "locator5"
+					}
+				]
+			}
+		}
+	}
+}

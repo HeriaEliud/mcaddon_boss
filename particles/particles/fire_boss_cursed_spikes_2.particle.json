@@ -1,0 +1,62 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "fire_boss_cursed_spikes_2",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/particle/fire_boss_cursed_spikes_2"
+      }
+    },
+    "curves": {
+      "variable.a": {
+        "type": "bezier",
+        "input": "v.particle_age",
+        "horizontal_range": "v.particle_lifetime",
+        "nodes": [0, 1, 9.25, 8.19]
+      },
+      "variable.b": {
+        "type": "linear",
+        "input": "v.particle_age",
+        "horizontal_range": "v.particle_lifetime",
+        "nodes": [0, 3.41]
+      }
+    },
+    "components": {
+      "minecraft:emitter_local_space": {
+        "position": true,
+        "rotation": true,
+        "velocity": true
+      },
+      "minecraft:emitter_rate_steady": {
+        "spawn_rate": 100,
+        "max_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 2
+      },
+      "minecraft:emitter_shape_point": {},
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": 0.25
+      },
+      "minecraft:particle_initial_spin": {
+        "rotation": 90
+      },
+      "minecraft:particle_initial_speed": 0,
+      "minecraft:particle_motion_dynamic": {},
+      "minecraft:particle_appearance_billboard": {
+        "size": ["2 * variable.b", "2 * variable.b"],
+        "facing_camera_mode": "emitter_transform_xz"
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": {
+          "interpolant": "v.particle_age / v.particle_lifetime",
+          "gradient": {
+            "0.56": "#FFFFFFFF",
+            "1.0": "#00000000"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "geometry": {
+        "default": "geometry.boss_expansion.fur_coat_armor_leggings"
+      },
+      "identifier": "sz_workshop:fur_coat_armor_leggings",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "render_controllers": [
+        "controller.render.armor"
+      ],
+      "textures": {
+        "default": "textures/sz/be/attachable/fur_coat_armor",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      }
+    }
+  }
+}

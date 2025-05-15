@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.sz_workshop.pjd_emit_the_kraken_atk2.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": []
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_emit_the_kraken_atk2.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:kraken_attack2_hit_01 ~ ~ ~",
+          "/particle sz_workshop:kraken_attack2_hit_02 ~ ~ ~",
+          "/particle sz_workshop:kraken_attack2_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.det_emit_the_kraken_blind.loop": {
+      "loop": true,
+      "timeline": {
+        "0.0": [
+          "/execute at @p[r=4] run tp @s ~~1~"
+        ]
+      },
+      "animation_length": 0.05
+    }
+  }
+}

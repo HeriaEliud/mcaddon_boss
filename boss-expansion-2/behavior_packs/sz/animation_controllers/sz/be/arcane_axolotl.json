@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.arcane_axolotl.target_test": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {"awake": "!query.is_stunned"},
+            {"asleep": "query.is_stunned"}
+          ]
+        },
+        "asleep": {
+          "transitions": [
+            {"on_awake": "!query.is_stunned"}
+          ]
+        },
+        "on_awake": {
+          "on_entry": ["v.awake_time = q.life_time;"],
+          "transitions": [
+            {"awake": "q.life_time - v.awake_time >= 0.75"}
+          ]
+        },
+        "awake": {
+          "on_entry": ["@s event:set_awake"],
+          "transitions": [
+            {"default": "(0.0)"}
+          ]
+        },
+        "try_sleep": {
+          "on_entry": ["v.sleep_time = q.life_time;"],
+          "transitions": [
+            {"set_asleep": "q.life_time - v.sleep_time >= 5.0"}
+          ]
+        },
+        "set_asleep": {
+          "on_entry": ["@s event:set_asleep"],
+          "transitions": [
+            {"default": "(1.0)"}
+          ]
+        }
+      }
+    }
+  }
+}

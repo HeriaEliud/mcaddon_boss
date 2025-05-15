@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.book.root",
+        "look_at_player": "animation.pixelmind_magic.book.look_at_player",
+        "open": "animation.pixelmind_magic.book.open",
+        "close": "animation.pixelmind_magic.book.close",
+        "turn": "animation.pixelmind_magic.book.turn",
+        "turn2": "animation.pixelmind_magic.book.turn2"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.rotation_to_camera_0 = -Math.atan2(-q.distance_from_camera * Math.sin(q.rotation_to_camera(0)) - 1, q.distance_from_camera * Math.cos(q.rotation_to_camera(0)));",
+          "v.look_at_entity = Math.abs(Math.abs(q.rotation_to_camera(1) - q.camera_rotation(1)) - 180) < (20 / q.distance_from_camera) && Math.abs(v.rotation_to_camera_0 + q.camera_rotation(0)) < (60 / q.distance_from_camera);"
+        ],
+        "animate": [
+          "root",
+          "look_at_player"
+        ]
+      },
+      "identifier": "sz_workshop:book",
+      "geometry": {
+        "default": "geometry.boss_expansion.book"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.sz_workshop_book"
+      ],
+      "textures": {
+        "page1": "textures/sz/be/entity/page1",
+        "page2": "textures/sz/be/entity/page2",
+        "page3": "textures/sz/be/entity/page3",
+        "page4": "textures/sz/be/entity/page4",
+        "page5": "textures/sz/be/entity/page5",
+        "page6": "textures/sz/be/entity/page6",
+        "page7": "textures/sz/be/entity/page7",
+        "page8": "textures/sz/be/entity/page8",
+        "page9": "textures/sz/be/entity/page9"
+      }
+    }
+  }
+}

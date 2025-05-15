@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pixelmind.magical_falling_boulder",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 12,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-22, 0, -22],
+							"size": [44, 92, 44],
+							"uv": {
+								"north": {"uv": [0, 44], "uv_size": [44, 92]},
+								"east": {"uv": [0, 44], "uv_size": [44, 92]},
+								"south": {"uv": [0, 44], "uv_size": [44, 92]},
+								"west": {"uv": [88, 44], "uv_size": [44, 92]},
+								"up": {"uv": [44, 0], "uv_size": [44, 44]},
+								"down": {"uv": [88, 44], "uv_size": [44, -44]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

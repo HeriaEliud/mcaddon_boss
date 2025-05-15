@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.sz_workshop_icon_projectile": {
+      "geometry": "Geometry.default",
+      "textures": ["Array.item[query.variant]"],
+      "materials": [{"*": "Material.default"}],
+      "arrays": {
+        "textures": {
+          "Array.item": [
+            "Texture.tomb_seal",
+            "Texture.temple_seal",
+            "Texture.cave_seal"
+          ]
+        }
+      },
+      "is_hurt_color": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.0}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "sz_workshop:the_pharoah_block"
+        },
+        "components": {
+            "minecraft:custom_components": ["sz_workshop:the_pharoah"],
+            "minecraft:tick": {
+                "interval_range": [10, 20],
+                "looping": true
+            }
+        }
+    }
+}

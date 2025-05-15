@@ -1,0 +1,74 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.emit_the_kraken.root",
+        "scale": "animation.boss_expansion.emit_the_kraken.scale",
+        "empty": "animation.boss_expansion.emit_the_kraken.empty",
+        "idle": "animation.boss_expansion.emit_the_kraken.idle",
+        "asleep": "animation.boss_expansion.emit_the_kraken.asleep",
+        "awake": "animation.boss_expansion.emit_the_kraken.awake",
+        "attack_1": "animation.boss_expansion.emit_the_kraken.attack_1",
+        "attack_2": "animation.boss_expansion.emit_the_kraken.attack_2",
+        "ink_clouds": "animation.boss_expansion.emit_the_kraken.ink_clouds",
+        "ink_beams": "animation.boss_expansion.emit_the_kraken.ink_beams",
+        "siphon": "animation.boss_expansion.emit_the_kraken.siphon",
+        "catch": "animation.boss_expansion.emit_the_kraken.catch",
+        "rampage": "animation.boss_expansion.emit_the_kraken.rampage",
+        "coral_strike": "animation.boss_expansion.emit_the_kraken.coral_strike",
+        "death": "animation.boss_expansion.emit_the_kraken.death"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.emit_the_kraken"
+      },
+      "identifier": "sz_workshop:emit_the_kraken",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.health_rate = query.health / query.max_health;"
+        ],
+        "animate": [
+          "scale",
+          "idle",
+          "root"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:emit_the_kraken_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/emit_the_kraken"
+      },
+      "particle_effects": {
+        "kraken_rampage_04": "sz_workshop:kraken_rampage_04",
+        "kraken_rampage_01": "sz_workshop:kraken_rampage_01",
+        "kraken_rampage_02": "sz_workshop:kraken_rampage_02",
+        "kraken_rampage_03": "sz_workshop:kraken_rampage_03",
+        "kraken_siphon_01": "sz_workshop:kraken_siphon_01",
+        "kraken_siphon_02": "sz_workshop:kraken_siphon_02",
+        "kraken_attack2_01": "sz_workshop:kraken_attack2_01",
+        "kraken_ink_clouds_02": "sz_workshop:kraken_ink_clouds_02",
+        "kraken_ink_clouds_01": "sz_workshop:kraken_ink_clouds_01",
+        "kraken_ink_beams_04": "sz_workshop:kraken_ink_beams_04",
+        "kraken_ink_beams_02": "sz_workshop:kraken_ink_beams_02",
+        "kraken_ink_beams_03": "sz_workshop:kraken_ink_beams_03",
+        "kraken_ink_beams_01": "sz_workshop:kraken_ink_beams_01"
+      },
+      "sound_effects": {
+        "emit_the_kraken_catch": "sz_workshop.emit_the_kraken_catch",
+        "emit_the_kraken_coral_strike": "sz_workshop.emit_the_kraken_coral_strike",
+        "emit_the_kraken_death": "sz_workshop.emit_the_kraken_death",
+        "emit_the_kraken_ink_beams": "sz_workshop.emit_the_kraken_ink_beams",
+        "emit_the_kraken_ink_clouds": "sz_workshop.emit_the_kraken_ink_clouds",
+        "emit_the_kraken_rampage": "sz_workshop.emit_the_kraken_rampage",
+        "emit_the_kraken_siphon": "sz_workshop.emit_the_kraken_siphon"
+      }
+    }
+  }
+}

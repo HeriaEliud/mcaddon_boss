@@ -1,0 +1,111 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:icon_projectile",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:explode": {
+        "minecraft:is_sheared": {}
+      },
+      "comp:timedown": {
+        "minecraft:timer": {
+          "time": 3,
+          "looping": false,
+          "time_down_event": {
+            "event": "event:expire",
+            "target": "self"
+          }
+        }
+      },
+      "comp:projectile": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "event:expire",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              "damage": 0,
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "is_dangerous": false,
+          "power": 1.6,
+          "gravity": 0.05,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": 1,
+          "should_bounce": false,
+          "offset": [0, 0, 0]
+        }
+      },
+      "comp:tomb_seal": {"minecraft:variant": {"value": 0}},
+      "comp:temple_seal": {"minecraft:variant": {"value": 1}},
+      "comp:cave_seal": {"minecraft:variant": {"value": 2}}
+    },
+    "components": {
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:type_family": {
+        "family": [
+          "projectile",
+          "illuminate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:fire_immune": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "event:expire": {
+        "add": {
+          "component_groups": [
+            "comp:despawn"
+          ]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": [
+            "comp:despawn"
+          ]
+        }
+      },
+      "sz_workshop:tomb_seal": {"add": {"component_groups": ["comp:tomb_seal"]}},
+      "sz_workshop:temple_seal": {"add": {"component_groups": ["comp:temple_seal"]}},
+      "sz_workshop:cave_seal": {"add": {"component_groups": ["comp:cave_seal"]}}
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "fire_boss_cursed_spikes_1",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/fire_boss_cursed_spikes_1"
+			}
+		},
+		"curves": {
+			"variable.a": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [0, 1, 0]
+			}
+		},
+		"components": {
+			"minecraft:emitter_local_space": {
+				"position": true
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 30,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 2
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [0, 1, 0]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.125
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(-180, 180)"
+			},
+			"minecraft:particle_initial_speed": 0.1,
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.4, "20*variable.a"],
+				"facing_camera_mode": "lookat_direction"
+			}
+		}
+	}
+}

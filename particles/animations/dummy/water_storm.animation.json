@@ -1,0 +1,68 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.magical_water_storm.shifa": {
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "magical_water_storm_1"
+          },
+          {
+            "effect": "magical_water_storm_2"
+          },
+          {
+            "effect": "magical_water_storm_3"
+          },
+          {
+            "effect": "magical_water_storm_4"
+          },
+          {
+            "effect": "magical_water_storm_5"
+          }
+        ]
+      },
+      "sound_effects": {
+        "0.0": [{ "effect": "player_magical_water_storm_2" }]
+      }
+    },
+    "animation.pixelmind.magical_water_storm.bullet": {
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "magical_water_storm_6",
+            "locator": "fx1"
+          },
+          {
+            "effect": "magical_water_storm_7",
+            "locator": "fx1"
+          },
+          {
+            "effect": "magical_water_storm_8",
+            "locator": "fx1"
+          }
+        ]
+      }
+    },
+    "animation.pixelmind.magical_water_storm.hit": {
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "fishes_strike_3"
+          },
+          {
+            "effect": "fishes_strike_4"
+          },
+          {
+            "effect": "fishes_strike_5"
+          },
+          {
+            "effect": "fishes_strike_6"
+          }
+        ]
+      }
+    }
+  }
+}

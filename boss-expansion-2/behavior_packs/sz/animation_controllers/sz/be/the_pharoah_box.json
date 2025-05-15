@@ -1,0 +1,60 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.the_pharoah_box.root": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {"is_summoned": "q.is_stunned"},
+            {"ready": "(1.0)"}
+          ]
+        },
+        "ready": {
+          "transitions": [
+            {"summoning": "q.is_stunned"}
+          ]
+        },
+        "summoning": {
+          "animations": ["spawn"],
+          "on_exit": ["/summon sz_workshop:the_pharoah ~ ~1 ~ "],
+          "transitions": [
+            {"is_summoned": "q.any_animation_finished"}
+          ]
+        },
+        "is_summoned": {
+          "transitions": [
+            {"default": "(0.0)"}
+          ]
+        }
+      }
+    },
+    "controller.animation.boss_expansion.the_pharoah_box.state": {
+      "initial_state": "opened",
+      "states": {
+        "on_open": {
+          "on_entry": ["v.end_time = q.life_time + 0.75;"],
+          "transitions": [
+            {"opened": "q.life_time > v.end_time"}
+          ]
+        },
+        "opened": {
+          "transitions": [
+            {"on_close": "q.is_sheared"}
+          ]
+        },
+        "on_close": {
+          "on_entry": ["v.end_time = q.life_time + 0.75;"],
+          "transitions": [
+            {"closed": "q.life_time > v.end_time"}
+          ]
+        },
+        "closed": {
+          "transitions": [
+            {"on_open": "!q.is_sheared"}
+          ]
+        }
+      }
+    }
+  }
+}

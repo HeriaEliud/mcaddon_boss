@@ -1,0 +1,553 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.iron_mountain.new": {
+			"loop": true,
+			"animation_length": 10,
+			"bones": {
+				"particle": {
+					"position": [658, 10, 0]
+				},
+				"particle2": {
+					"position": [-593, 10, 0]
+				},
+				"particle4": {
+					"position": [0, 10, -581]
+				},
+				"particle3": {
+					"position": [0, 10, 587]
+				},
+				"particle5": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [-180, 0, 0],
+					"position": [0, 23, 0]
+				},
+				"particle7": {
+					"position": [407, 0, -256]
+				},
+				"particle6": {
+					"position": [-401, 0, 0]
+				},
+				"particle9": {
+					"position": [407, 0, -165]
+				},
+				"particle8": {
+					"position": [328, 0, 385]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_4",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_5",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_6",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_7",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_8",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_9",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_10",
+						"locator": "locator5"
+					}
+				],
+				"0.5833": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator2"
+					}
+				],
+				"1.1667": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator4"
+					}
+				],
+				"1.75": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator3"
+					}
+				],
+				"2.4583": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator6"
+					}
+				],
+				"3.1667": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator7"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator7"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator7"
+					}
+				],
+				"3.875": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator5"
+					}
+				],
+				"4.4583": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator2"
+					}
+				],
+				"4.875": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator9"
+					}
+				],
+				"5.4167": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator5"
+					}
+				],
+				"6.0417": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator3"
+					}
+				],
+				"6.8333": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator4"
+					}
+				],
+				"7.5833": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator9"
+					}
+				],
+				"8.375": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator6"
+					}
+				]
+			}
+		},
+		"animation.model.new": {
+			"animation_length": 10,
+			"bones": {
+				"particle": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [-180, 0, 0],
+					"position": [386, 10, 0]
+				},
+				"particle9": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [-180, 0, 0],
+					"position": [389, 0, -50]
+				},
+				"particle8": {
+					"rotation": [-180, 0, 0],
+					"position": [255, 0, 385]
+				},
+				"particle7": {
+					"rotation": [-180, 0, 0],
+					"position": [390, 0, 162]
+				},
+				"particle6": {
+					"rotation": [-180, 0, 0],
+					"position": [-386, 0, 143]
+				},
+				"particle5": {
+					"rotation": [-180, 0, 0],
+					"position": [0, 89, 0]
+				},
+				"particle4": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [-180, 0, 0],
+					"position": [0, 10, -359]
+				},
+				"particle3": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [-180, 0, 0],
+					"position": [0, 10, 393]
+				},
+				"particle2": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [-180, 0, 0],
+					"position": [-367, 10, 0]
+				},
+				"particle10": {
+					"position": [150, 0, 201]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_4",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_5",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_6",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_7",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_8",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_9",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_10",
+						"locator": "locator5"
+					}
+				],
+				"0.5833": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator2"
+					}
+				],
+				"1.1667": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator4"
+					}
+				],
+				"1.75": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator3"
+					}
+				],
+				"2.4583": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator6"
+					}
+				],
+				"3.1667": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator7"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator7"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator7"
+					}
+				],
+				"3.875": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator5"
+					}
+				],
+				"4.4583": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator2"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator2"
+					}
+				],
+				"4.875": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator9"
+					}
+				],
+				"5.4167": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator5"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator5"
+					}
+				],
+				"6.0417": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator3"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator3"
+					}
+				],
+				"6.8333": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator4"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator4"
+					}
+				],
+				"7.5833": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator9"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator9"
+					}
+				],
+				"8.375": [
+					{
+						"effect": "coffin_of_the_iron_mountain_1",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_2",
+						"locator": "locator6"
+					},
+					{
+						"effect": "coffin_of_the_iron_mountain_3",
+						"locator": "locator6"
+					}
+				]
+			}
+		}
+	}
+}

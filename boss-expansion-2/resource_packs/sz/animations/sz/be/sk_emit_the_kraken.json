@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.boss_expansion.projectile.emit_the_kraken.attack2": {
+			"loop": true,
+			"animation_length": 1.2,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "kraken_attack2_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_attack2_bullet_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_attack2_bullet_03",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.projectile.emit_the_kraken.skill5": {
+			"loop": true,
+			"animation_length": 1.2,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "kraken_attack2_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_attack2_bullet_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_attack2_bullet_03",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.detector.emit_the_kraken.blind": {
+			"loop": true,
+			"animation_length": 7,
+			"particle_effects": {
+				"0.0": {
+					"effect": "kraken_zhedang_01"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.proj.wind_boss_blowing_air_bullet": {
+      "animation_length": 3.0417,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "wind_boss_blowing_air_bullet_1",
+            "locator": "locator"
+          },
+          {
+            "effect": "wind_boss_blowing_air_bullet_2",
+            "locator": "locator"
+          },
+          {
+            "effect": "wind_boss_blowing_air_bullet_3",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.pixelmind.proj.wind_boss_wind_blade": {
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "wind_boss_wind_blade_9",
+            "locator": "locator"
+          },
+          {
+            "effect": "wind_boss_wind_blade_10",
+            "locator": "locator"
+          },
+          {
+            "effect": "wind_boss_wind_blade_11",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.pixelmind.proj.wind_boss_wind_fury_tornado": {
+      "animation_length": 3,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "wind_boss_wind_fury_tornado_1",
+            "locator": "locator"
+          },
+          {
+            "effect": "wind_boss_wind_fury_tornado_2",
+            "locator": "locator"
+          },
+          {
+            "effect": "wind_boss_wind_fury_tornado_3",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

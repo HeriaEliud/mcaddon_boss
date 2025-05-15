@@ -1,0 +1,41 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.mummy.root",
+        "idle": "animation.boss_expansion.mummy.idle",
+        "walk": "animation.boss_expansion.mummy.walk",
+        "attack": "animation.boss_expansion.mummy.attack",
+        "sound": "animation.boss_expansion.mummy.sound"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.mummy"
+      },
+      "identifier": "sz_workshop:mummy",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root",
+          "sound"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:mummy_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/mummy"
+      },
+      "sound_effects": {
+        "mummy_attack": "sz_workshop.mummy_attack",
+        "mummy_idle": "sz_workshop.mummy_idle",
+        "mummy_walk": "sz_workshop.mummy_walk"
+      }
+    }
+  }
+}

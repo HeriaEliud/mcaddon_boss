@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.other.virtual_puecon": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "virtual_puecon_12",
+            "locator": "locator"
+          },
+          {
+            "effect": "virtual_puecon_13",
+            "locator": "locator"
+          },
+          {
+            "effect": "virtual_puecon_14",
+            "locator": "locator"
+          },
+          {
+            "effect": "virtual_puecon_15",
+            "locator": "locator"
+          },
+          {
+            "effect": "virtual_puecon_16",
+            "locator": "locator"
+          },
+          {
+            "effect": "virtual_puecon_17",
+            "locator": "locator"
+          },
+          {
+            "effect": "virtual_puecon_18",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

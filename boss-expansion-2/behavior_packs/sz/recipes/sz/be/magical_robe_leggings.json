@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_magical_robe_leggings"
+    },
+    "key": {
+      "1": {"item": "minecraft:lapis_lazuli"},
+      "2": {"item": "minecraft:iron_ingot"}
+    },
+    "pattern": [
+      "111",
+      "1 1",
+      "2 2"
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:magical_robe_leggings"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

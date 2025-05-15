@@ -1,0 +1,17 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.blood_boss.water": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "blood_boss_water_1",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_pharoah_seal"
+    },
+    "key": {
+      "1": {"item": "minecraft:gold_ingot"},
+      "2": {"item": "minecraft:lapis_lazuli"},
+      "3": {"item": "minecraft:mossy_cobblestone"},
+      "4": {"item": "minecraft:sand"}
+    },
+    "pattern": [
+      "121",
+      "242",
+      "131"
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:pharoah_seal"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

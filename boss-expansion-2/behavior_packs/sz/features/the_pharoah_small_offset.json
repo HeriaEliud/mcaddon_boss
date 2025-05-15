@@ -1,0 +1,16 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "sz_workshop:the_pharoah_small_offset"
+		},
+		"places_feature": "sz_workshop:the_pharoah_small",
+		"distribution": {
+			"iterations": "q.above_top_solid(v.worldx, v.worldz) == q.heightmap(v.worldx, v.worldz)",
+			"x": -16,
+			"y": -14,
+			"z": -16
+		}
+		
+	}
+}

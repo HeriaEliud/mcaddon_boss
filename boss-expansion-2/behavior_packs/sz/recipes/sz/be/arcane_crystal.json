@@ -1,0 +1,26 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_arcane_crystal"
+    },
+    "key": {
+      "1": {"item": "minecraft:diamond"},
+      "2": {"item": "minecraft:lapis_lazuli"},
+      "3": {"item": "minecraft:nether_star"},
+      "4": {"item": "minecraft:amethyst_shard"}
+    },
+    "pattern": [
+      " 1 ",
+      "232",
+      " 4 "
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:arcane_crystal"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

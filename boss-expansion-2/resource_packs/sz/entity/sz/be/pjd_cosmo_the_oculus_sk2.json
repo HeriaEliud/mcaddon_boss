@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:pjd_cosmo_the_oculus_sk2",
+      "animations": {
+        "root": "animation.boss_expansion.projectile.cosmo_the_oculus.skill2",
+        "pjd": "animation.boss_expansion.projectile.general"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.projectile_general"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "initialize": [
+          "variable.shake_power = 0.0;"
+        ],
+        "animate": [
+          "root",
+          "pjd"
+        ]
+      },
+      "textures": {
+        "default": "textures/items/apple"
+      },
+      "particle_effects": {
+        "cosmo_the_oculus_ray_attack_bullet_01": "sz_workshop:cosmo_the_oculus_ray_attack_bullet_01",
+        "cosmo_the_oculus_ray_attack_bullet_02": "sz_workshop:cosmo_the_oculus_ray_attack_bullet_02"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_verdant_plate_boots"
+    },
+    "key": {
+      "1": {"item": "minecraft:gold_ingot"},
+      "2": {"item": "minecraft:oak_sapling"},
+      "3": {"item": "minecraft:iron_ingot"}
+    },
+    "pattern": [
+      "121",
+      "3 3"
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:verdant_plate_boots"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

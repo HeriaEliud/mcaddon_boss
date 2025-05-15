@@ -1,0 +1,79 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.boss_expansion.projectile.the_pharoah.attack1": {
+			"loop": true,
+			"animation_length": 1.2,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "pharoah_basic_attack1_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "pharoah_basic_attack1_bullet_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "pharoah_basic_attack1_bullet_03",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.projectile.the_pharoah.attack2": {
+			"loop": true,
+			"animation_length": 1.2,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "pharoah_basic_attack2_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "pharoah_basic_attack2_bullet_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "pharoah_basic_attack2_bullet_03",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.projectile.the_pharoah.skill2": {
+			"loop": true,
+			"animation_length": 1.2,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "pharoah_sand_dust_strike_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "pharoah_sand_dust_strike_bullet_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "pharoah_sand_dust_strike_bullet_03",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.detector.the_pharoah.skill3": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "pharoah_sandstorm_bullet_01"
+					},
+					{
+						"effect": "pharoah_sandstorm_bullet_02"
+					}
+				]
+			}
+		}
+	}
+}

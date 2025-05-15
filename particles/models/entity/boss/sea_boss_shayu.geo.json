@@ -1,0 +1,70 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shayu",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 1,
+				"visible_bounds_height": 1,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "shayu_root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "shayu",
+					"parent": "shayu_root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "shayu3",
+					"parent": "shayu",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"shayu3": {
+							"offset": [0, 0, 0],
+							"rotation": [0, 0, -180]
+						}
+					}
+				},
+				{
+					"name": "shayu2",
+					"parent": "shayu",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"shayu2": {
+							"offset": [0, 0, 0],
+							"rotation": [0, 0, -180]
+						}
+					}
+				},
+				{
+					"name": "shayu4",
+					"parent": "shayu",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"shayu4": {
+							"offset": [0, 0, 0],
+							"rotation": [0, 0, -180]
+						}
+					}
+				},
+				{
+					"name": "shayu1",
+					"parent": "shayu",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"shayu1": {
+							"offset": [0, 0, 0],
+							"rotation": [0, 0, -180]
+						}
+					}
+				}
+			]
+		}
+	]
+}

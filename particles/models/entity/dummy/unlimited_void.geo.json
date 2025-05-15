@@ -1,0 +1,73 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unlimited_void",
+				"texture_width": 4096,
+				"texture_height": 4096,
+				"visible_bounds_width": 42,
+				"visible_bounds_height": 46,
+				"visible_bounds_offset": [0, 19, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 327, 0],
+					"cubes": [
+						{"origin": [-327, 0, -327], "size": [654, 654, 654], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "particle",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle2",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator2": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle3",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator3": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle4",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator4": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle5",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator5": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle6",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator6": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle7",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator7": [0, 0, 0]
+					}
+				}
+			]
+		}
+	]
+}

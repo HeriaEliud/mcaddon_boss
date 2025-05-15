@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.uniform_head",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, -24, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, -12, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "Head",
+					"parent": "waist",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 0, -4], "size": [8, 8, 8], "uv": [0, 17]},
+						{"origin": [-4, 0, -4], "size": [8, 8, 8], "inflate": 0.55, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "RightArm",
+					"parent": "waist",
+					"pivot": [-5, -2, 0]
+				},
+				{
+					"name": "LeftArm",
+					"parent": "waist",
+					"pivot": [5, -2, 0]
+				},
+				{
+					"name": "LeftLeg",
+					"parent": "root",
+					"pivot": [1.9, -12, 0]
+				},
+				{
+					"name": "RightLeg",
+					"parent": "root",
+					"pivot": [-1.9, -12, 0]
+				}
+			]
+		}
+	]
+}

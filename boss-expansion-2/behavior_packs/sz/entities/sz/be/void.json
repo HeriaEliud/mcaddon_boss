@@ -1,0 +1,14 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:void",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "components": {"minecraft:instant_despawn": {}},
+    "component_groups": {},
+    "events": {}
+  }
+}

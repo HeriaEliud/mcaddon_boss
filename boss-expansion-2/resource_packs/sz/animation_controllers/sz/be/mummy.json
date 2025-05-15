@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.mummy.root": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true,
+          "animations": ["idle"],
+          "transitions": [
+            {
+              "attack": "query.is_delayed_attacking"
+            },
+            {
+              "walk": "query.modified_move_speed >= 0.1"
+            }
+          ]
+        },
+        "walk": {
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true,
+          "animations": ["walk"],
+          "transitions": [
+            {
+              "attack": "query.is_delayed_attacking"
+            },
+            {
+              "idle": "query.modified_move_speed < 0.1"
+            }
+          ]
+        },
+        "attack": {
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true,
+          "animations": ["attack"],
+          "transitions": [
+            {
+              "idle": "query.any_animation_finished && query.modified_move_speed < 0.1"
+            },
+            {
+              "walk": "query.any_animation_finished && query.modified_move_speed >= 0.1"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

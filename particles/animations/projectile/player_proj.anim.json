@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pixelmind.player.puppet_ray_proj": {
+			"loop": true,
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["-query.target_x_rotation", "-query.target_y_rotation", 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "robot_puppet_attack_bullet_1",
+						"locator": "fx1"
+					},
+					{
+						"effect": "robot_puppet_attack_bullet_2",
+						"locator": "fx1"
+					}
+				]
+			}
+		},
+		"animation.pixelmind.player.proj_rotate": {
+			"override_previous_animation": true,
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["-query.target_x_rotation", "-query.target_y_rotation", 0]
+				}
+			}
+		}
+	}
+}

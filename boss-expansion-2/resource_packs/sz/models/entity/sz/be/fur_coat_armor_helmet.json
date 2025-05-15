@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.boss_expansion.fur_coat_armor_helmet",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4.75, 23.25, -6], "size": [9.5, 9.5, 10.75], "inflate": 0.01, "uv": [0, 12]},
+						{"origin": [-6.5, 23.25, -4.4], "size": [1.75, 9.5, 1.75], "uv": [0, 0]},
+						{"origin": [-6.5, 32.75, -4.4], "size": [13, 2, 1.75], "uv": [36, 0]},
+						{"origin": [-8.5, 23.25, -4.3], "size": [17, 13.5, 0], "uv": [33, 41]},
+						{"origin": [4.75, 23.25, -4.4], "size": [1.75, 9.5, 1.75], "uv": [0, 0], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

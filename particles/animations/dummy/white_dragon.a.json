@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.white_dragon.lightning": {
+      "animation_length": 5,
+      "loop": false,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "white_dragon_roar_3",
+            "locator": "locator"
+          },
+          {
+            "effect": "white_dragon_roar_4",
+            "locator": "locator"
+          },
+          {
+            "effect": "white_dragon_roar_5",
+            "locator": "locator"
+          },
+          {
+            "effect": "white_dragon_roar_6",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

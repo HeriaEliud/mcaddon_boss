@@ -1,0 +1,142 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.arcane_axolotl.root": {
+      "initial_state": "init",
+      "states": {
+        "init": {
+          "animations": ["idle"],
+          "transitions": [
+            {"awake": "query.has_target"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "awake": {
+          "animations": ["hostile"],
+          "transitions": [
+            {"idle": "query.any_animation_finished"}
+          ]
+        },
+        "idle": {
+          "animations": ["walk"],
+          "transitions": [
+            {"attack1": "query.is_casting && query.variant == 10"},
+            {"attack2": "query.is_casting && query.variant == 20"},
+            {"skill1": "query.is_casting && query.variant == 100"},
+            {"skill2": "query.is_casting && query.variant == 200"},
+            {"skill3": "query.is_casting && query.variant == 300"},
+            {"skill4": "query.is_casting && query.variant == 400"},
+            {"skill5": "query.is_casting && query.variant == 500"},
+            {"skill6": "query.is_casting && query.variant == 600"},
+            {"skill7": "query.is_casting && query.variant == 700"},
+            {"skill8": "query.is_casting && query.variant == 800"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "attack1": {
+          "animations": ["water_control"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "attack2": {
+          "animations": ["water_explosion"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill1": {
+          "animations": ["water_missile"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill2": {
+          "animations": ["water_shield"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill3": {
+          "animations": ["water_jet"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill4": {
+          "animations": ["geyser_explosion"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill5": {
+          "animations": ["bubble_trap"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill6": {
+          "animations": ["water_spin"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill7": {
+          "animations": ["navy"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill8": {
+          "animations": ["life_of_water"],
+          "transitions": [
+            {"idle": "query.variant == 0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        }
+      }
+    },
+    "controller.animation.boss_expansion.friendly_arcane_axolotl.root": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            {"walk": "query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": ["walk"],
+          "transitions": [
+            {"idle": "query.modified_move_speed < 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:det_cosmo_the_oculus_sk5",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "on_buff": "animation.sz_workshop.det_cosmo_the_oculus_sk5.on_buff",
+        "on_impact": "animation.sz_workshop.det_cosmo_the_oculus_sk5.on_impact"
+      },
+      "scripts": {
+        "animate": [
+          {"on_buff": "query.is_stunned"},
+          {"on_impact": "query.is_sheared"}
+        ]
+      }
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:finish_hit": {
+        "minecraft:is_stunned": {}
+      },
+      "comp:explode": {
+        "minecraft:explode": {
+          "fuse_length": 0.0,
+          "fuse_lit": true,
+          "power": 5,
+          "causes_fire": false,
+          "breaks_blocks": false,
+          "destroy_affected_by_griefing": true
+        },
+        "minecraft:is_sheared": {}
+      },
+      "comp:timedown": {
+        "minecraft:timer": {
+          "time": 12,
+          "looping": false,
+          "time_down_event": {
+            "event": "event:expire",
+            "target": "self"
+          }
+        }
+      },
+      "comp:config": {
+        "minecraft:health": {
+          "max": 1,
+          "value": 1
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false,
+            "on_damage": {
+              "filters": {"test": "has_damage", "value": "fatal"},
+              "event": "event:on_hit",
+              "target": "self"
+            }
+          }
+        }
+      },
+      "comp:set_hit1": {
+        "minecraft:variant": {"value": 1}
+      },
+      "comp:set_hit2": {
+        "minecraft:variant": {"value": 2}
+      }
+    },
+    "components": {
+      "minecraft:variant": {"value": 0},
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:type_family": {
+        "family": ["detector", "illuminate"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 1.5
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:can_climb": {},
+      "minecraft:jump.static": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:config"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:config"]
+        }
+      },
+      "event:expire": {
+        "add": {
+          "component_groups": ["comp:explode"]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": ["comp:despawn"]
+        }
+      },
+      "event:on_hit": {
+        "sequence": [
+          {"filters": {"test": "is_variant", "value": 2}, "add": {"component_groups": ["comp:finish_hit"]}},
+          {"filters": {"test": "is_variant", "value": 1}, "add": {"component_groups": ["comp:set_hit2"]}},
+          {"filters": {"test": "is_variant", "value": 0}, "add": {"component_groups": ["comp:set_hit1"]}}
+        ]
+      }
+    }
+  }
+}

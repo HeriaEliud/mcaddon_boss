@@ -1,0 +1,126 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.the_champ.root": {
+      "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": ["spawn"],
+          "transitions": [
+            {"idle": "query.any_animation_finished"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"attack1": "query.is_casting && query.variant == 10"},
+            {"attack2": "query.is_casting && query.variant == 20"},
+            {"skill1": "query.is_casting && query.variant == 100"},
+            {"skill2": "query.is_casting && query.variant == 200"},
+            {"skill3": "query.is_casting && query.variant == 300"},
+            {"skill4": "query.is_casting && query.variant == 400"},
+            {"skill5": "query.is_casting && query.variant == 500"},
+            {"walk": "query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": ["walk"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"attack1": "query.is_casting && query.variant == 10"},
+            {"attack2": "query.is_casting && query.variant == 20"},
+            {"skill1": "query.is_casting && query.variant == 100"},
+            {"skill2": "query.is_casting && query.variant == 200"},
+            {"skill3": "query.is_casting && query.variant == 300"},
+            {"skill4": "query.is_casting && query.variant == 400"},
+            {"skill5": "query.is_casting && query.variant == 500"},
+            {"idle": "query.modified_move_speed < 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "death": {
+          "animations": ["death"],
+          "transitions": [
+            {"idle": "(0.0)"}
+          ]
+        },
+        "attack1": {
+          "animations": ["attack1"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "attack2": {
+          "animations": ["attack2"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill1": {
+          "animations": ["lock"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill2": {
+          "animations": ["body_punch"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill3": {
+          "animations": ["player_punch"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill4": {
+          "animations": ["player_throw"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "skill5": {
+          "animations": ["head_butt"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

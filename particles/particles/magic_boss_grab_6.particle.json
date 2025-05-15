@@ -1,0 +1,64 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "magic_boss_grab_6",
+      "basic_render_parameters": {
+        "material": "particles_add",
+        "texture": "textures/particle/magic_boss_grab_6"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 100
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 3
+      },
+      "minecraft:emitter_shape_point": {
+        "offset": [0, 0.1, 0],
+        "direction": ["math.random(-3, 3)", "math.random(-5, 10)", "math.random(-10, 3)"]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "math.random(1, 2)"
+      },
+      "minecraft:particle_initial_spin": {
+        "rotation_rate": "math.random(-180, 360)"
+      },
+      "minecraft:particle_initial_speed": "math.random(10,38)",
+      "minecraft:particle_motion_dynamic": {
+        "linear_acceleration": [0, "math.Random(-1, -15)", 0],
+        "linear_drag_coefficient": 2
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          "(1.2*v.particle_random_2+0.02) / (v.particle_age+0.1)",
+          "(1.2*v.particle_random_2+0.02) / (v.particle_age+0.1)"
+        ],
+        "facing_camera_mode": "rotate_xyz",
+        "uv": {
+          "texture_width": 32,
+          "texture_height": 32,
+          "uv": [0, 0],
+          "uv_size": [32, 32]
+        }
+      },
+      "minecraft:particle_motion_collision": {
+        "collision_drag": 0.1,
+        "coefficient_of_restitution": 0.1,
+        "collision_radius": 0.1
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": {
+          "interpolant": "v.particle_age+variable.particle_random_1",
+          "gradient": {
+            "0.0": "#FF684943",
+            "0.94": "#FFEFCF8D",
+            "1.42": "#FFA27358",
+            "2.0": "#00FF0000"
+          }
+        }
+      }
+    }
+  }
+}

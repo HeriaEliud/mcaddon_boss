@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fireball.anim": {
+			"loop": true,
+			"bones": {
+				"fx1": {
+					"position": [0, 0, -6]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "nine_tailed_fox_fireball_1",
+						"locator": "fx1"
+					},
+					{
+						"effect": "nine_tailed_fox_fireball_2",
+						"locator": "fx1"
+					}
+				]
+			}
+		},
+		"animation.fireball.foward": {
+			"loop": true,
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"bones": {
+				"bone": {
+					"rotation": ["-query.target_x_rotation", "-query.target_y_rotation", 0],
+					"position": [0, 0, 0]
+				},
+				"fx1": {
+					"position": [0, 0, -6]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "nine_tailed_fox_fireball_1",
+						"locator": "fx1"
+					},
+					{
+						"effect": "nine_tailed_fox_fireball_2",
+						"locator": "fx1"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:det_pharoah_sk3",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "root": "animation.sz_workshop.pjd_pharoah_sk3.loop"
+      },
+      "scripts": {
+        "animate": ["root"]
+      }
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:timedown": {
+        "minecraft:timer": {
+          "time": 10,
+          "looping": false,
+          "time_down_event": {
+            "event": "event:expire",
+            "target": "self"
+          }
+        }
+      },
+      "comp:config": {
+        "minecraft:attack": {"damage": 0},
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "filters": {
+                "subject": "other",
+                "test": "is_family",
+                "value": "player"
+              },
+              "max_dist": 24
+            }
+          ],
+          "within_radius": 25,
+          "must_see": true,
+          "reselect_targets": true,
+          "must_see_forget_duration": 17
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 5,
+          "speed_multiplier": 1.0,
+          "track_target": true
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 8,
+          "interval": 1,
+          "xz_dist": 12,
+          "y_dist": 3
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false,
+        "can_sink": false,
+        "can_path_from_air": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": false,
+        "avoid_sun": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:type_family": {
+        "family": ["detector", "illuminate"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:can_climb": {},
+      "minecraft:jump.static": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:config"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:config"]
+        }
+      },
+      "event:expire": {
+        "add": {
+          "component_groups": ["comp:despawn"]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": ["comp:despawn"]
+        }
+      }
+    }
+  }
+}

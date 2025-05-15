@@ -1,0 +1,94 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.boss_expansion.projectile.cosmo_the_oculus.attack2": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "cosmo_the_oculus_basic_attack2_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "cosmo_the_oculus_basic_attack2_bullet_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "cosmo_the_oculus_basic_attack2_bullet_03",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.projectile.cosmo_the_oculus.skill2": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "cosmo_the_oculus_ray_attack_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "cosmo_the_oculus_ray_attack_bullet_02",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.projectile.cosmo_the_oculus.skill3": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "cosmo_the_oculus_crystal_attack_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "cosmo_the_oculus_crystal_attack_bullet_02",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.projectile.cosmo_the_oculus.skill4": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "cosmo_the_oculus_ray_attack2_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "cosmo_the_oculus_ray_attack2_bullet_02",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.boss_expansion.detector.cosmo_the_oculus.skill5": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"position": [0, 25, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "cosmo_the_oculus_crystal_attack_bullet_01",
+						"locator": "locator"
+					},
+					{
+						"effect": "cosmo_the_oculus_crystal_attack_bullet_02",
+						"locator": "locator"
+					}
+				]
+			}
+		}
+	}
+}

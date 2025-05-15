@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pixelmind.meteor_strike.bullet": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "meteor_strike_1",
+						"locator": "fx1"
+					},
+					{
+						"effect": "meteor_strike_2",
+						"locator": "fx1"
+					}
+				]
+			}
+		},
+		"animation.pixelmind.meteor_strike.meteor_strike_hit": {
+			"animation_length": 2.25,
+			"particle_effects": {
+				"0.0417": [
+					{
+						"effect": "meteor_strike_3"
+					},
+					{
+						"effect": "meteor_strike_4"
+					},
+					{
+						"effect": "meteor_strike_5"
+					},
+					{
+						"effect": "meteor_strike_6"
+					},
+					{
+						"effect": "meteor_strike_7"
+					},
+					{
+						"effect": "meteor_strike_8"
+					}
+				]
+			}
+		}
+	}
+}

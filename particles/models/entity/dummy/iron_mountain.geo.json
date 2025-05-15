@@ -1,0 +1,98 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.iron_mountain",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 52,
+				"visible_bounds_height": 21.5,
+				"visible_bounds_offset": [0, 10.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-400, 0, -400], "size": [800, 0, 800], "uv": [-1321, -798]},
+						{"origin": [-400, 0, -400], "size": [0, 320, 800], "uv": [-1321, -798]},
+						{"origin": [400, 0, -400], "size": [0, 320, 800], "uv": [-1321, -798], "mirror": true},
+						{"origin": [-400, 0, -400], "size": [800, 320, 0], "uv": [-1321, 2], "mirror": true},
+						{"origin": [-400, 0, 400], "size": [800, 320, 0], "uv": [-1321, 2], "mirror": true}
+					]
+				},
+				{
+					"name": "particle",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle2",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator2": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle3",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator3": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle4",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator4": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle5",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator5": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle6",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator6": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle7",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator7": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle8",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator8": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle9",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator9": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle10",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator10": [0, 0, 0]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.book.root": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "turn2"
+          ],
+          "transitions": [
+            {
+              "open": "query.is_stunned"
+            },
+            {
+              "close": "query.is_powered"
+            },
+            {
+              "turn": "query.is_sheared"
+            }
+          ]
+        },
+        "close": {
+          "animations": [
+            "close"
+          ]
+        },
+        "open": {
+          "animations": [
+            "open"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_stunned"
+            }
+          ]
+        },
+        "turn": {
+          "animations": [
+            "turn"
+          ],
+          "transitions": [
+            {
+              "close": "query.is_powered"
+            },
+            {
+              "default": "!query.is_sheared"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

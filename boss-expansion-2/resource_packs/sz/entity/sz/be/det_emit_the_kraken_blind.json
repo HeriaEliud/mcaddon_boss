@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:det_emit_the_kraken_blind",
+      "animations": {
+        "root": "animation.boss_expansion.detector.emit_the_kraken.blind"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.projectile_general"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "textures": {
+        "default": "textures/items/apple"
+      },
+      "particle_effects": {
+        "kraken_zhedang_01": "sz_workshop:kraken_zhedang_01"
+      }
+    }
+  }
+}

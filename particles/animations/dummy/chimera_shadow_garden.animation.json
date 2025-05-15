@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.chimera_shadow_garden": {
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "chimera_shadow_garden_1"
+          },
+          {
+            "effect": "chimera_shadow_garden_3"
+          }
+        ]
+      }
+    }
+  }
+}

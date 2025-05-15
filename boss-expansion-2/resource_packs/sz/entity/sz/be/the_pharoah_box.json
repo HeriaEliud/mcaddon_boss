@@ -1,0 +1,32 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:the_pharoah_box",
+      "animations": {
+        "root": "controller.animation.boss_expansion.the_pharoah_box.root",
+        "opening": "animation.boss_expansion.the_pharoah_box.opening",
+        "state.opened": "animation.boss_expansion.the_pharoah_box.state.opened",
+        "closing": "animation.boss_expansion.the_pharoah_box.closing",
+        "state.closed": "animation.boss_expansion.the_pharoah_box.state.closed"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.the_pharoah_box"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/the_pharoah_box"
+      }
+    }
+  }
+}

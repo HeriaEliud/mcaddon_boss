@@ -1,0 +1,102 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:the_pharoah_box",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "root": "controller.animation.boss_expansion.the_pharoah_box.root",
+        "state": "controller.animation.boss_expansion.the_pharoah_box.state",
+        "spawn": "animation.sz_workshop.the_pharoah_box.spawnn_entity"
+      },
+      "scripts": {
+        "animate": [
+          "root",
+          "state"
+        ]
+      }
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:config": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false
+          }
+        }
+      },
+      "comp:can_interact": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {"test": "is_family", "subject": "other", "value": "player"},
+                    {"test": "has_equipment", "subject": "other", "domain": "hand", "value": "sz_workshop:pharoah_seal"}
+                  ]
+                },
+                "event": "event:release_entity",
+                "target": "self"
+              },
+              "use_item": true,
+              "interact_text": "Use Pharoah Seal"
+            }
+          ]
+        }
+      },
+      "comp:used_seal": {
+        "minecraft:is_stunned": {}
+      },
+      "comp:open_box": {
+        "minecraft:is_sheared": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["detector", "illuminate", "the_pharoah_box"]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:fire_immune": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:config", "comp:can_interact"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:config", "comp:can_interact"]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": ["comp:despawn"]
+        }
+      },
+      "event:release_entity": {
+        "add": {"component_groups": ["comp:open_box", "comp:used_seal"]},
+        "remove": {"component_groups": ["comp:can_interact"]}
+      }
+    }
+  }
+}

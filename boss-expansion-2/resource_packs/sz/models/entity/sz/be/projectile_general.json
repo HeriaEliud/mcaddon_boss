@@ -1,0 +1,43 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.boss_expansion.projectile_general",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [0, 0, 0], "size": [0, 0, 0], "uv": [0, 0]}
+					],
+					"locators": {
+						"locator": [0, 0, 0]
+					}
+				},
+				{
+					"name": "reverse",
+					"parent": "root",
+					"pivot": [0, 0, 0],
+					"rotation": [0, -90, 0],
+					"locators": {
+						"reverse": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle2",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator2": [0, 0, 0]
+					}
+				}
+			]
+		}
+	]
+}

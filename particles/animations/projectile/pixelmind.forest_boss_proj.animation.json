@@ -1,0 +1,62 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.seed.forward": {
+      "loop": true,
+      "override_previous_animation": true,
+      "bones": {
+        "bone": {
+          "rotation": ["-query.target_x_rotation", "-query.target_y_rotation", 0]
+        }
+      }
+    },
+    "animation.pixelmind.seed.particle": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "seed_1",
+            "locator": "locator"
+          },
+          {
+            "effect": "seed_2",
+            "locator": "locator"
+          },
+          {
+            "effect": "seed_3",
+            "locator": "locator"
+          },
+          {
+            "effect": "seed_4",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.pixelmind.forest_boss.meteor": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "forest_boss_yun_6",
+            "locator": "locator"
+          },
+          {
+            "effect": "forest_boss_yun_7",
+            "locator": "locator"
+          },
+          {
+            "effect": "forest_boss_yun_8",
+            "locator": "locator"
+          },
+          {
+            "effect": "forest_boss_yun_9",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.the_pharoah.root",
+        "idle": "animation.boss_expansion.the_pharoah.idle",
+        "walk": "animation.boss_expansion.the_pharoah.walk",
+        "basic_attack1": "animation.boss_expansion.the_pharoah.basic_attack1",
+        "basic_attack2": "animation.boss_expansion.the_pharoah.basic_attack2",
+        "shield": "animation.boss_expansion.the_pharoah.shield",
+        "sand_dust_strike": "animation.boss_expansion.the_pharoah.sand_dust_strike",
+        "sandstorm": "animation.boss_expansion.the_pharoah.sandstorm",
+        "curse_cloud": "animation.boss_expansion.the_pharoah.curse_cloud"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.the_pharoah"
+      },
+      "identifier": "sz_workshop:the_pharoah",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.health_rate = query.health / query.max_health;"
+        ],
+        "animate": [
+          "root"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:the_pharoah_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/the_pharoah"
+      },
+      "particle_effects": {
+        "pharoah_shield_04": "sz_workshop:pharoah_shield_04",
+        "pharoah_basic_attack2_01": "sz_workshop:pharoah_basic_attack2_01",
+        "pharoah_shield_01": "sz_workshop:pharoah_shield_01",
+        "pharoah_shield_03": "sz_workshop:pharoah_shield_03",
+        "pharoah_basic_attack1_01": "sz_workshop:pharoah_basic_attack1_01",
+        "pharoah_shield_02": "sz_workshop:pharoah_shield_02",
+        "pharoah_sandstorm_02": "sz_workshop:pharoah_sandstorm_02",
+        "pharoah_sand_dust_strike_01": "sz_workshop:pharoah_sand_dust_strike_01",
+        "pharoah_sand_dust_strike_02": "sz_workshop:pharoah_sand_dust_strike_02",
+        "pharoah_sandstorm_01": "sz_workshop:pharoah_sandstorm_01"
+      },
+      "sound_effects": {
+        "the_pharoah_sandstorm": "sz_workshop.the_pharoah_sandstorm"
+      }
+    }
+  }
+}

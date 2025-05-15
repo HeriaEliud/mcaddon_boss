@@ -1,0 +1,26 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_magical_robe_chestplate"
+    },
+    "key": {
+      "1": {"item": "minecraft:lapis_lazuli"},
+      "2": {"item": "minecraft:emerald"},
+      "3": {"item": "minecraft:iron_ingot"},
+      "4": {"item": "minecraft:diamond"}
+    },
+    "pattern": [
+      "1 1",
+      "121",
+      "343"
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:magical_robe_chestplate"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

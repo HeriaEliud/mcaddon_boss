@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.arcane_staff.fp": {
+      "states": {
+        "default": {
+          "animations": ["fpp_idle"],
+          "transitions": [
+            {"active": "query.is_using_item"}
+          ]
+        },
+        "active": {
+          "on_entry": ["v.use_time = q.life_time;"],
+          "animations": ["fpp_idle"],
+          "transitions": [
+            {"hold": "!query.is_using_item && q.life_time - v.use_time >= 3.0"},
+            {"click": "!query.is_using_item"}
+          ]
+        },
+        "hold": {
+          "animations": ["fpp_attack2"],
+          "transitions": [{"default": "query.any_animation_finished"}]
+        },
+        "click": {
+          "animations": ["fpp_attack1"],
+          "transitions": [{"default": "query.any_animation_finished"}]
+        }
+      }
+    },
+    "controller.animation.boss_expansion.arcane_staff.tp": {
+      "states": {
+        "default": {
+          "animations": ["tpp_idle"],
+          "transitions": [
+            {"active": "query.is_using_item"}
+          ]
+        },
+        "active": {
+          "on_entry": ["v.use_time = q.life_time;"],
+          "animations": ["tpp_idle"],
+          "transitions": [
+            {"hold": "!query.is_using_item && q.life_time - v.use_time >= 3.0"},
+            {"click": "!query.is_using_item"}
+          ]
+        },
+        "hold": {
+          "animations": ["tpp_attack2"],
+          "transitions": [{"default": "query.any_animation_finished"}]
+        },
+        "click": {
+          "animations": ["tpp_attack1"],
+          "transitions": [{"default": "query.any_animation_finished"}]
+        }
+      }
+    }
+  }
+}

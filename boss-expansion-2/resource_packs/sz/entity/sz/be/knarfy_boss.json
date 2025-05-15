@@ -1,0 +1,89 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.knarfy_boss.root",
+        "asleep": "animation.boss_expansion.knarfy_boss.asleep",
+        "awake": "animation.boss_expansion.knarfy_boss.awake",
+        "idle": "animation.boss_expansion.knarfy_boss.idle",
+        "walk": "animation.boss_expansion.knarfy_boss.walk",
+        "run": "animation.boss_expansion.knarfy_boss.run",
+        "limp": "animation.boss_expansion.knarfy_boss.limp",
+        "roar": "animation.boss_expansion.knarfy_boss.roar",
+        "claw": "animation.boss_expansion.knarfy_boss.claw",
+        "punch": "animation.boss_expansion.knarfy_boss.punch",
+        "crack": "animation.boss_expansion.knarfy_boss.crack",
+        "charge_back": "animation.boss_expansion.knarfy_boss.charge_back",
+        "charge_run": "animation.boss_expansion.knarfy_boss.charge_run",
+        "charge_hit": "animation.boss_expansion.knarfy_boss.charge_hit",
+        "charge_hit_crack": "animation.boss_expansion.knarfy_boss.charge_hit_crack",
+        "breath": "animation.boss_expansion.knarfy_boss.breath",
+        "snowstorm": "animation.boss_expansion.knarfy_boss.snowstorm",
+        "breath_snowstorm": "animation.boss_expansion.knarfy_boss.breath_snowstorm",
+        "death": "animation.boss_expansion.knarfy_boss.death"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.knarfy_boss"
+      },
+      "identifier": "sz_workshop:knarfy_boss",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.health_rate = query.health / query.max_health;"
+        ],
+        "animate": [
+          "root"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:knarfy_boss_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/knarfy_boss"
+      },
+      "particle_effects": {
+        "knarfy_charge_02": "sz_workshop:knarfy_charge_02",
+        "knarfy_charge_01": "sz_workshop:knarfy_charge_01",
+        "knarfy_storm_01": "sz_workshop:knarfy_storm_01",
+        "knarfy_xing_01": "sz_workshop:knarfy_xing_01",
+        "knarfy_storm_03": "sz_workshop:knarfy_storm_03",
+        "knarfy_storm_02": "sz_workshop:knarfy_storm_02",
+        "knarfy_storm_05": "sz_workshop:knarfy_storm_05",
+        "knarfy_storm_04": "sz_workshop:knarfy_storm_04",
+        "knarfy_death_02": "sz_workshop:knarfy_death_02",
+        "knarfy_death_01": "sz_workshop:knarfy_death_01",
+        "knarfy_roar_01": "sz_workshop:knarfy_roar_01",
+        "knarfy_breath_01": "sz_workshop:knarfy_breath_01",
+        "knarfy_breath_02": "sz_workshop:knarfy_breath_02",
+        "knarfy_crack_04": "sz_workshop:knarfy_crack_04",
+        "knarfy_crack_05": "sz_workshop:knarfy_crack_05",
+        "knarfy_crack_02": "sz_workshop:knarfy_crack_02",
+        "knarfy_crack_03": "sz_workshop:knarfy_crack_03",
+        "knarfy_crack_01": "sz_workshop:knarfy_crack_01"
+      },
+      "sound_effects": {
+        "knarfy_boss_berath": "sz_workshop.knarfy_boss_berath",
+        "knarfy_boss_breath_snowstorm": "sz_workshop.knarfy_boss_breath_snowstorm",
+        "knarfy_boss_charge_back": "sz_workshop.knarfy_boss_charge_back",
+        "knarfy_boss_charge_hit": "sz_workshop.knarfy_boss_charge_hit",
+        "knarfy_boss_charge_hit_crack": "sz_workshop.knarfy_boss_charge_hit_crack",
+        "knarfy_boss_claw": "sz_workshop.knarfy_boss_claw",
+        "knarfy_boss_crack": "sz_workshop.knarfy_boss_crack",
+        "knarfy_boss_death": "sz_workshop.knarfy_boss_death",
+        "knarfy_boss_idle": "sz_workshop.knarfy_boss_idle",
+        "knarfy_boss_punch": "sz_workshop.knarfy_boss_punch",
+        "knarfy_boss_roar": "sz_workshop.knarfy_boss_roar",
+        "knarfy_boss_run": "sz_workshop.knarfy_boss_run",
+        "knarfy_boss_snowstorm": "sz_workshop.knarfy_boss_snowstorm",
+        "knarfy_boss_transition": "sz_workshop.knarfy_boss_transition",
+        "knarfy_boss_walk": "sz_workshop.knarfy_boss_walk"
+      }
+    }
+  }
+}

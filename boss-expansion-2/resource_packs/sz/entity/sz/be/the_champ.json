@@ -1,0 +1,76 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.the_champ.root",
+        "scale": "animation.boss_expansion.the_champ.scale",
+        "spawn": "animation.boss_expansion.the_champ.spawn",
+        "idle": "animation.boss_expansion.the_champ.idle",
+        "walk": "animation.boss_expansion.the_champ.walk",
+        "death": "animation.boss_expansion.the_champ.death",
+        "attack1": "animation.boss_expansion.the_champ.attack1",
+        "attack2": "animation.boss_expansion.the_champ.attack2",
+        "lock": "animation.boss_expansion.the_champ.lock",
+        "body_punch": "animation.boss_expansion.the_champ.body_punch",
+        "player_punch": "animation.boss_expansion.the_champ.player_punch",
+        "player_throw": "animation.boss_expansion.the_champ.player_throw",
+        "head_butt": "animation.boss_expansion.the_champ.head_butt"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.the_champ"
+      },
+      "identifier": "sz_workshop:the_champ",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.health_rate = query.health / query.max_health;"
+        ],
+        "animate": [
+          "root",
+          "scale"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:the_champ_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/the_champ"
+      },
+      "particle_effects": {
+        "champ_body_punch_6": "sz_workshop:champ_body_punch_6",
+        "champ_body_punch_4": "sz_workshop:champ_body_punch_4",
+        "champ_body_punch_5": "sz_workshop:champ_body_punch_5",
+        "champ_body_punch_3": "sz_workshop:champ_body_punch_3",
+        "champ_body_punch_1": "sz_workshop:champ_body_punch_1",
+        "champ_spawn_1": "sz_workshop:champ_spawn_1",
+        "champ_spawn_3": "sz_workshop:champ_spawn_3",
+        "champ_spawn_2": "sz_workshop:champ_spawn_2",
+        "champ_head_butt_1": "sz_workshop:champ_head_butt_1",
+        "champ_attack1_1": "sz_workshop:champ_attack1_1",
+        "champ_attack1_2": "sz_workshop:champ_attack1_2",
+        "champ_attack1_3": "sz_workshop:champ_attack1_3",
+        "champ_attack1_4": "sz_workshop:champ_attack1_4",
+        "champ_attack2_1": "sz_workshop:champ_attack2_1",
+        "champ_attack2_2": "sz_workshop:champ_attack2_2",
+        "champ_attack2_3": "sz_workshop:champ_attack2_3",
+        "champ_attack2_4": "sz_workshop:champ_attack2_4"
+      },
+      "sound_effects": {
+        "the_champ_attack1": "sz_workshop.the_champ_attack1",
+        "the_champ_attack2": "sz_workshop.the_champ_attack2",
+        "the_champ_body_punch": "sz_workshop.the_champ_body_punch",
+        "the_champ_death": "sz_workshop.the_champ_death",
+        "the_champ_player_punch": "sz_workshop.the_champ_player_punch",
+        "the_champ_player_throw": "sz_workshop.the_champ_player_throw",
+        "the_champ_spawn": "sz_workshop.the_champ_spawn",
+        "the_champ_walk": "sz_workshop.the_champ_walk"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.knarfy_boss.target_test": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {"awake": "!query.is_stunned"},
+            {"asleep": "query.is_stunned"}
+          ]
+        },
+        "asleep": {
+          "transitions": [
+            {"on_awake": "!query.is_stunned"}
+          ]
+        },
+        "on_awake": {
+          "on_entry": ["v.awake_time = q.life_time;"],
+          "transitions": [
+            {"awake": "q.life_time - v.awake_time >= 3.25"}
+          ]
+        },
+        "awake": {
+          "on_entry": ["@s event:set_awake"],
+          "transitions": [
+            {"default": "(0.0)"}
+          ]
+        },
+        "try_sleep": {
+          "on_entry": ["v.sleep_time = q.life_time;"],
+          "transitions": [
+            {"set_asleep": "q.life_time - v.sleep_time >= 5.0"}
+          ]
+        },
+        "set_asleep": {
+          "on_entry": ["@s event:set_asleep"],
+          "transitions": [
+            {"default": "(1.0)"}
+          ]
+        }
+      }
+    },
+    "controller.animation.boss_expansion.knarfy_boss.health_test": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {"health05": "query.health / query.max_health <= 0.5"},
+            {"health01": "query.health / query.max_health <= 0.1"}
+          ]
+        },
+        "health05": {
+          "on_entry": [
+            "@s event:health_05_state"
+          ],
+          "transitions": [
+            {"default": "query.health / query.max_health > 0.5"},
+            {"health01": "query.health / query.max_health <= 0.1"}
+          ]
+        },
+        "health01": {
+          "on_entry": [
+            "@s event:health_01_state"
+          ],
+          "transitions": [
+            {"default": "query.health / query.max_health > 0.5"},
+            {"health05": "query.health / query.max_health > 0.1"}
+          ]
+        }
+      }
+    }
+  }
+}

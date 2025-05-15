@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.boss_entity.combat": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {"attack": "query.is_casting"}
+          ]
+        },
+        "attack": {
+          "on_entry": ["@s event:try_active_ability"],
+          "transitions": [
+            {"active": "query.variant > 0"},
+            {"default": "!query.is_casting"}
+          ]
+        },
+        "active": {
+          "on_entry": ["@s event:on_active_ability"],
+          "transitions": [
+            {"default": "query.variant == 0"}
+          ]
+        }
+      }
+    }
+  }
+}

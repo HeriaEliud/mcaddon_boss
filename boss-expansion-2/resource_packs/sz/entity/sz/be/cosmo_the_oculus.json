@@ -1,0 +1,93 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.cosmo_the_oculus.root",
+        "facing_target": "animation.boss_expansion.cosmo_the_oculus.facing_target",
+        "sound": "animation.boss_expansion.cosmo_the_oculus.sound",
+        "idle": "animation.boss_expansion.cosmo_the_oculus.idle",
+        "walk": "animation.boss_expansion.cosmo_the_oculus.walk",
+        "recovery": "animation.boss_expansion.cosmo_the_oculus.recovery",
+        "basic_attack1": "animation.boss_expansion.cosmo_the_oculus.basic_attack1",
+        "basic_attack2": "animation.boss_expansion.cosmo_the_oculus.basic_attack2",
+        "ray_attack": "animation.boss_expansion.cosmo_the_oculus.ray_attack",
+        "light_attack": "animation.boss_expansion.cosmo_the_oculus.light_attack",
+        "ray_attack2": "animation.boss_expansion.cosmo_the_oculus.ray_attack2",
+        "crystal_attack": "animation.boss_expansion.cosmo_the_oculus.crystal_attack",
+        "rage_attack": "animation.boss_expansion.cosmo_the_oculus.rage_attack"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.cosmo_the_oculus"
+      },
+      "identifier": "sz_workshop:cosmo_the_oculus",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.health_rate = query.health / query.max_health;"
+        ],
+        "animate": [
+          "facing_target",
+          "root",
+          "sound"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:cosmo_the_oculus_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/cosmo_the_oculus"
+      },
+      "particle_effects": {
+        "cosmo_the_oculus_basic_attack1_01": "sz_workshop:cosmo_the_oculus_basic_attack1_01",
+        "cosmo_the_oculus_basic_attack1_02": "sz_workshop:cosmo_the_oculus_basic_attack1_02",
+        "cosmo_the_oculus_basic_attack1_03": "sz_workshop:cosmo_the_oculus_basic_attack1_03",
+        "cosmo_the_oculus_basic_attack1_04": "sz_workshop:cosmo_the_oculus_basic_attack1_04",
+        "cosmo_the_oculus_basic_attack1_05": "sz_workshop:cosmo_the_oculus_basic_attack1_05",
+        "cosmo_the_oculus_basic_attack1_06": "sz_workshop:cosmo_the_oculus_basic_attack1_06",
+        "cosmo_the_oculus_idle_01": "sz_workshop:cosmo_the_oculus_idle_01",
+        "cosmo_the_oculus_idle_02": "sz_workshop:cosmo_the_oculus_idle_02",
+        "cosmo_the_oculus_crystal_attack_02": "sz_workshop:cosmo_the_oculus_crystal_attack_02",
+        "cosmo_the_oculus_crystal_attack_01": "sz_workshop:cosmo_the_oculus_crystal_attack_01",
+        "cosmo_the_oculus_light_attack_02": "sz_workshop:cosmo_the_oculus_light_attack_02",
+        "cosmo_the_oculus_light_attack_03": "sz_workshop:cosmo_the_oculus_light_attack_03",
+        "cosmo_the_oculus_light_attack_01": "sz_workshop:cosmo_the_oculus_light_attack_01",
+        "cosmo_the_oculus_basic_attack2_05": "sz_workshop:cosmo_the_oculus_basic_attack2_05",
+        "cosmo_the_oculus_ray_attack_01": "sz_workshop:cosmo_the_oculus_ray_attack_01",
+        "cosmo_the_oculus_ray_attack_02": "sz_workshop:cosmo_the_oculus_ray_attack_02",
+        "cosmo_the_oculus_ray_attack_03": "sz_workshop:cosmo_the_oculus_ray_attack_03",
+        "cosmo_the_oculus_basic_attack2_01": "sz_workshop:cosmo_the_oculus_basic_attack2_01",
+        "cosmo_the_oculus_basic_attack2_03": "sz_workshop:cosmo_the_oculus_basic_attack2_03",
+        "cosmo_the_oculus_basic_attack2_02": "sz_workshop:cosmo_the_oculus_basic_attack2_02",
+        "cosmo_the_oculus_ray_attack2_01": "sz_workshop:cosmo_the_oculus_ray_attack2_01",
+        "cosmo_the_oculus_rage_attack_06": "sz_workshop:cosmo_the_oculus_rage_attack_06",
+        "cosmo_the_oculus_ray_attack2_03": "sz_workshop:cosmo_the_oculus_ray_attack2_03",
+        "cosmo_the_oculus_ray_attack2_02": "sz_workshop:cosmo_the_oculus_ray_attack2_02",
+        "cosmo_the_oculus_basic_attack2_04": "sz_workshop:cosmo_the_oculus_basic_attack2_04",
+        "cosmo_the_oculus_rage_attack_07": "sz_workshop:cosmo_the_oculus_rage_attack_07",
+        "cosmo_the_oculus_rage_attack_04": "sz_workshop:cosmo_the_oculus_rage_attack_04",
+        "cosmo_the_oculus_rage_attack_05": "sz_workshop:cosmo_the_oculus_rage_attack_05",
+        "cosmo_the_oculus_rage_attack_02": "sz_workshop:cosmo_the_oculus_rage_attack_02",
+        "cosmo_the_oculus_rage_attack_03": "sz_workshop:cosmo_the_oculus_rage_attack_03",
+        "cosmo_the_oculus_rage_attack_01": "sz_workshop:cosmo_the_oculus_rage_attack_01",
+        "cosmo_the_oculus_recovery_01": "sz_workshop:cosmo_the_oculus_recovery_01"
+      },
+      "sound_effects": {
+        "cosmo_the_oculus_basic_attack1": "sz_workshop.cosmo_the_oculus_basic_attack1",
+        "cosmo_the_oculus_basic_attack2": "sz_workshop.cosmo_the_oculus_basic_attack2",
+        "cosmo_the_oculus_crystal_attack": "sz_workshop.cosmo_the_oculus_crystal_attack",
+        "cosmo_the_oculus_light_attack": "sz_workshop.cosmo_the_oculus_light_attack",
+        "cosmo_the_oculus_rage_attack": "sz_workshop.cosmo_the_oculus_rage_attack",
+        "cosmo_the_oculus_ray_attack": "sz_workshop.cosmo_the_oculus_ray_attack",
+        "cosmo_the_oculus_ray_attack2": "sz_workshop.cosmo_the_oculus_ray_attack2",
+        "cosmo_the_oculus_recovery": "sz_workshop.cosmo_the_oculus_recovery",
+        "cosmo_the_oculus_walk": "sz_workshop.cosmo_the_oculus_walk"
+      }
+    }
+  }
+}

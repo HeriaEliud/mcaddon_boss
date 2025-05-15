@@ -1,0 +1,111 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.sz_workshop.the_pharoah_box.the_pharoah.shield": {
+      "loop": true,
+      "timeline": {
+        "0.0": [
+          "/tag @s remove has_mummy",
+          "/execute if entity @e[type=sz_workshop:mummy,r=16] run tag @s add has_mummy",
+          "/execute if entity @s[tag=has_mummy] run effect @s resistance 2 255 false",
+          "/execute if entity @s[tag=has_mummy] run particle sz_workshop:pharoah_shield_01 ~~~",
+          "/execute if entity @s[tag=has_mummy] run particle sz_workshop:pharoah_shield_02 ~~~",
+          "/execute if entity @s[tag=has_mummy] run particle sz_workshop:pharoah_shield_03 ~~~",
+          "/execute if entity @s[tag=has_mummy] run particle sz_workshop:pharoah_shield_04 ~~~"
+        ]
+      },
+      "animation_length": 1.5
+    },
+    "animation.sz_workshop.the_pharoah_box.spawnn_entity": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:pharoah_clouds_01 ~~~"
+        ],
+        "3.0": [
+          "/summon sz_workshop:mummy ~5 ~1 ~5",
+          "/summon sz_workshop:mummy ~5 ~1 ~5",
+          "/summon sz_workshop:mummy ~5 ~1 ~5",
+          "/summon sz_workshop:mummy ~-5 ~1 ~5",
+          "/summon sz_workshop:mummy ~-5 ~1 ~5",
+          "/summon sz_workshop:mummy ~-5 ~1 ~-5",
+          "/summon sz_workshop:mummy ~-5 ~1 ~-5",
+          "/summon sz_workshop:mummy ~5 ~1 ~-5",
+          "/summon sz_workshop:mummy ~5 ~1 ~-5",
+          "/summon sz_workshop:mummy ~5 ~1 ~-5"
+        ]
+      },
+      "animation_length": 3.5
+    },
+    "animation.sz_workshop.pjd_pharoah_atk1.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": ["/playsound sz_workshop.the_pharoah_basic_attack1 @a[r=20]"]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_pharoah_atk1.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:pharoah_basic_attack1_hit_01 ~ ~ ~",
+          "/particle sz_workshop:pharoah_basic_attack1_hit_02 ~ ~ ~",
+          "/particle sz_workshop:pharoah_basic_attack1_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_pharoah_atk2.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": ["/playsound sz_workshop.the_pharoah_basic_attack2 @a[r=20]"]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_pharoah_atk2.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:pharoah_basic_attack2_hit_01 ~ ~ ~",
+          "/particle sz_workshop:pharoah_basic_attack2_hit_02 ~ ~ ~",
+          "/particle sz_workshop:pharoah_basic_attack2_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_pharoah_sk2.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": ["/playsound sz_workshop.the_pharoah_sand_dust_strike @a[r=20]"]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_pharoah_sk2.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:pharoah_sand_dust_strike_hit_01 ~ ~ ~",
+          "/particle sz_workshop:pharoah_sand_dust_strike_hit_02 ~ ~ ~",
+          "/particle sz_workshop:pharoah_sand_dust_strike_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_pharoah_sk3.loop": {
+      "loop": true,
+      "timeline": {
+        "0.0": [
+          // CHANGE: - 沙尘风暴（Dust Storm） - 设置时间减少至 4 秒。攻击范围增加至 8 格半径。
+          // "/damage @a[r=6] 6 entity_attack",
+          // "/effect @a[r=6] slowness 6 0",
+          "/damage @a[r=8] 6 entity_attack",
+          "/effect @a[r=8] slowness 6 0"
+        ]
+      },
+      "animation_length": 1
+    }
+  }
+}

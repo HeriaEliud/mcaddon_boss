@@ -1,0 +1,101 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.fire_boss.fire_arrow": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "volcano_boss_summon_1",
+            "locator": "locator"
+          },
+          {
+            "effect": "volcano_boss_summon_2",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.pixelmind.fire_boss.cursed_energy": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "fire_boss_cursed_energy_1",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_2",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_3",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_4",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_5",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_6",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_7",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_8",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_9",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_10",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_11",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_12",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_13",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_14",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_15",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_16",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_17",
+            "locator": "locator"
+          },
+          {
+            "effect": "fire_boss_cursed_energy_18",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

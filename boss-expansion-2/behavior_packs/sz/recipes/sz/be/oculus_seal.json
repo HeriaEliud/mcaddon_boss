@@ -1,0 +1,25 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_oculus_seal"
+    },
+    "key": {
+      "1": {"item": "minecraft:lapis_lazuli"},
+      "2": {"item": "minecraft:amethyst_shard"},
+      "3": {"item": "minecraft:ender_pearl"}
+    },
+    "pattern": [
+      "121",
+      "232",
+      "121"
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:oculus_seal"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

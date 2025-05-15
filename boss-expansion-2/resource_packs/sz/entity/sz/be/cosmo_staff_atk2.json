@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:cosmo_staff_atk2",
+      "animations": {
+        "root": "animation.boss_expansion.detector.cosmo_staff.attack2"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.projectile_general"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "textures": {
+        "default": "textures/items/apple"
+      },
+      "particle_effects": {
+        "cosmo_the_oculus_basic_attack1_06": "sz_workshop:cosmo_the_oculus_basic_attack1_06"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.sz_workshop_book": {
+      "geometry": "Geometry.default",
+      "textures": ["Array.skins[q.property('sz_workshop:book_page') - 1]"],
+      "materials": [{"*": "Material.default"}],
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.page1",
+            "Texture.page2",
+            "Texture.page3",
+            "Texture.page4",
+            "Texture.page5",
+            "Texture.page6",
+            "Texture.page7",
+            "Texture.page8",
+            "Texture.page9"
+          ]
+        }
+      }
+    }
+  }
+}

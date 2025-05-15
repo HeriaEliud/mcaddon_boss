@@ -1,0 +1,97 @@
+### Pack name
+pack.name=Epic Boss
+pack.description=Adds resource elements to the Epic Boss experience!
+
+### Actions
+action.hint.exit.sz_workshop:the_champ=Press jump repeatedly to break free!
+sz_workshop.book.button=Next Page
+sz_workshop.book.button_last=Last Page  
+
+text.friendly_arcane_axolotl.follow=Friendly Arcane Axolotl is following you!
+text.friendly_arcane_axolotl.stroll=Friendly Arcane Axolotl will stroll around.
+sz_workshop.follow.button=Follow
+sz_workshop.stroll.button=Stroll
+
+### Entity names
+entity.sz_workshop:cosmo_staff_atk2.name=Ability
+entity.sz_workshop:det_arcane_axolotl_sk5.name=Ability
+entity.sz_workshop:det_cosmo_the_oculus_sk5.name=Ability
+entity.sz_workshop:det_emit_the_kraken_blind.name=Ability
+entity.sz_workshop:det_pharoah_sk3.name=Ability
+### entity.sz_workshop:the_pharoah_box.name=Ability
+entity.sz_workshop:icon_projectile.name=Structure Projectile
+entity.sz_workshop:pjd_arcane_axolotl_atk1.name=Ability Projectile
+entity.sz_workshop:pjd_arcane_axolotl_atk2.name=Ability Projectile
+entity.sz_workshop:pjd_arcane_axolotl_sk1.name=Ability Projectile
+entity.sz_workshop:pjd_cosmo_the_oculus_atk2.name=Ability Projectile
+entity.sz_workshop:pjd_cosmo_the_oculus_sk2.name=Ability Projectile
+entity.sz_workshop:pjd_cosmo_the_oculus_sk3.name=Ability Projectile
+entity.sz_workshop:pjd_cosmo_the_oculus_sk4.name=Ability Projectile
+entity.sz_workshop:pjd_emit_the_kraken_atk2.name=Ability Projectile
+entity.sz_workshop:pjd_emit_the_kraken_sk5.name=Ability Projectile
+entity.sz_workshop:pjd_pharoah_atk1.name=Ability Projectile
+entity.sz_workshop:pjd_pharoah_atk2.name=Ability Projectile
+entity.sz_workshop:pjd_pharoah_sk2.name=Ability Projectile
+
+### Item names
+entity.sz_workshop:water_sword_man.name=Water Swordman
+entity.sz_workshop:water_spearman.name=Water Spearman
+entity.sz_workshop:water_archer.name=Water Archer
+entity.sz_workshop:friendly_arcane_axolotl.name=Friendly Arcane Axolotl
+entity.sz_workshop:mummy.name=Mummy
+entity.sz_workshop:kratiny.name=Kratiny
+entity.sz_workshop:knarfy_boss.name=Knarfy Boss
+entity.sz_workshop:arcane_axolotl.name=Arcane Axolotl
+entity.sz_workshop:cosmo_the_oculus.name=Cosmo The Oculus
+entity.sz_workshop:the_pharoah.name=The Pharoah
+entity.sz_workshop:emit_the_kraken.name=Emit The Kraken
+entity.sz_workshop:the_champ.name=The Champ
+entity.sz_workshop:the_pharoah_box.name=The Pharoah Box
+item.sz_workshop:guide_book=Guide Book
+item.sz_workshop:cave_seal=Cave Seal
+item.sz_workshop:temple_seal=Temple Seal
+item.sz_workshop:tomb_seal=Tomb Seal
+item.sz_workshop:arcane_crystal=Arcane Crystal
+item.sz_workshop:arcane_staff=Arcane Staff
+item.sz_workshop:champion_ticket=Champion Ticket
+item.sz_workshop:champion_belt_helmet=Champion's Belt Helmet
+item.sz_workshop:champion_belt_chestplate=Champion's Belt Chestplate
+item.sz_workshop:cosmo_staff=Cosmo Staff
+item.sz_workshop:emit_plate_helmet=Emit Plate Helmet
+item.sz_workshop:emit_plate_chestplate=Emit Plate Chestplate
+item.sz_workshop:emit_plate_leggings=Emit Plate Leggings
+item.sz_workshop:emit_plate_boots=Emit Plate Boot
+item.sz_workshop:fur_coat_armor_helmet=Fur Coat Armor Helmet
+item.sz_workshop:fur_coat_armor_chestplate=Fur Coat Armor Chestplate
+item.sz_workshop:fur_coat_armor_leggings=Fur Coat Armor Leggings
+item.sz_workshop:fur_coat_armor_boots=Fur Coat Armor Boot
+item.sz_workshop:knarfy_claw=Knarfy Claw
+item.sz_workshop:knarfy_totem=Knarfy Totem
+item.sz_workshop:kraken_sword=Kraken Sword
+item.sz_workshop:magical_robe_helmet=Magical Robe Helmet
+item.sz_workshop:magical_robe_chestplate=Magical Robe Chestplate
+item.sz_workshop:magical_robe_leggings=Magical Robe Leggings
+item.sz_workshop:magical_robe_boots=Magical Robe Boot
+item.sz_workshop:oculus_seal=Oculus Seal
+item.sz_workshop:pharoah_seal=Pharaoh Seal
+item.sz_workshop:pharoah_coffin=Coffin
+item.sz_workshop:tidal_totem=Tidal Totem
+item.sz_workshop:verdant_plate_helmet=Verdant Plate Helmet
+item.sz_workshop:verdant_plate_chestplate=Verdant Plate Chestplate
+item.sz_workshop:verdant_plate_leggings=Verdant Plate Leggings
+item.sz_workshop:verdant_plate_boots=Verdant Plate Boot
+
+### Item Spawn Egg
+item.spawn_egg.entity.sz_workshop:water_sword_man.name=Water Swordman Spawn Egg
+item.spawn_egg.entity.sz_workshop:water_spearman.name=Water Spearman Spawn Egg
+item.spawn_egg.entity.sz_workshop:water_archer.name=Water Archer Spawn Egg
+item.spawn_egg.entity.sz_workshop:friendly_arcane_axolotl.name=Friendly Arcane Axolotl Spawn Egg
+item.spawn_egg.entity.sz_workshop:mummy.name=Mummy Spawn Egg
+item.spawn_egg.entity.sz_workshop:kratiny.name=Kratiny Spawn Egg
+item.spawn_egg.entity.sz_workshop:knarfy_boss.name=Knarfy Boss Spawn Egg
+item.spawn_egg.entity.sz_workshop:arcane_axolotl.name=Arcane Axolotl Spawn Egg
+item.spawn_egg.entity.sz_workshop:cosmo_the_oculus.name=Cosmo The Oculus Spawn Egg
+item.spawn_egg.entity.sz_workshop:the_pharoah.name=The Pharaoh Spawn Egg
+item.spawn_egg.entity.sz_workshop:emit_the_kraken.name=Emit The Kraken Spawn Egg
+item.spawn_egg.entity.sz_workshop:the_champ.name=The Champ Spawn Egg
+item.spawn_egg.entity.sz_workshop:the_pharoah_box.name=The Pharoah Box Spawn Egg

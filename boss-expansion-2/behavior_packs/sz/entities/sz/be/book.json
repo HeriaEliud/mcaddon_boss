@@ -1,0 +1,480 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:book",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "properties": {
+        "sz_workshop:book_page": {
+					"type": "int",
+					"range": [ 1, 9 ],
+					"default": 1,
+					"client_sync": true
+				}
+      }
+    },
+    "component_groups": {
+      "spawn": {
+        "minecraft:is_stunned": {},
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "deals_damage": false
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "time": [
+            0.7,
+            0.7
+          ],
+          "looping": true,
+          "time_down_event": {
+            "event": "default",
+            "target": "self"
+          }
+        }
+      },
+      "default": {
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "on_damage": {
+                "event": "close"
+              },
+              "deals_damage": false
+            }
+          ]
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_component",
+                      "operator": "!=",
+                      "value": "minecraft:is_sheared"
+                    },
+                    {
+                      "test": "is_sneaking",
+                      "subject": "other",
+                      "value": false
+                    }
+                  ]
+                  
+                },
+                "event": "next"
+              },
+              "swing": true,
+              "interact_text": "sz_workshop.book.button"
+            },
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_component",
+                      "operator": "!=",
+                      "value": "minecraft:is_sheared"
+                    },
+                    {
+                      "test": "is_sneaking",
+                      "subject": "other",
+                      "value": true
+                    }
+                  ]
+                  
+                },
+                "event": "last"
+              },
+              "swing": true,
+              "interact_text": "sz_workshop.book.button_last"
+            }
+          ]
+        }
+      },
+      "close": {
+        "minecraft:is_charged": {},
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "deals_damage": false
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "time": [
+            0.5,
+            0.5
+          ],
+          "looping": true,
+          "time_down_event": {
+            "event": "despawn",
+            "target": "self"
+          }
+        }
+      },
+      "page_1": {
+        "minecraft:skin_id": {
+          "value": 1
+        }
+      },
+      "page_2": {
+        "minecraft:skin_id": {
+          "value": 2
+        }
+      },
+      "page_3": {
+        "minecraft:skin_id": {
+          "value": 3
+        }
+      },
+      "page_4": {
+        "minecraft:skin_id": {
+          "value": 4
+        }
+      },
+      "page_5": {
+        "minecraft:skin_id": {
+          "value": 5
+        }
+      },
+      "page_6": {
+        "minecraft:skin_id": {
+          "value": 6
+        }
+      },
+      "page_7": {
+        "minecraft:skin_id": {
+          "value": 7
+        }
+      },
+      "page_8": {
+        "minecraft:skin_id": {
+          "value": 8
+        }
+      },
+      "page_9": {
+        "minecraft:skin_id": {
+          "value": 9
+        }
+      },
+      "next": {
+        "minecraft:is_sheared": {},
+        "minecraft:timer": {
+          "time": [
+            1,
+            1
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "page_up",
+            "target": "self"
+          }
+        }
+      },
+      "last": {
+        "minecraft:is_sheared": {},
+        "minecraft:timer": {
+          "time": [
+            1,
+            1
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "page_down",
+            "target": "self"
+          }
+        }
+      },
+      "despawn": {
+        "minecraft:equipment": {"table": "loot_tables/sz/be/guide_book.json"},
+        "minecraft:transformation": {"into": "sz_workshop:void", "delay": {"value": 0.01}, "drop_equipment": true},
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:scale": {
+        "value": 0.8
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "height": 2,
+            "width": 2,
+            "pivot": [
+              0,
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 100
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "page_1",
+            "spawn"
+          ]
+        }
+      },
+      "spawn": {
+        "add": {
+          "component_groups": [
+            "spawn"
+          ]
+        }
+      },
+      "default": {
+        "remove": {
+          "component_groups": [
+            "spawn"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "default"
+          ]
+        }
+      },
+      "close": {
+        "remove": {
+          "component_groups": [
+            "default"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "close"
+          ]
+        }
+      },
+      "last": {
+        // "queue_command": {
+        //   "command":[
+        //     "say last"
+        //   ]
+        // },
+        "add": {
+          "component_groups": [
+            "last"
+          ]
+        }
+      },
+      "next": {
+        // "queue_command": {
+        //   "command":[
+        //     "say next"
+        //   ]
+        // },
+        "add": {
+          "component_groups": [
+            "next"
+          ]
+        }
+      },
+      "page_up": {
+        "sequence": [
+          {
+            // "queue_command": {
+            //   "command":[
+            //     "say page up"
+            //   ]
+            // },
+            "set_property": { "sz_workshop:book_page": "q.property('sz_workshop:book_page') == 9 ? 1 : (q.property('sz_workshop:book_page') + 1)" },
+            "remove": {
+              "component_groups": [
+                "next"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "default"
+              ]
+            }
+          }
+        ]
+      },
+      "page_down":{
+        "sequence": [
+          {
+            // "queue_command": {
+            //   "command":[
+            //     "say page down"
+            //   ]
+            // },
+            "set_property": { "sz_workshop:book_page": "q.property('sz_workshop:book_page') == 1 ? 9 : (q.property('sz_workshop:book_page') - 1)" },
+            "remove": {
+              "component_groups": [
+                "last"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "default"
+              ]
+            }
+          }
+        ]
+      },
+      "changed": {
+        "sequence": [
+          {
+            "filters": [
+              {
+                "all_of":[
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "value": 1
+                  },
+                  {
+                    "test": "is_sneaking",
+                    "subject": "other",
+                    "value": false
+                  }
+                ]
+              }
+            ],
+            "add": {
+              "component_groups": [
+                "page_2"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 2
+            },
+            "add": {
+              "component_groups": [
+                "page_3"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 3
+            },
+            "add": {
+              "component_groups": [
+                "page_4"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 4
+            },
+            "add": {
+              "component_groups": [
+                "page_5"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 5
+            },
+            "add": {
+              "component_groups": [
+                "page_6"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 6
+            },
+            "add": {
+              "component_groups": [
+                "page_7"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 7
+            },
+            "add": {
+              "component_groups": [
+                "page_8"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 8
+            },
+            "add": {
+              "component_groups": [
+                "page_9"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_skin_id",
+              "subject": "self",
+              "value": 9
+            },
+            "add": {
+              "component_groups": [
+                "page_1"
+              ]
+            }
+          },
+          {
+            "remove": {
+              "component_groups": [
+                "next"
+              ]
+            }
+          }
+        ]
+      },
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    }
+  }
+}

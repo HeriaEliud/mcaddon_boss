@@ -1,0 +1,80 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sea_boss_deep_sea_frenzy": {
+			"animation_length": 3,
+			"bones": {
+				"fx3": {
+					"position": [0, 0, -400]
+				},
+				"fx2": {
+					"position": [0, 0, -200]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "sea_boss_deep_sea_frenzy_8"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_9"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_10"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_11"
+					}
+				],
+				"0.25": [
+					{
+						"effect": "sea_boss_deep_sea_frenzy_8",
+						"locator": "fx2"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_9",
+						"locator": "fx2"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_10",
+						"locator": "fx2"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_11",
+						"locator": "fx2"
+					}
+				],
+				"0.5": [
+					{
+						"effect": "sea_boss_deep_sea_frenzy_1",
+						"locator": "fx3"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_2",
+						"locator": "fx3"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_3",
+						"locator": "fx3"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_4",
+						"locator": "fx3"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_5",
+						"locator": "fx3"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_6",
+						"locator": "fx3"
+					},
+					{
+						"effect": "sea_boss_deep_sea_frenzy_7",
+						"locator": "fx3"
+					}
+				]
+			}
+		}
+	}
+}

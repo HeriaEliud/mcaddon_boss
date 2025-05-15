@@ -1,0 +1,77 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "components": {
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 4.5
+      },
+      "minecraft:emitter_local_space": {
+        "position": true,
+        "rotation": true,
+        "velocity": true
+      },
+      "minecraft:emitter_rate_steady": {
+        "max_particles": 100,
+        "spawn_rate": 25
+      },
+      "minecraft:emitter_shape_sphere": {
+        "direction": "outwards",
+        "radius": 0.2
+      },
+      "minecraft:particle_appearance_billboard": {
+        "facing_camera_mode": "rotate_xyz",
+        "size": [
+          "1*variable.particle_random_1*variable.size1",
+          "1*variable.particle_random_1*variable.size1"
+        ],
+        "uv": {
+          "texture_height": 9,
+          "texture_width": 9,
+          "uv": [
+            0,
+            0
+          ],
+          "uv_size": [
+            9,
+            9
+          ]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [
+          0.39608,
+          0.7098,
+          1,
+          1
+        ]
+      },
+      "minecraft:particle_initial_speed": 0,
+      "minecraft:particle_initial_spin": {
+        "rotation": "math.random(0,360)"
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "math.random(0.3,0.5)"
+      },
+      "minecraft:particle_motion_dynamic": {}
+    },
+    "curves": {
+      "variable.size1": {
+        "horizontal_range": "v.particle_lifetime",
+        "input": "v.particle_age",
+        "nodes": [
+          1,
+          1,
+          0
+        ],
+        "type": "linear"
+      }
+    },
+    "description": {
+      "basic_render_parameters": {
+        "material": "particles_add",
+        "texture": "textures/sz/be/particle/arcane_water_missile_02"
+      },
+      "identifier": "sz_workshop:arcane_water_missile_02"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.recipe_book.flip_forward": {
+			"animation_length": 0.3,
+			"bones": {
+				"page0": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 180, 0]
+					}
+				},
+				"page1": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [0, -45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 0, 0]
+					}
+				},
+				"page2": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 180, 0]
+					}
+				},
+				"page3": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [0, -45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.recipe_book.flip_backward": {
+			"animation_length": 0.3,
+			"bones": {
+				"page0": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 180, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 0, 0]
+					}
+				},
+				"page1": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [0, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 0, 0]
+					}
+				},
+				"page2": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 180, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 0, 0]
+					}
+				},
+				"page3": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.15": {
+							"post": [0, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.recipe_book.first_person": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"book_fp": {
+					"rotation": [0, 180, 0],
+					"position": [0, -24, 84],
+					"scale": 5.5
+				},
+				"book_tp": {
+					"scale": 0
+				},
+				"root_guide_book": {
+					"rotation": [0, 180, 0],
+					"position": [0, 22, 0]
+				},
+				"book_root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, 360, 0]
+					}
+				}
+			}
+		},
+		"animation.recipe_book.third_person": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"book_fp": {
+					"scale": 0
+				},
+				"book_tp": {
+					"rotation": [80, 0, 0],
+					"scale": 0.5
+				}
+			}
+		},
+		"animation.recipe_book.new": {
+			"loop": true
+		},
+		"animation.recipe_book.first_person_mission": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"book_fp": {
+					"scale": 0
+				},
+				"book_tp": {
+					"rotation": [0, 32.5, 0],
+					"position": [0, -8, 0],
+					"scale": 1
+				}
+			}
+		}
+	}
+}

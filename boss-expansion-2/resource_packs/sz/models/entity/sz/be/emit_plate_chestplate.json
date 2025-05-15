@@ -1,0 +1,46 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.boss_expansion.emit_plate_chestplate",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-1.5, 17.5, -3.5], "size": [3, 5, 3], "inflate": 0.02, "uv": [11, 60]},
+						{"origin": [-4.5, 11.5, -2.5], "size": [9, 13, 5], "inflate": 0.02, "uv": [0, 41]},
+						{"origin": [-5, 16.5, -3], "size": [10, 8, 6], "inflate": 0.02, "uv": [33, 14]}
+					]
+				},
+				{
+					"name": "LeftArm",
+					"pivot": [5, 22, 0],
+					"cubes": [
+						{"origin": [3.5, 20.5, -3], "size": [5.5, 4.5, 6], "uv": [21, 63]},
+						{"origin": [3.5, 11.5, -2.5], "size": [5, 13, 5], "uv": [49, 59]},
+						{"origin": [3.5, 10.5, -2.5], "size": [5, 3, 7], "inflate": 0.2, "uv": [104, 0]},
+						{"origin": [3.5, 11.5, 2.5], "size": [5, 7, 2], "uv": [0, 79]}
+					]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{"origin": [-9, 20.5, -3], "size": [5.5, 4.5, 6], "uv": [21, 63], "mirror": true},
+						{"origin": [-8.5, 11.5, -2.5], "size": [5, 13, 5], "uv": [49, 59], "mirror": true},
+						{"origin": [-8.5, 10.5, -2.5], "size": [5, 3, 7], "inflate": 0.2, "uv": [104, 0], "mirror": true},
+						{"origin": [-8.5, 11.5, 2.5], "size": [5, 7, 2], "uv": [0, 79], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

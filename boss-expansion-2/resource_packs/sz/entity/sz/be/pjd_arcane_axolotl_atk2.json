@@ -1,0 +1,32 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:pjd_arcane_axolotl_atk2",
+      "animations": {
+        "root": "animation.boss_expansion.projectile.arcane_axolotl.attack2"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.projectile_general"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "textures": {
+        "default": "textures/items/apple"
+      },
+      "particle_effects": {
+        "arcane_water_explosion_bullet_01": "sz_workshop:arcane_water_explosion_bullet_01",
+        "arcane_water_explosion_bullet_02": "sz_workshop:arcane_water_explosion_bullet_02"
+      }
+    }
+  }
+}

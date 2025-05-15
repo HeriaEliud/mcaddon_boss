@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pixelmind.magical_falling_boulder": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.6667,
+			"bones": {
+				"bone": {
+					"position": {
+						"0.0": [0, 400, 0],
+						"0.25": [0, 0, 0],
+						"0.75": [0, 0, 0],
+						"1.0": [0, -94, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.25": {
+					"effect": "player_magical_falling_boulder"
+				}
+			},
+			"particle_effects": {
+				"0.25": [
+					{
+						"effect": "magical_falling_boulder_1"
+					},
+					{
+						"effect": "magical_falling_boulder_2"
+					},
+					{
+						"effect": "magical_falling_boulder_3"
+					},
+					{
+						"effect": "magical_falling_boulder_4"
+					},
+					{
+						"effect": "magical_falling_boulder_5"
+					}
+				]
+			}
+		}
+	}
+}

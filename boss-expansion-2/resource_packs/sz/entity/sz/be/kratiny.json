@@ -1,0 +1,35 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.kratiny.root",
+        "spawn": "animation.boss_expansion.kratiny.spawn",
+        "idle": "animation.boss_expansion.kratiny.idle",
+        "attack": "animation.boss_expansion.kratiny.attack",
+        "death": "animation.boss_expansion.kratiny.death"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.kratiny"
+      },
+      "identifier": "sz_workshop:kratiny",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:kratiny_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/kratiny"
+      }
+    }
+  }
+}

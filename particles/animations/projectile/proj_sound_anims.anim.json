@@ -1,0 +1,85 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.pixelmind.forest_boss.drop_fly_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "forest_boss_drop_fly"
+        }
+      }
+    },
+    "animation.pixelmind.blood_boss.piercing_water_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "piercing_water_piercing_water"
+        }
+      }
+    },
+    "animation.pixelmind.forest_boss.summon_seed_explosion_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "forest_boss_summon_seed_explosion"
+        }
+      }
+    },
+    "animation.pixelmind.volcano_boss.summon_the_extreme_the_meteor_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "volcano_boss_the_extreme_the_meteor"
+        }
+      }
+    },
+    "animation.pixelmind.wind_boss.wind_blade_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "wind_boss_wind_blade_explosion"
+        }
+      }
+    },
+    "animation.pixelmind.wind_boss.tornado_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "wind_boss_tornado"
+        }
+      }
+    },
+    "animation.pixelmind.player.robot_puppet_attack_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "robot_puppet_attack"
+        }
+      }
+    },
+    "animation.pixelmind.fire_boss.cursed_energy_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "fire_boss_cursed_energy_shoot"
+        }
+      }
+    },
+    "animation.pixelmind.wind_boss.blowing_air_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "wind_boss_piercing_blowing_air_explosion"
+        }
+      }
+    },
+    "animation.pixelmind.fire_boss.fire_bow_loop_sound": {
+      "animation_length": 3,
+      "sound_effects": {
+        "0.0": {
+          "effect": "fire_boss_fire_bow_loop"
+        }
+      }
+    }
+  }
+}

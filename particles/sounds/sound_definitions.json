@@ -1,0 +1,2099 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    //npc
+    "npc.idle1": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/idle1",
+          "stream": true,
+          "volume": 0
+        }
+      ]
+    },
+    "npc.idle2": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/idle2",
+          "stream": true,
+          "volume": 0.5
+        }
+      ]
+    },
+    "npc.idle3": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/idle3",
+          "stream": true,
+          "volume": 0.3
+        }
+      ]
+    },
+
+    //skills
+    "skill.astral_burst": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/astral_burst",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.side_kick": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/side_kick",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.sinister_sanctum": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/sinister_sanctum",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.steel_tomb_1": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/steel_tomb_1",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.steel_tomb_2": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/steel_tomb_2",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.vermilion_control": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/vermilion_control",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.infinity_veil": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/infinity_veil",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.judgement_strike": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/judgement_strike",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.obsidian_flash": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/obsidian_flash",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.phantom_assembly": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/phantom_assembly",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.ratio_technique": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ratio_technique",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.robot_puppet.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/robot_puppet_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.robot_puppet.idle": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/robot_puppet_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.robot_puppet.walk": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/robot_puppet_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.shadow_fusion_sanctuary": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/shadow_fusion_sanctuary",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.unlimited_void": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/unlimited_void",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "skill.perfect_enclosure": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/perfect_enclosure",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    //weapon
+    "weapon.black_machete.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/black_machete_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.black_machete.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/black_machete_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.black_machete.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/black_machete_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.shadow_axe.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/shadow_axe_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.shadow_axe.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/shadow_axe_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.shadow_axe.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/shadow_axe_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.slash_blade.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/slash_blade_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.slash_blade.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/slash_blade_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.slash_blade.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/slash_blade_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.spear_knife.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/spear_knife_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.spear_knife.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/spear_knife_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.spear_knife.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/spear_knife_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.cursed_knife.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/cursed_knife_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.cursed_knife.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/cursed_knife_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.cursed_knife.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/cursed_knife_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.dagger.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/dagger_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.dagger.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/dagger_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.dagger.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/dagger_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.one_handed_knife.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/one-handed_knife_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.one_handed_knife.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/one-handed-knife_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.one_handed_knife.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/one_handed_knife_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    "weapon.pike.attack": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/pike_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.pike.combo": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/pike_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.pike.right_click": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/pike_right_click",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "weapon.pike.right_click_2": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/pike_right_click_2",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+
+    //mob
+    "mob.bird.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/bird_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.bird.fly": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/bird_fly",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.bird.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/bird_idle",
+          "stream": true,
+          "volume": 0.6
+        }
+      ]
+    },
+    "mob.blood_boss.combo": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.piercing_water": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_piercing_water",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.summon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_summon",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.red_water": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_red_water",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/blood_boss_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.ratio_technique": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/ratio_technique",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.vermilion_control": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/vermilion_control",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.blood_boss.obsidian_flash": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/obsidian_flash",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.centipede.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/centipede_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.centipede.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/centipede_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.centipede.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/centipede_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.dragon.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/dragon_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.dragon.roar": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/dragon_roar",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.dragon.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/dragon_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.elephant.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/elephant_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.elephant.spary": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/elephant_spary",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.basic_attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_basic_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.cursed_energy_charge": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_cursed_energy_charge",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.cursed_energy_shoot": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_cursed_energy_shoot",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.cursed_flames": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_cursed_flames",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.cursed_spikes": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_cursed_spikes",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.fire_bow_loop": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_fire_bow_loop",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.fire_bow_shoot": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_fire_bow_shoot",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.fire_boss.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.summon_magic_boss": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_summon_magic_boss",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.summon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_summon",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.world_slash": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_world_slash",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.fire_tornado": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_fire_tornado",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fire_boss.health_regeneration": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fire_boss_health_regeneration",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fly_head.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fly_head_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fly_head.fly": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fly_head_fly",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.fly_head.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fly_head_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.drop_charging": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_drop_charging",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.forest_boss.drop_explosion": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_drop_explosion",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.forest_boss.drop_fly": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_drop_fly",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.fower_pedal_dance_charging": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_fower_pedal_dance_charging",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.forest_boss.fower_pedal_dance_explosion": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_fower_pedal_dance_explosion",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.mass_flowers": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_mass_flowers",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.summon_seed_charge": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_summon_seed_charge",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.summon_seed_explosion": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_summon_seed_explosion",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.forest_boss.summon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_summon",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.forest_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/forest_boss_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.ichthyoxenus.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/ichthyoxenus_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.ichthyoxenus.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/ichthyoxenus_idle",
+          "stream": true,
+          "volume": 0
+        }
+      ]
+    },
+    "mob.ichthyoxenus.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/ichthyoxenus_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.infected.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/infected_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.infected.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/infected_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.infected.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/infected_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.kechizu.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/kechizu_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.kechizu.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/kechizu_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.kechizu.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/kechizu_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.leopard.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/leopard_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.leopard.roar": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/leopard_roar",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.leopard.run": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/leopard_run",
+          "stream": true,
+          "volume": 8
+        }
+      ]
+    },
+    "mob.lizard.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/lizard_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.lizard.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/lizard_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.lizard.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/lizard_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.locust_guy.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/locust_guy_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.locust_guy.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/locust_guy_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.locust_guy.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/locust_guy_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.magic_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/magic_boss_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.magic_boss.grab": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/magic_boss_grab",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.magic_boss.summon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/magic_boss_summon",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.magic_boss.throw": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/magic_boss_throw",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.mutated_boss.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mutated_boss_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.mutated_boss.basic_attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mutated_boss_basic_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.mutated_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mutated_boss_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.mutated_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mutated_boss_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.mutated_boss.regeneration": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mutated_regeneration",
+          "stream": true,
+          "volume": 0.4
+        }
+      ]
+    },
+    "mob.mutated_boss.perfect_enclosure": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/perfect_enclosure",
+          "stream": true,
+          "volume": 0.4
+        }
+      ]
+    },
+    "mob.nine_tailed_fox.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/nine-tailed_fox_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.nine_tailed_fox.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/nine-tailed_fox_idle",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.nine_tailed_fox.run": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/nine-tailed_fox_run",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.rabbit.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/rabbit_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.rabbit.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/rabbit_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.rabbit.run": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/rabbit_run",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.sea_boss.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.sea_boss.dagon_spraying_water": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_dagon_spraying_water",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.sea_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_death",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.sea_boss.deep_sea_frenzy": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_deep_sea_frenzy",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.sea_boss.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.sea_boss.rapids": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_rapids",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.sea_boss.summon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_summon",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.sea_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.sea_boss.water_raid_domain": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_water_raid_domain",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.sea_boss.spell": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/sea_boss_spell",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_attack",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.sting_out": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_sting_out",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.sting_out_emergence": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_sting_out_emergence",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.sting_out_explosion": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_sting_out_explosion",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.basic_attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_basic_attack",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.basic_attack_2": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_basic_attack_2",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_idle",
+          "stream": true,
+          "volume": 0.2
+        }
+      ]
+    },
+    "mob.volcano_boss.summon_the_fire_worms": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_summon_the_fire_worms",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.the_extreme_the_meteor": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_the_extreme_the_meteor",
+          "stream": false,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.volcano_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/volcano_boss_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.basic_attack_1": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_basic_attack1",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.basic_attack_2": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_basic_attack2",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.piercing_blowing_air_charge": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_piercing_blowing_air_charge",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.piercing_blowing_air_explosion": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_piercing_blowing_air_explosion",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.summon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_summon",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.tornado": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_tornado",
+          "stream": true,
+          "volume": 4
+        }
+      ]
+    },
+    "mob.wind_boss.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.wind_blade_charge": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_wind_blade_charge",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wind_boss.wind_blade_explosion": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wind_boss_wind_blade_explosion",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wolf.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wolf_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.wolf.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wolf_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.wolf.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/wolf_idle",
+          "stream": true,
+          "volume": 0.3
+        }
+      ]
+    },
+    "mob.tamamo.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/tamamo_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.tamamo.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/tamamo_idle",
+          "stream": true,
+          "volume": 0.2
+        }
+      ]
+    },
+    "mob.tamamo.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/tamamo_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.snake.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/snake_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.snake.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/snake_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.snake.bite": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/snake_bite",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.smallpox.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/smallpox_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.smallpox.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/smallpox_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.smallpox.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/smallpox_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.slit_woman.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/slit_woman_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.slit_woman.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/slit_woman_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.slit_woman.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/slit_woman_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.suture_monster.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/suture_monster_walk",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.suture_monster.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/suture_monster_idle",
+          "stream": true,
+          "volume": 0.3
+        }
+      ]
+    },
+    "mob.suture_monster.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/suture_monster_attack",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.toad.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/toad_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.toad.jump": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/toad_jump",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.toad.stick_out_tongue": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/toad_stick_out_tongue",
+          "stream": true,
+          "volume": 2
+        }
+      ]
+    },
+    "mob.white_dragon.idle": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_idle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.white_dragon.roar": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_roar",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.white_dragon.death": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_death",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.white_dragon.spawn": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_spawn",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.white_dragon.walk": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_walk",
+          "stream": true,
+          "volume": 3
+        }
+      ]
+    },
+    "mob.white_dragon.rainbow_dragon_charge": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_rainbow_dragon_charge",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "mob.white_dragon.rainbow_dragon_energy_ejection": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/white_dragon_rainbow_dragon_energy_ejection",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_dash_astral": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_dash_astral",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_dash_flashing": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_dash_flashing",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_dash_shadow": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_dash_shadow",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_double_jump": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_double_jump",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_grab": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_grab",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_falling_boulder": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_falling_boulder",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_fire_cannon": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_fire_cannon",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_fishes_strike_2": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_fishes_strike_2",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_fishes_strike": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_fishes_strike",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_flower_petals": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_flower_petals",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_volcano_rain": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_volcano_rain",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_water_laser": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_water_laser",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_water_storm_2": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_water_storm_2",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_magical_water_storm": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_magical_water_storm",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_punch_explosive_touch": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_punch_explosive_touch",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_punch_ground_lacerate": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_punch_ground_lacerate",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_punch_heavy_ground_smash": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_punch_heavy_ground_smash",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_punch_lacerate_combo_2": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_punch_lacerate_combo_2",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "player.player_punch_lacerate_combo": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/player_punch_lacerate_combo",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    }
+  }
+}

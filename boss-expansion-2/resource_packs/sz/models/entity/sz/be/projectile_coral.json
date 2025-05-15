@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.boss_expansion.projectile_coral",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 15,
+				"visible_bounds_height": 16,
+				"visible_bounds_offset": [0, 4, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [-0.18673, -0.00708, -0.08841],
+					"rotation": [0, 0, -90],
+					"cubes": [
+						{"origin": [-1, -5.5, -1.5], "size": [2, 5, 2.5], "pivot": [-0.5, -5.5, -0.5], "rotation": [50, 0, 0], "uv": [16, 18]},
+						{"origin": [-1, 1.5, -1.5], "size": [2, 5, 2.5], "pivot": [-0.5, 1.5, -0.5], "rotation": [-52.5, 0, 0], "uv": [8, 18]},
+						{"origin": [-1.5, -8.5, -1.5], "size": [3, 13, 3], "uv": [0, 0]},
+						{"origin": [-5.65685, 1.53553, -1.5], "size": [3, 7, 3], "inflate": 0.01, "pivot": [-4.15685, 8.03553, 0], "rotation": [0, 0, -45], "uv": [12, 0]},
+						{"origin": [3.05685, 3.28553, -1], "size": [2, 4, 2], "pivot": [3.55685, 9.78553, 0], "rotation": [0, 0, 45], "uv": [20, 10]},
+						{"origin": [4.05685, -3.46447, -1], "size": [2, 6, 2], "pivot": [4.55685, 3.03553, 0], "rotation": [0, 0, 45], "uv": [0, 16]},
+						{"origin": [-6.05685, -6.21447, -1], "size": [2, 6, 2], "pivot": [-4.55685, 0.28553, 0], "rotation": [0, 0, -45], "uv": [12, 10]}
+					]
+				}
+			]
+		}
+	]
+}

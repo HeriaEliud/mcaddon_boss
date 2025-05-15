@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.steel_tomb_summit.first": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "hollow_wicker_basket_1"
+				}
+			}
+		},
+		"animation.steel_tomb_summit.second": {
+			"loop": true,
+			"bones": {
+				"particle": {
+					"position": [0, 662, 0]
+				},
+				"particle2": {
+					"position": [0, 334, -321]
+				},
+				"particle5": {
+					"position": [-301, 350, 0]
+				},
+				"particle4": {
+					"position": [0, 334, 278]
+				},
+				"particle3": {
+					"position": [306, 350, 0]
+				},
+				"particle6": {
+					"position": [0, 6, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "hollow_wicker_basket_black_wall_x_p",
+						"locator": "locator2"
+					},
+					{
+						"effect": "hollow_wicker_basket_black_wall_y_p",
+						"locator": "locator3"
+					},
+					{
+						"effect": "hollow_wicker_basket_black_wall_x_p",
+						"locator": "locator4"
+					},
+					{
+						"effect": "hollow_wicker_basket_black_floor_p",
+						"locator": "locator"
+					},
+					{
+						"effect": "hollow_wicker_basket_black_floor_p",
+						"locator": "locator6"
+					},
+					{
+						"effect": "hollow_wicker_basket_black_wall_y_p",
+						"locator": "locator5"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.sz_workshop.pjd_cosmo_the_oculus_atk2.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": []
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_atk2.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:cosmo_the_oculus_hit_01 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_02 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk2.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": []
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk2.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:cosmo_the_oculus_hit_01 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_02 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk3.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": []
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk3.on_explode": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "@s event:set_explode"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk3.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:cosmo_the_oculus_hit_01 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_02 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk4.launch": {
+      "loop": false,
+      "timeline": {
+        "0.0": []
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.pjd_cosmo_the_oculus_sk4.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:cosmo_the_oculus_hit_01 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_02 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.det_cosmo_the_oculus_sk5.on_impact": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:cosmo_the_oculus_hit_01 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_02 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_03 ~ ~ ~",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    },
+    "animation.sz_workshop.det_cosmo_the_oculus_sk5.on_buff": {
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/particle sz_workshop:cosmo_the_oculus_hit_01 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_02 ~ ~ ~",
+          "/particle sz_workshop:cosmo_the_oculus_hit_03 ~ ~ ~",
+          "/scriptevent boss_expansion:det_cosmo_the_oculus_sk5 on_buff",
+          "@s event:despawn"
+        ]
+      },
+      "animation_length": 1
+    }
+  }
+}

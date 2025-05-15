@@ -1,0 +1,141 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:pjd_arcane_axolotl_sk1",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "on_impact": "animation.sz_workshop.pjd_arcane_axolotl_sk1.on_impact",
+        "launch": "animation.sz_workshop.pjd_arcane_axolotl_sk1.launch"
+      },
+      "scripts": {
+        "animate": [{ "on_impact": "query.is_sheared" }, "launch"]
+      }
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:explode": {
+        "minecraft:is_sheared": {}
+      },
+      "comp:timedown": {
+        "minecraft:timer": {
+          "time": 3,
+          "looping": false,
+          "time_down_event": {
+            "event": "event:expire",
+            "target": "self"
+          }
+        }
+      },
+      "comp:projectile": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "event:expire",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              // CHANGE: 每颗水弹造成 6 点伤害
+              // "damage": 5,
+              "damage": 6,
+              "filter": "player",
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "is_dangerous": false,
+          "power": 0.5,
+          "gravity": 0.0,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": 1,
+          "should_bounce": false,
+          "offset": [0, 0, 0]
+        }
+      },
+      "comp:projectile_player": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "event:expire",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              // CHANGE: 每颗水弹造成 6 点伤害
+              // "damage": 4,
+              "damage": 6,
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "is_dangerous": false,
+          "power": 0.5,
+          "gravity": 0.0,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": 1,
+          "should_bounce": false,
+          "offset": [0, 0, 0]
+        }
+      }
+    },
+    "components": {
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:type_family": {
+        "family": ["projectile", "illuminate"]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:fire_immune": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "event:expire": {
+        "add": {
+          "component_groups": ["comp:explode"]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": ["comp:despawn"]
+        }
+      },
+      "event:player_ability": {
+        "add": {
+          "component_groups": ["comp:projectile_player"]
+        }
+      }
+    }
+  }
+}

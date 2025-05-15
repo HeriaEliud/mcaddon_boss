@@ -1,0 +1,318 @@
+{
+  "resource_pack_name": "JujutsuKaisen",
+  "texture_data": {
+    "pixelmind:wall": {
+      "textures": "textures/jujutsu_kaisen/block/black"
+    },
+    "pixelmind:binge_boss": {
+      "textures": "textures/jujutsu_kaisen/items/binge_boss"
+    },
+    "pixelmind:bird": {
+      "textures": "textures/jujutsu_kaisen/items/bird"
+    },
+    "pixelmind:blood_boss": {
+      "textures": "textures/jujutsu_kaisen/items/blood_boss"
+    },
+    "pixelmind:centipede": {
+      "textures": "textures/jujutsu_kaisen/items/centipede"
+    },
+    "pixelmind:dragon": {
+      "textures": "textures/jujutsu_kaisen/items/dragon"
+    },
+    "pixelmind:elephant": {
+      "textures": "textures/jujutsu_kaisen/items/elephant"
+    },
+    "pixelmind:fire_boss": {
+      "textures": "textures/jujutsu_kaisen/items/fire_boss"
+    },
+    "pixelmind:fly_head": {
+      "textures": "textures/jujutsu_kaisen/items/fly_head"
+    },
+    "pixelmind:forest_boss": {
+      "textures": "textures/jujutsu_kaisen/items/forest_boss"
+    },
+    "pixelmind:ichthyoxenus": {
+      "textures": "textures/jujutsu_kaisen/items/ichthyoxenus"
+    },
+    "pixelmind:infected": {
+      "textures": "textures/jujutsu_kaisen/items/infected"
+    },
+    "pixelmind:kechizu": {
+      "textures": "textures/jujutsu_kaisen/items/kechizu"
+    },
+    "pixelmind:leopard": {
+      "textures": "textures/jujutsu_kaisen/items/leopard"
+    },
+    "pixelmind:lizard": {
+      "textures": "textures/jujutsu_kaisen/items/lizard"
+    },
+    "pixelmind:locust_guy": {
+      "textures": "textures/jujutsu_kaisen/items/locust"
+    },
+    "pixelmind:magic_boss": {
+      "textures": "textures/jujutsu_kaisen/items/magic_boss"
+    },
+    "pixelmind:mutated_boss": {
+      "textures": "textures/jujutsu_kaisen/items/mutated_boss"
+    },
+    "pixelmind:nine_tailed_fox": {
+      "textures": "textures/jujutsu_kaisen/items/nine_tailed_fox"
+    },
+    "pixelmind:rabbit": {
+      "textures": "textures/jujutsu_kaisen/items/rabbit"
+    },
+    "pixelmind:robot_puppet": {
+      "textures": "textures/jujutsu_kaisen/items/robot_puppet"
+    },
+    "pixelmind:sea_boss": {
+      "textures": "textures/jujutsu_kaisen/items/sea_boss"
+    },
+    "pixelmind:slit_woman": {
+      "textures": "textures/jujutsu_kaisen/items/slit_woman"
+    },
+    "pixelmind:smallpox": {
+      "textures": "textures/jujutsu_kaisen/items/smallpox"
+    },
+    "pixelmind:snake": {
+      "textures": "textures/jujutsu_kaisen/items/snake"
+    },
+    "pixelmind:suture_monster": {
+      "textures": "textures/jujutsu_kaisen/items/suture_monster"
+    },
+    "pixelmind:tamamo": {
+      "textures": "textures/jujutsu_kaisen/items/tamamo"
+    },
+    "pixelmind:toad": {
+      "textures": "textures/jujutsu_kaisen/items/toad"
+    },
+    "pixelmind:volcano_boss": {
+      "textures": "textures/jujutsu_kaisen/items/volcano_boss"
+    },
+    "pixelmind:white_dragon": {
+      "textures": "textures/jujutsu_kaisen/items/white_dragon"
+    },
+    "pixelmind:wind_boss": {
+      "textures": "textures/jujutsu_kaisen/items/wind_boss"
+    },
+    "pixelmind:wolf": {
+      "textures": "textures/jujutsu_kaisen/items/wolf"
+    },
+    "pixelmind:wraith": {
+      "textures": "textures/jujutsu_kaisen/items/wraith"
+    },
+
+    //weapon
+    "pixelmind:black_machete": {
+      "textures": "textures/jujutsu_kaisen/items/black_machete"
+    },
+    "pixelmind:cursed_compass": {
+      "textures": "textures/jujutsu_kaisen/items/cursed_compass"
+    },
+    "pixelmind:cursed_knife": {
+      "textures": "textures/jujutsu_kaisen/items/cursed_knife"
+    },
+    "pixelmind:dagger": {
+      "textures": "textures/jujutsu_kaisen/items/dagger"
+    },
+    "pixelmind:one_handed_knife": {
+      "textures": "textures/jujutsu_kaisen/items/one_handed_knife"
+    },
+    "pixelmind:pike": {
+      "textures": "textures/jujutsu_kaisen/items/pike"
+    },
+    "pixelmind:shadow_axe": {
+      "textures": "textures/jujutsu_kaisen/items/shadow_axe"
+    },
+    "pixelmind:slash_blade": {
+      "textures": "textures/jujutsu_kaisen/items/slash_blade"
+    },
+    "pixelmind:spear_knife": {
+      "textures": "textures/jujutsu_kaisen/items/spear_knife"
+    },
+
+    //equip
+    "pixelmind:clothes": {
+      "textures": "textures/jujutsu_kaisen/items/clothes"
+    },
+    "pixelmind:eye_mask": {
+      "textures": "textures/jujutsu_kaisen/items/eye_mask"
+    },
+    "pixelmind:pants": {
+      "textures": "textures/jujutsu_kaisen/items/pants"
+    },
+    "pixelmind:shoes": {
+      "textures": "textures/jujutsu_kaisen/items/shoes"
+    },
+
+    //dropped
+    "pixelmind:dark_essence": {
+      "textures": "textures/jujutsu_kaisen/items/dark_essence"
+    },
+    "pixelmind:dark_stone": {
+      "textures": "textures/jujutsu_kaisen/items/dark_stone"
+    },
+    "pixelmind:life_petal": {
+      "textures": "textures/jujutsu_kaisen/items/life_petal"
+    },
+    "pixelmind:magic_stone": {
+      "textures": "textures/jujutsu_kaisen/items/magic_stone"
+    },
+    "pixelmind:nether_fire": {
+      "textures": "textures/jujutsu_kaisen/items/nether_fire"
+    },
+    "pixelmind:shadow_droplet": {
+      "textures": "textures/jujutsu_kaisen/items/shadow_droplet"
+    },
+    "pixelmind:sharp_claw": {
+      "textures": "textures/jujutsu_kaisen/items/sharp_claw"
+    },
+    "pixelmind:sharp_grass_blade": {
+      "textures": "textures/jujutsu_kaisen/items/sharp_grass_blade"
+    },
+    "pixelmind:spear_bone": {
+      "textures": "textures/jujutsu_kaisen/items/spear_bone"
+    },
+    "pixelmind:undead_bone": {
+      "textures": "textures/jujutsu_kaisen/items/undead_bone"
+    },
+    "pixelmind:vine": {
+      "textures": "textures/jujutsu_kaisen/items/vine"
+    },
+    "pixelmind:spell_fragments": {
+      "textures": "textures/jujutsu_kaisen/items/spell_fragments"
+    },
+    "pixelmind:guide_book": {
+      "textures": "textures/jujutsu_kaisen/items/guidebook"
+    },
+    "pixelmind:mission_book": {
+      "textures": "textures/jujutsu_kaisen/items/missionbook"
+    },
+
+    //skill
+    "pixelmind:astral_burst": {
+      "textures": "textures/jujutsu_kaisen/items/astral_burst"
+    },
+    "pixelmind:infinite_abyss": {
+      "textures": "textures/jujutsu_kaisen/items/infinite_abyss"
+    },
+    "pixelmind:infinity_veil": {
+      "textures": "textures/jujutsu_kaisen/items/infinity_veil"
+    },
+    "pixelmind:judgement_strike": {
+      "textures": "textures/jujutsu_kaisen/items/judgement_strike"
+    },
+    "pixelmind:obsidian_flash": {
+      "textures": "textures/jujutsu_kaisen/items/obsidian_flash"
+    },
+    "pixelmind:perfect_enclosure": {
+      "textures": "textures/jujutsu_kaisen/items/perfect_enclosure"
+    },
+    "pixelmind:phantom_assembly": {
+      "textures": "textures/jujutsu_kaisen/items/phantom_assembly"
+    },
+    "pixelmind:puppet_manipulation_technique": {
+      "textures": "textures/jujutsu_kaisen/items/puppet_manipulation_technique"
+    },
+    "pixelmind:ratio_technique": {
+      "textures": "textures/jujutsu_kaisen/items/ratio_technique"
+    },
+    "pixelmind:reverse_technique": {
+      "textures": "textures/jujutsu_kaisen/items/reverse_technique"
+    },
+    "pixelmind:shadow_fusion_sanctuary": {
+      "textures": "textures/jujutsu_kaisen/items/shadow_fusion_sanctuary"
+    },
+    "pixelmind:sinister_sanctum": {
+      "textures": "textures/jujutsu_kaisen/items/sinister_sanctum"
+    },
+    "pixelmind:steel_tomb_summit": {
+      "textures": "textures/jujutsu_kaisen/items/steel_tomb_summit"
+    },
+    "pixelmind:vermilion_control": {
+      "textures": "textures/jujutsu_kaisen/items/vermilion_control"
+    },
+    "pixelmind:wraith_cursed": {
+      "textures": "textures/jujutsu_kaisen/items/wraith_cursed"
+    },
+    "pixelmind:break_attack": {
+      "textures": "textures/jujutsu_kaisen/items/break_attack"
+    },
+    "pixelmind:dash_astral": {
+      "textures": "textures/jujutsu_kaisen/items/dash_astral"
+    },
+    "pixelmind:dash_flashing": {
+      "textures": "textures/jujutsu_kaisen/items/dash_flashing"
+    },
+    "pixelmind:dash_shadow": {
+      "textures": "textures/jujutsu_kaisen/items/dash_shadow"
+    },
+    "pixelmind:double_jump": {
+      "textures": "textures/jujutsu_kaisen/items/double_jump"
+    },
+    "pixelmind:dragon_strike": {
+      "textures": "textures/jujutsu_kaisen/items/dragon_strike"
+    },
+    "pixelmind:energy_combo": {
+      "textures": "textures/jujutsu_kaisen/items/energy_combo"
+    },
+    "pixelmind:explosive_touch": {
+      "textures": "textures/jujutsu_kaisen/items/explosive_touch"
+    },
+    "pixelmind:falling_boulder": {
+      "textures": "textures/jujutsu_kaisen/items/falling_boulder"
+    },
+    "pixelmind:fire_cannon": {
+      "textures": "textures/jujutsu_kaisen/items/fire_cannon"
+    },
+    "pixelmind:fishes_strike": {
+      "textures": "textures/jujutsu_kaisen/items/fishes_strike"
+    },
+    "pixelmind:flower_petals": {
+      "textures": "textures/jujutsu_kaisen/items/flower_petals"
+    },
+    "pixelmind:shadow_grab": {
+      "textures": "textures/jujutsu_kaisen/items/grab"
+    },
+    "pixelmind:ground_lacerate": {
+      "textures": "textures/jujutsu_kaisen/items/ground_lacerate"
+    },
+    "pixelmind:heavy_ground_smash": {
+      "textures": "textures/jujutsu_kaisen/items/heavy_ground_smash"
+    },
+    "pixelmind:meteor_strike": {
+      "textures": "textures/jujutsu_kaisen/items/meteor_strike"
+    },
+    "pixelmind:volcano_rain": {
+      "textures": "textures/jujutsu_kaisen/items/volcano_rain"
+    },
+    "pixelmind:water_laser": {
+      "textures": "textures/jujutsu_kaisen/items/water_laser"
+    },
+    "pixelmind:water_storm": {
+      "textures": "textures/jujutsu_kaisen/items/water_storm"
+    },
+    "pixelmind:defense": {
+      "textures": "textures/jujutsu_kaisen/items/defense"
+    },
+    "pixelmind:fire_bow": {
+      "textures": "textures/jujutsu_kaisen/items/fire_bow"
+    },
+    "pixelmind:lacerate_combo": {
+      "textures": "textures/jujutsu_kaisen/items/lacerate_combo"
+    },
+
+    //armor
+    "pixelmind:uniform_head": {
+      "textures": "textures/jujutsu_kaisen/items/uniform_head"
+    },
+    "pixelmind:uniform_body": {
+      "textures": "textures/jujutsu_kaisen/items/uniform_body"
+    },
+    "pixelmind:uniform_feet": {
+      "textures": "textures/jujutsu_kaisen/items/uniform_feet"
+    },
+    "pixelmind:uniform_leg": {
+      "textures": "textures/jujutsu_kaisen/items/uniform_leg"
+    }
+  }
+}

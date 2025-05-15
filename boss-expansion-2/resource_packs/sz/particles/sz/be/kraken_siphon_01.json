@@ -1,0 +1,86 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "components": {
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 6
+      },
+      "minecraft:emitter_rate_steady": {
+        "max_particles": 100,
+        "spawn_rate": 8
+      },
+      "minecraft:emitter_shape_point": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          0,
+          -8
+        ]
+      },
+      "minecraft:particle_appearance_billboard": {
+        "facing_camera_mode": "rotate_xyz",
+        "size": [
+          "10.5*variable.size1",
+          "10.5*variable.size1"
+        ],
+        "uv": {
+          "texture_height": 16,
+          "texture_width": 16,
+          "uv": [
+            0,
+            0
+          ],
+          "uv_size": [
+            16,
+            16
+          ]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [
+          0.01961,
+          0,
+          0.15686,
+          1
+        ]
+      },
+      "minecraft:particle_initial_speed": 75,
+      "minecraft:particle_initial_spin": {
+        "rotation": "math.random(0,360)",
+        "rotation_rate": 500
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "math.random(0.5,0.5)"
+      },
+      "minecraft:particle_motion_dynamic": {
+        "linear_drag_coefficient": 2
+      }
+    },
+    "curves": {
+      "variable.size1": {
+        "horizontal_range": "v.particle_lifetime",
+        "input": "v.particle_age",
+        "nodes": [
+          1.21,
+          1.05,
+          0.87,
+          0.61,
+          0.41,
+          0.19
+        ],
+        "type": "linear"
+      }
+    },
+    "description": {
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "textures/sz/be/particle/kraken_siphon_01"
+      },
+      "identifier": "sz_workshop:kraken_siphon_01"
+    }
+  }
+}

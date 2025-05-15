@@ -1,0 +1,276 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "components": {
+      "minecraft:boss": {"should_darken_sky": true, "hud_range": 55, "name": "§cThe Pharoah"},
+      "minecraft:experience_reward": {"on_death": 500},
+      "minecraft:follow_range": {"value": 64},
+      "minecraft:behavior.hurt_by_target": {"priority": 0}
+    },
+    "description": {
+      "identifier": "sz_workshop:the_pharoah",
+      "is_experimental": false,
+      "is_spawnable": true,
+      "is_summonable": true,
+      "animations": {
+        "combat": "controller.animation.boss_expansion.boss_entity.combat",
+        "shield": "animation.sz_workshop.the_pharoah_box.the_pharoah.shield"
+      },
+      "scripts": {
+        "animate": [
+          "combat",
+          "shield"
+        ]
+      }
+    },
+    "component_groups": {
+      "comp:base": {
+        "minecraft:jump.static": {},
+        "minecraft:physics": {},
+        "minecraft:nameable": {
+          "allow_name_tag_renaming": true,
+          "always_show": true
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        }
+      },
+      "comp:behaviour": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 3,
+          "must_see": true,
+          "entity_types": [
+            {"filters": {"subject": "other", "test": "is_family", "value": "player"}}
+          ]
+        },
+        "minecraft:behavior.random_hover": {
+          "priority": 20,
+          "interval": 5,
+          "hover_height": [2, 3],
+          "xz_dist": 8,
+          "y_dist": 8,
+          "y_offset": -1
+        }
+      },
+      "comp:config": {
+        "minecraft:knockback_resistance": {"value": 1},
+        "minecraft:attack": {"damage": 1},
+        "minecraft:health": {
+          // CHANGE: 生命值增加至 600
+          // "max": 500,
+          // "value": 500
+          "max": 600,
+          "value": 600
+        },
+        "minecraft:custom_hit_test": {
+          "hitboxes": [
+            {
+              "width": 1,
+              "height": 1,
+              "pivot": [0, 1.3, 0]
+            }
+          ]
+        },
+        "minecraft:movement": {
+          "value": 0.4
+        },
+        "minecraft:type_family": {
+          "family": ["mob", "monster", "boss", "pharoah_entity"]
+        },
+        "minecraft:movement.hover": {
+          "max_turn": 20.0
+        },
+        "minecraft:flying_speed": {
+          "value": 0.3
+        },
+        "minecraft:can_fly": {},
+        "minecraft:loot": {"table": "loot_tables/sz/be/the_pharoah.json"}
+      },
+      "comp:sensor": {
+        "minecraft:on_target_acquired": {
+          "event": "event:on_target_acquired",
+          "target": "self"
+        },
+        "minecraft:on_target_escape": {
+          "event": "event:on_target_escape",
+          "target": "self"
+        }
+      },
+      "comp:on_death": {
+        "minecraft:is_sheared": {},
+        "minecraft:timer": {"looping": false, "time": 3.0, "time_down_event": {"event": "event:despawn"}}
+      },
+      "comp:despawn": {
+        "minecraft:equipment": {"table": "loot_tables/sz/be/the_pharoah.json"},
+        "minecraft:transformation": {"into": "sz_workshop:void", "delay": {"value": 0.01}, "drop_equipment": true}
+      },
+      "comp:set_awake": {
+        "minecraft:navigation.hover": {
+          "can_path_over_water": true,
+          "can_sink": false,
+          "can_pass_doors": false,
+          "can_path_from_air": true,
+          "avoid_water": true,
+          "avoid_damage_blocks": true,
+          "avoid_sun": false
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 9,
+          "probability": 0.02,
+          "target_distance": 6.0
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 11
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 10,
+          "speed_multiplier": 1.0
+        }
+      },
+      "comp:immune_death": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false,
+            "on_damage": {
+              "filters": {"test": "has_damage", "value": "fatal"},
+              "event": "event:on_death",
+              "target": "self"
+            }
+          }
+        }
+      },
+      "comp:search_attack": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 5,
+          "speed_multiplier": 1.0,
+          "track_target": true,
+          "reach_multiplier": 0.0
+        }
+      },
+      "comp:can_use_ability": {
+        "minecraft:behavior.summon_entity": {
+          "priority": 4,
+          "summon_choices": [
+            {
+              "weight": 1,
+              "min_activation_range": 1.0,
+              "max_activation_range": 5.0,
+              "cooldown_time": 10.0,
+              "cast_duration": 30.0,
+              "sequence": [
+                {"entity_type": "sz_workshop:void"}
+              ]
+            }
+          ]
+        }
+      },
+      "comp:health_05_state": {
+        "minecraft:movement": {
+          "value": 0.3
+        }
+      },
+      "comp:health_01_state": {
+        "minecraft:movement": {
+          "value": 0.15
+        }
+      },
+      "comp:set_charge_hit": {"minecraft:mark_variant": {"value": 1}},
+      "comp:reset_charge_hit": {"minecraft:mark_variant": {"value": 0}},
+      "comp:reset_ability": {
+        "minecraft:variant": {"value": 0}
+      },
+      "comp:use_attack1": {
+        "minecraft:variant": {"value": 10}
+      },
+      "comp:use_attack2": {
+        "minecraft:variant": {"value": 20}
+      },
+      "comp:use_skill1": {
+        "minecraft:variant": {"value": 100}
+      },
+      "comp:use_skill2": {
+        "minecraft:variant": {"value": 200}
+      },
+      "comp:use_skill3": {
+        "minecraft:variant": {"value": 300}
+      },
+      "comp:use_skill4": {
+        "minecraft:variant": {"value": 400}
+      },
+      "comp:use_skill5": {
+        "minecraft:variant": {"value": 500}
+      },
+      "comp:use_skill6": {
+        "minecraft:variant": {"value": 600}
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "comp:base", "comp:config", "comp:behaviour",
+            "comp:sensor",
+            "comp:search_attack",
+            // CHANGE: 觉醒（Awaken） - 更改此技能的激活方式，该技能将在法老看到玩家时自动激活
+            // "comp:set_awake",
+            "comp:can_use_ability"
+          ]
+        }
+      },
+      "event:despawn": {"add": {"component_groups": ["comp:despawn"]}},
+      "event:on_death": {
+        "sequence": [
+          {
+            "filters": {"test": "has_component", "value": "minecraft:is_sheared", "operator": "!="},
+            "add": {"component_groups": ["comp:on_death"]}
+          },
+          {
+            "remove": {
+              "component_groups": [
+                "comp:set_awake",
+                "comp:behaviour"
+              ]
+            }
+          }
+        ]
+      },
+      // CHANGE: 觉醒（Awaken） - 更改此技能的激活方式，该技能将在法老看到玩家时自动激活
+      // "event:on_target_acquired": {"remove": {"component_groups": ["comp:no_attackable_target"]}},
+      "event:on_target_acquired": {
+        "remove": {
+          "component_groups": ["comp:no_attackable_target"]
+        },
+        "add": {
+          "component_groups": ["comp:set_awake"]
+        }
+      },
+      "event:on_target_escape": {},
+      "event:health_05_state": {"add": {"component_groups": ["comp:health_05_state"]}},
+      "event:health_01_state": {"add": {"component_groups": ["comp:health_01_state"]}},
+      "event:try_active_ability": {},
+      "event:on_active_ability": {},
+      "event:reset_ability": {
+        "sequence": [
+          {"remove": {"component_groups": ["comp:can_use_ability"]}},
+          {"add": {"component_groups": ["comp:reset_ability"]}},
+          {
+            "filters": {"test": "has_component", "value": "minecraft:is_sheared", "operator": "!="},
+            "add": {"component_groups": ["comp:search_attack"]}
+          }
+        ]
+      },
+      "event:can_use_ability": {"add": {"component_groups": ["comp:can_use_ability"]}},
+      "event:set_charge_hit": {"add": {"component_groups": ["comp:set_charge_hit"]}},
+      "event:reset_charge_hit": {"add": {"component_groups": ["comp:reset_charge_hit"]}},
+      "event:set_use_attack1": {"add": {"component_groups": ["comp:use_attack1"]}},
+      "event:set_use_attack2": {"add": {"component_groups": ["comp:use_attack2"]}},
+      "event:set_use_skill1": {"add": {"component_groups": ["comp:use_skill1"]}},
+      "event:set_use_skill2": {"add": {"component_groups": ["comp:use_skill2"]}},
+      "event:set_use_skill3": {"add": {"component_groups": ["comp:use_skill3"]}},
+      "event:set_use_skill4": {"add": {"component_groups": ["comp:use_skill4"]}},
+      "event:set_use_skill5": {"add": {"component_groups": ["comp:use_skill5"]}},
+      "event:set_use_skill6": {"add": {"component_groups": ["comp:use_skill6"]}}
+    }
+  }
+}

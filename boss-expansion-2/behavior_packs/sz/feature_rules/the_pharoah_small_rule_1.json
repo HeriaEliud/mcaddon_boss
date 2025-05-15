@@ -1,0 +1,55 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "sz_workshop:the_pharoah_small_rule_1",
+			"places_feature": "sz_workshop:the_pharoah_small_offset"
+		},
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"value": "overworld"
+							},
+							{
+								"test": "has_biome_tag",
+								"value": "overworld_generation"
+							}
+						]
+					},
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"value": "desert"
+							},
+							{
+								"test": "has_biome_tag",
+								"value": "desert_hills"
+							},
+							{
+								"test": "has_biome_tag",
+								"value": "desert_mutated"
+							}
+						]
+					}
+					
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 1000
+			},
+			"x": 0,
+			"y": "math.min(math.min(math.min(q.heightmap(v.worldx-12,v.worldz-12),q.heightmap(v.worldx+12,v.worldz+12)),math.min(q.heightmap(v.worldx-12,v.worldz+12),q.heightmap(v.worldx+12,v.worldz-12))),q.heightmap(v.worldx,v.worldz))-0",
+			"z": 0
+		}
+	}
+}

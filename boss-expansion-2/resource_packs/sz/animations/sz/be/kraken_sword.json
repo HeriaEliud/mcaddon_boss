@@ -1,0 +1,223 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.boss_expansion.kraken_sword.fpp_attack1": {
+			"animation_length": 2.375,
+			"bones": {
+				"sword": {
+					"rotation": {
+						"0.0": {
+							"post": [42.64801, 61.58417, -90.35309],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [51.65, -14.42, -47.35],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [119.11, -14.11, -47.52],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5833": {
+							"post": [226.48, -10.1, -41.79],
+							"lerp_mode": "catmullrom"
+						},
+						"0.875": {
+							"post": [179.13, 54.5, -50.14],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [172.44, 57.13, -52.5],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": {
+							"post": [175.44, 57.13, -52.5],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5": {
+							"post": [51.65, -14.42, -47.35],
+							"lerp_mode": "catmullrom"
+						},
+						"1.625": {
+							"post": [222.11, -32.11, -51.52],
+							"lerp_mode": "catmullrom"
+						},
+						"1.875": {
+							"post": [294.48, -36.1, -46.79],
+							"lerp_mode": "catmullrom"
+						},
+						"2.375": [42.64801, 61.58417, -90.35309]
+					},
+					"position": {
+						"0.0": {
+							"post": [-5.42465, -5.62114, 2.00898],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [-4.38397, 1.30787, -13.3647],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [0.97538, -5.07873, -7.24614],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5833": {
+							"post": [-0.56088, -7.43383, 1.54822],
+							"lerp_mode": "catmullrom"
+						},
+						"0.875": {
+							"post": [-5.74548, -2.85174, 2.49442],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [1.01965, -9.73328, 1.89604],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": {
+							"post": [3.3531, -12.05785, 1.69267],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5": {
+							"post": [-5.84294, 3.80333, -16.43944],
+							"lerp_mode": "catmullrom"
+						},
+						"1.625": {
+							"post": [-0.75764, -12.41085, 4.75205],
+							"lerp_mode": "catmullrom"
+						},
+						"1.875": {
+							"post": [-8.3109, -7.54055, 9.58164],
+							"lerp_mode": "catmullrom"
+						},
+						"2.375": [-5.42465, -5.62114, 2.00898]
+					}
+				}
+			}
+		},
+		"animation.boss_expansion.kraken_sword.fpp_idle": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"sword": {
+					"rotation": [42.64801, 61.58417, -90.35309],
+					"position": [-5.42465, -5.62114, 2.00898]
+				}
+			}
+		},
+		"animation.boss_expansion.kraken_sword.tpp_idle": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"sword": {
+					"rotation": [90, 0, 0],
+					"position": [0, -2.44949, -1.41421]
+				}
+			}
+		},
+		"animation.boss_expansion.kraken_sword.fpp_attack2": {
+			"animation_length": 2.375,
+			"bones": {
+				"sword": {
+					"rotation": {
+						"0.0": {
+							"post": [42.64801, 61.58417, -90.35309],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [121.65, 60.58, -50.35],
+							"lerp_mode": "catmullrom"
+						},
+						"1.75": {
+							"post": [46.65, 60.58, -50.35],
+							"lerp_mode": "catmullrom"
+						},
+						"1.8333": {
+							"post": [186.65, 60.58, -50.35],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [209.76244, 60.96557, -47.88642],
+							"lerp_mode": "catmullrom"
+						},
+						"2.375": [42.64801, 61.58417, -90.35309]
+					},
+					"position": {
+						"0.0": {
+							"post": [-5.42465, -5.62114, 2.00898],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-1.62478, -0.83605, -9.12553],
+							"lerp_mode": "catmullrom"
+						},
+						"1.75": {
+							"post": [-12.55233, -6.4421, -15.25829],
+							"lerp_mode": "catmullrom"
+						},
+						"1.8333": {
+							"post": [10.36304, -8.19025, -8.19928],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [11.06798, -7.5285, -7.67473],
+							"lerp_mode": "catmullrom"
+						},
+						"2.375": [-5.42465, -5.62114, 2.00898]
+					}
+				},
+				"bone": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.9167": [40, -21, 2]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"1.5": [104.32612, 0.21705, -158.92848],
+						"1.8333": [93.56613, 13.88584, -233.52136]
+					}
+				},
+				"bone3": {
+					"position": {
+						"1.75": [-38, -23, 0],
+						"1.7917": [-9, -42, 0],
+						"1.8333": [17, -43, 0],
+						"1.875": [45, -20, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"1.5833": [
+					{
+						"effect": "kraken_sword_attack2_06",
+						"locator": "locator2"
+					},
+					{
+						"effect": "kraken_sword_attack2_07",
+						"locator": "locator3"
+					}
+				],
+				"1.9167": [
+					{
+						"effect": "kraken_sword_attack2_05",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_sword_attack2_04",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_sword_attack2_03",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_sword_attack2_02",
+						"locator": "locator"
+					},
+					{
+						"effect": "kraken_sword_attack2_01",
+						"locator": "locator"
+					}
+				]
+			}
+		}
+	}
+}

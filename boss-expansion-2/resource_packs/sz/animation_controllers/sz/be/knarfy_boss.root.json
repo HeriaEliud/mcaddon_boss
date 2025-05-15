@@ -1,0 +1,202 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boss_expansion.knarfy_boss.root": {
+      "initial_state": "init",
+      "states": {
+        "init": {
+          "transitions": [
+            {"asleep": "query.is_stunned"},
+            {"idle": "!query.is_stunned"}
+          ]
+        },
+        "asleep": {
+          "animations": ["asleep"],
+          "transitions": [
+            {"awake": "!query.is_stunned"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "awake": {
+          "animations": ["awake"],
+          "transitions": [
+            {"idle": "query.any_animation_finished"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"claw": "query.is_casting && query.variant == 10"},
+            {"punch": "query.is_casting && query.variant == 20"},
+            {"roar": "query.is_casting && query.variant == 50"},
+            {"crack": "query.is_casting && query.variant == 100"},
+            {"charge": "query.is_casting && query.variant == 200"},
+            {"breath": "query.is_casting && query.variant == 300"},
+            {"charge_crack": "query.is_casting && query.variant == 400"},
+            {"snowstorm": "query.is_casting && query.variant == 500"},
+            {"breath_snowstorm": "query.is_casting && query.variant == 600"},
+            {"walk": "query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            {"walk": "variable.health_rate > 0.5"},
+            {"limp": "variable.health_rate <= 0.1"},
+            {"run": "variable.health_rate <= 0.5 && variable.health_rate > 0.1"}
+          ],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"claw": "query.is_casting && query.variant == 10"},
+            {"punch": "query.is_casting && query.variant == 20"},
+            {"roar": "query.is_casting && query.variant == 50"},
+            {"crack": "query.is_casting && query.variant == 100"},
+            {"charge": "query.is_casting && query.variant == 200"},
+            {"breath": "query.is_casting && query.variant == 300"},
+            {"charge_crack": "query.is_casting && query.variant == 400"},
+            {"snowstorm": "query.is_casting && query.variant == 500"},
+            {"breath_snowstorm": "query.is_casting && query.variant == 600"},
+            {"idle": "query.modified_move_speed < 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "death": {
+          "animations": ["death"],
+          "transitions": [
+            {"idle": "(0.0)"}
+          ]
+        },
+        "claw": {
+          "animations": ["claw"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "punch": {
+          "animations": ["punch"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "roar": {
+          "animations": ["roar"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "crack": {
+          "animations": ["crack"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "charge": {
+          "animations": ["charge_back"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"charge_run": "query.any_animation_finished"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "charge_run": {
+          "animations": ["charge_run"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"charge_hit": "query.mark_variant == 1.0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "charge_hit": {
+          "animations": ["charge_hit"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.any_animation_finished"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "breath": {
+          "animations": ["breath"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "charge_crack": {
+          "animations": ["charge_back"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"charge_crack_run": "query.any_animation_finished"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "charge_crack_run": {
+          "animations": ["charge_run"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"charge_crack_hit": "query.mark_variant == 1.0"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "charge_crack_hit": {
+          "animations": ["charge_hit_crack"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.any_animation_finished"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "snowstorm": {
+          "animations": ["snowstorm"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "breath_snowstorm": {
+          "animations": ["breath_snowstorm"],
+          "transitions": [
+            {"death": "query.is_sheared"},
+            {"idle": "query.variant == 0 && query.modified_move_speed < 0.1"},
+            {"walk": "query.variant == 0 && query.modified_move_speed >= 0.1"}
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

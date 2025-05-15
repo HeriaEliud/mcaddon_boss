@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.water_axolotl.root",
+        "idle": "animation.boss_expansion.water_axolotl.idle",
+        "walk": "animation.boss_expansion.water_axolotl.walk_spear",
+        "attack": "animation.boss_expansion.water_axolotl.attack_spear"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.water_axolotl"
+      },
+      "identifier": "sz_workshop:water_spearman",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:water_axolotl_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/water_spearman"
+      },
+      "sound_effects": {
+        "axolotl_walk_spear": "sz_workshop.axolotl_walk_spear"
+      }
+    }
+  }
+}

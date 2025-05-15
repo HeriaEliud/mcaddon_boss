@@ -1,0 +1,32 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:det_pharoah_sk3",
+      "animations": {
+        "root": "animation.boss_expansion.detector.the_pharoah.skill3"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.projectile_general"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "textures": {
+        "default": "textures/items/apple"
+      },
+      "particle_effects": {
+        "pharoah_sandstorm_bullet_01": "sz_workshop:pharoah_sandstorm_bullet_01",
+        "pharoah_sandstorm_bullet_02": "sz_workshop:pharoah_sandstorm_bullet_02"
+      }
+    }
+  }
+}

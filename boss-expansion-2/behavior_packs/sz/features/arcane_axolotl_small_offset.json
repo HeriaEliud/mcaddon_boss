@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "sz_workshop:arcane_axolotl_small_offset"
+		},
+		"places_feature": "sz_workshop:arcane_axolotl_small",
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 100,
+			"x": -16,
+			"y": -2,
+			"z": -16
+		}
+		
+	}
+}

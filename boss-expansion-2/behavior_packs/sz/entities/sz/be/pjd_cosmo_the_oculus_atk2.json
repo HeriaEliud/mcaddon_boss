@@ -1,0 +1,189 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:pjd_cosmo_the_oculus_atk2",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "on_explode": "animation.sz_workshop.pjd_cosmo_the_oculus_sk3.on_explode",
+        "on_impact": "animation.sz_workshop.pjd_cosmo_the_oculus_atk2.on_impact",
+        "launch": "animation.sz_workshop.pjd_cosmo_the_oculus_atk2.launch"
+      },
+      "scripts": {
+        "animate": [
+          {"on_explode": "query.is_sheared && query.is_stunned"},
+          {"on_impact": "query.is_sheared"},
+          "launch"
+        ]
+      }
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:explode": {
+        "minecraft:is_sheared": {}
+      },
+      "comp:set_explode": {
+        "minecraft:explode": {
+          "fuse_length": 0.0,
+          "fuse_lit": true,
+          "power": 2,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": true
+        }
+      },
+      // CHANGE: 投射物爆炸 - 使其不会破坏方块，防止玩家通过右键攻击过度挖掘或破坏环境
+      "comp:explode_player": {
+        "minecraft:explode": {
+          "fuse_length": 0.0,
+          "fuse_lit": true,
+          "power": 2,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": true,
+          "breaks_blocks": false
+        },
+        "minecraft:is_sheared": {}
+      },
+      "comp:timedown": {
+        "minecraft:timer": {
+          "time": 3,
+          "looping": false,
+          "time_down_event": {
+            "event": "event:expire",
+            "target": "self"
+          }
+        }
+      },
+      "comp:projectile": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "event:expire",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              "damage": 7,
+              "filter": "player",
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "is_dangerous": false,
+          "power": 0.5,
+          "gravity": 0.0,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": 1,
+          "should_bounce": false,
+          "offset": [0, 0, 0]
+        }
+      },
+      "comp:projectile_player": {
+        "minecraft:is_stunned": {},
+        "minecraft:projectile": {
+          "on_hit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "event:expire_player",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              // CHANGE: 基础攻击 - 伤害提升至 8 点
+              // "damage": 7,
+              "damage": 8,
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "is_dangerous": false,
+          "power": 0.5,
+          "gravity": 0.0,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": 1,
+          "should_bounce": false,
+          "offset": [0, 0, 0]
+        }
+      }
+    },
+    "components": {
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:type_family": {
+        "family": [
+          "projectile",
+          "illuminate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:fire_immune": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "event:expire": {
+        "add": {
+          "component_groups": [
+            "comp:explode"
+          ]
+        }
+      },
+      "event:expire_player": {
+        "add": {
+          "component_groups": [
+            "comp:explode_player"
+          ]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": [
+            "comp:despawn"
+          ]
+        }
+      },
+      "event:player_ability": {
+        "add": {
+          "component_groups": [
+            "comp:projectile_player"
+          ]
+        }
+      },
+      "event:set_explode": {
+        "add": {
+          "component_groups": [
+            "comp:set_explode"
+          ]
+        }
+      }
+    }
+  }
+}

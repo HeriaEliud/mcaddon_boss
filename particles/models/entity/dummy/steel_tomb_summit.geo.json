@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.steel_tomb_summit",
+				"texture_width": 2048,
+				"texture_height": 2048,
+				"visible_bounds_width": 37,
+				"visible_bounds_height": 41,
+				"visible_bounds_offset": [0, 16.5, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 327, 0],
+					"cubes": [
+						{"origin": [-131, 0, -131], "size": [262, 261, 261], "uv": [-1, 0]}
+					]
+				},
+				{
+					"name": "particle",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle2",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator2": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle3",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator3": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle4",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator4": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle5",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator5": [0, 0, 0]
+					}
+				},
+				{
+					"name": "particle6",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"locator6": [0, 0, 0]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.boss_expansion.detector.cosmo_staff.attack2": {
+			"loop": true,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": {
+					"effect": "cosmo_the_oculus_basic_attack1_06",
+					"locator": "locator"
+				}
+			}
+		}
+	}
+}

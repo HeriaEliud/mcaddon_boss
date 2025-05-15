@@ -1,0 +1,59 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "sz_workshop:kraken_sword_attack2_07",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/sz/be/particle/kraken_sword_attack2_07"
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.size = 0.03;variable.lifetime = 2.2;"
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 50,
+				"max_particles": 70
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.53
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": [0.1, 0.1, 1],
+				"direction": "outwards"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(1,0.5)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(-360,360)",
+				"rotation_rate": "math.random(-360,360)"
+			},
+			"minecraft:particle_initial_speed": 1,
+			"minecraft:particle_motion_dynamic": {
+				"linear_drag_coefficient": 3
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["(0.3*v.particle_random_2+0.02) / (variable.particle_age+0.2)", "(0.3*v.particle_random_2+0.02) / (variable.particle_age+0.2)"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 32,
+					"texture_height": 32,
+					"uv": [0, 0],
+					"uv_size": [32, 32]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "variable.particle_age/variable.particle_lifetime",
+					"gradient": {
+						"0.0": "#FF040006",
+						"0.61": "#FF110A1B",
+						"1.0": "#000E0121"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,125 @@
+{
+  "texture_data": {
+    "sz_workshop:arcane_axolots_egg": {
+      "textures": "textures/sz/be/items/arcane_axolots_egg"
+    },
+    "sz_workshop:arcane_crystal": {
+      "textures": "textures/sz/be/items/arcane_crystal"
+    },
+    // "sz_workshop:cave_seal": {"textures": "textures/sz/be/items/cave_seal"},
+    "sz_workshop:guide_book": {"textures": "textures/sz/be/items/guide_book"},
+    // "sz_workshop:temple_seal": {"textures": "textures/sz/be/items/temple_seal"},
+    // "sz_workshop:tomb_seal": {"textures": "textures/sz/be/items/tomb_seal"},
+    "sz_workshop:arcane_staff": {
+      "textures": "textures/sz/be/items/arcane_staff"
+    },
+    "sz_workshop:champion_belt_chestplate": {
+      "textures": "textures/sz/be/items/champion_belt_chestplate"
+    },
+    "sz_workshop:champion_belt_helmet": {
+      "textures": "textures/sz/be/items/champion_belt_helmet"
+    },
+    "sz_workshop:champion_ticket": {
+      "textures": "textures/sz/be/items/champion_ticket"
+    },
+    "sz_workshop:cosmo_staff": {
+      "textures": "textures/sz/be/items/cosmo_staff"
+    },
+    "sz_workshop:emit_plate_boots": {
+      "textures": "textures/sz/be/items/emit_plate_boots"
+    },
+    "sz_workshop:emit_plate_chestplate": {
+      "textures": "textures/sz/be/items/emit_plate_chestplate"
+    },
+    "sz_workshop:emit_plate_helmet": {
+      "textures": "textures/sz/be/items/emit_plate_helmet"
+    },
+    "sz_workshop:emit_plate_leggings": {
+      "textures": "textures/sz/be/items/emit_plate_leggings"
+    },
+    "sz_workshop:fur_coat_armor_boots": {
+      "textures": "textures/sz/be/items/fur_coat_armor_boots"
+    },
+    "sz_workshop:fur_coat_armor_chestplate": {
+      "textures": "textures/sz/be/items/fur_coat_armor_chestplate"
+    },
+    "sz_workshop:fur_coat_armor_helmet": {
+      "textures": "textures/sz/be/items/fur_coat_armor_helmet"
+    },
+    "sz_workshop:fur_coat_armor_leggings": {
+      "textures": "textures/sz/be/items/fur_coat_armor_leggings"
+    },
+    "sz_workshop:knarfy_claw": {
+      "textures": "textures/sz/be/items/knarfy_claw"
+    },
+    "sz_workshop:knarfy_totem": {
+      "textures": "textures/sz/be/items/knarfy_totem"
+    },
+    "sz_workshop:kraken_sword": {
+      "textures": "textures/sz/be/items/kraken_sword"
+    },
+    "sz_workshop:magical_robe_boots": {
+      "textures": "textures/sz/be/items/magical_robe_boots"
+    },
+    "sz_workshop:magical_robe_chestplate": {
+      "textures": "textures/sz/be/items/magical_robe_chestplate"
+    },
+    "sz_workshop:magical_robe_helmet": {
+      "textures": "textures/sz/be/items/magical_robe_helmet"
+    },
+    "sz_workshop:magical_robe_leggings": {
+      "textures": "textures/sz/be/items/magical_robe_leggings"
+    },
+    "sz_workshop:oculus_seal": {
+      "textures": "textures/sz/be/items/oculus_seal"
+    },
+    "sz_workshop:pharoah_seal": {
+      "textures": "textures/sz/be/items/pharoah_seal"
+    },
+    "sz_workshop:pharoah_coffin": {
+      "textures": "textures/sz/be/items/pharoah_coffin"
+    },
+    "sz_workshop:tidal_totem": {
+      "textures": "textures/sz/be/items/tidal_totem"
+    },
+    "sz_workshop:verdant_plate_boots": {
+      "textures": "textures/sz/be/items/verdant_plate_boots"
+    },
+    "sz_workshop:verdant_plate_chestplate": {
+      "textures": "textures/sz/be/items/verdant_plate_chestplate"
+    },
+    "sz_workshop:verdant_plate_helmet": {
+      "textures": "textures/sz/be/items/verdant_plate_helmet"
+    },
+    "sz_workshop:verdant_plate_leggings": {
+      "textures": "textures/sz/be/items/verdant_plate_leggings"
+    },
+    "sz_workshop:arcane_axolotl_spawn_egg": {
+      "textures": "textures/sz/be/items/arcane_axolotl"
+    },
+    "sz_workshop:cosmo_the_oculus_spawn_egg": {
+      "textures": "textures/sz/be/items/cosmo_the_oculus"
+    },
+    "sz_workshop:emit_the_kraken_spawn_egg": {
+      "textures": "textures/sz/be/items/emit_the_kraken"
+    },
+    "sz_workshop:knarfy_boss_spawn_egg": {
+      "textures": "textures/sz/be/items/knarfy_boss"
+    },
+    "sz_workshop:kratiny_spawn_egg": {
+      "textures": "textures/sz/be/items/kratiny"
+    },
+    "sz_workshop:mummy_spawn_egg": {
+      "textures": "textures/sz/be/items/mummy"
+    },
+    "sz_workshop:the_champ_spawn_egg": {
+      "textures": "textures/sz/be/items/the_champ"
+    },
+    "sz_workshop:the_pharoah_spawn_egg": {
+      "textures": "textures/sz/be/items/the_pharoah"
+    },
+    "sz_workshop:water_axolotl_spawn_egg": {
+      "textures": "textures/sz/be/items/water_axolotl"
+    }
+  }
+}

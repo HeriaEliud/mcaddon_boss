@@ -1,0 +1,218 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "components": {
+      "minecraft:follow_range": {"value": 64}
+    },
+    "description": {
+      "identifier": "sz_workshop:friendly_arcane_axolotl",
+      "is_experimental": false,
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "comp:friendly":{
+        "minecraft:tameable": {},
+        "minecraft:behavior.follow_owner": {
+          "speed_multiplier": 1.5,
+          "can_teleport": true,
+          "start_distance": 16,
+          "stop_distance": 1
+        },
+        "minecraft:behavior.teleport_to_owner": {
+          "filters": {
+            "all_of": [{ "test": "owner_distance", "operator": ">", "value": 12 }]
+          }
+        }
+      },
+      "comp:base": {
+        "minecraft:jump.static": {},
+        "minecraft:movement.basic": {},
+        "minecraft:physics": {},
+        "minecraft:nameable": {
+          "allow_name_tag_renaming": true,
+          "always_show": true
+        },
+        "minecraft:navigation.walk": {
+          "avoid_water": true,
+          "is_amphibious": true
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        }
+      },
+      "comp:behaviour": {
+        "minecraft:behavior.float": {
+          "priority": 0
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 9,
+          "probability": 0.02,
+          "target_distance": 6.0
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 11
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 10,
+          "speed_multiplier": 1.0
+        }
+      },
+      "comp:config": {
+        "minecraft:health": {
+          "max": 999,
+          "value": 999
+        },
+        "minecraft:attack": {
+          "damage": 1
+        },
+        "minecraft:collision_box": {
+          "width": 0.7,
+          "height": 1.2
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/empty.json"
+        },
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:type_family": {
+          "family": ["mob"]
+        }
+      },
+      "comp:sensor": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "all",
+            "deals_damage": false
+          }
+        }
+      },
+      "comp:use_delayed_attack": {
+        "minecraft:behavior.delayed_attack": {
+          "attack_duration": 1.0,
+          "hit_delay_pct": 0.35,
+          "priority": 5,
+          "reach_multiplier": 1.5,
+          "track_target": true
+        }
+      },
+      "comp:use_melee_attack": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 5,
+          "speed_multiplier": 1.0,
+          "track_target": true
+        }
+      },
+      "comp:use_ranged_attack": {
+        "minecraft:behavior.ranged_attack": {
+          "priority": 5,
+          "attack_interval_max": 3.0,
+          "attack_interval_min": 1.0,
+          "attack_radius": 15.0
+        },
+        "minecraft:shooter": {
+          "def": "minecraft:arrow"
+        }
+      },
+      "comp:raw_tame": {
+        "minecraft:is_stunned": {},
+        "minecraft:tameable": {}
+      },
+      "comp:on_tame": {
+        "minecraft:is_tamed": {}
+      },
+      "comp:on_tame_following":{
+        "minecraft:behavior.follow_owner": {
+          "priority": 7,
+          "speed_multiplier": 1.0,
+          "start_distance": 10,
+          "stop_distance": 4
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "sz_workshop.follow.stroll",
+              "swing": true,
+              "on_interact": {
+                "event": "event:stroll"
+              }
+            }
+          ]
+        }
+      },
+      "comp:on_tame_strolling":{
+        "minecraft:behavior.random_stroll": {
+          "interval": 120,
+          "xz_dist": 10,
+          "y_dist": 7,
+          "speed_multiplier": 0.5
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "sz_workshop.follow.button",
+              "swing": true,
+              "on_interact": {
+                "event": "event:follow"
+              }
+            }
+          ]
+        }
+
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "comp:base", "comp:config", "comp:behaviour",
+            "comp:sensor",
+            "comp:raw_tame"
+            // "comp:friendly"
+          ]
+        }
+      },
+      "event:on_tame": {
+        "add": {
+          "component_groups": ["comp:on_tame", "comp:on_tame_following"]
+        },
+        "remove": {
+          "component_groups": ["comp:raw_tame"]
+        },
+        "queue_command": {
+          "command": [
+            "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"text.friendly_arcane_axolotl.follow\"} ] }"
+          ]
+        }
+      },
+      "event:follow":{
+        "add": {
+          "component_groups": ["comp:on_tame_following"]
+        },
+        "remove": {
+          "component_groups": ["comp:on_tame_strolling"]
+        },
+        "queue_command": {
+          "command": [
+            "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"text.friendly_arcane_axolotl.follow\"} ] }"
+          ]
+        }
+      },
+      "event:stroll":{
+        "add": {
+          "component_groups": ["comp:on_tame_strolling"]
+        },
+        "remove": {
+          "component_groups": ["comp:on_tame_following"]
+        },
+        "queue_command": {
+          "command": [
+            "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"text.friendly_arcane_axolotl.stroll\"} ] }"
+          ]
+        }
+      }
+    }
+  }
+}

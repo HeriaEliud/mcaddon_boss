@@ -1,0 +1,17 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "components": {
+      "minecraft:icon": "sz_workshop:champion_ticket",
+      "minecraft:max_stack_size": {
+        "value": 1
+      },
+      "minecraft:entity_placer": {
+        "entity": "sz_workshop:the_champ"
+      }
+    },
+    "description": {
+      "identifier": "sz_workshop:champion_ticket"
+    }
+  }
+}

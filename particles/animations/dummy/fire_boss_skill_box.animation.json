@@ -1,0 +1,61 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pixelmind.fire_boss_skill_box.cursed_storm": {
+			"loop": true,
+			"animation_length": 5,
+			"sound_effects": {
+				"0.0": {
+					"effect": "fire_tornado"
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_boss_curse_storm_1",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_curse_storm_2",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_curse_storm_3",
+						"locator": "locator"
+					}
+				]
+			}
+		},
+		"animation.pixelmind.fire_boss_skill_box.spike": {
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_boss_cursed_spikes_1",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_cursed_spikes_2",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_cursed_spikes_3",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_cursed_spikes_4",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_cursed_spikes_5",
+						"locator": "locator"
+					},
+					{
+						"effect": "fire_boss_cursed_spikes_6",
+						"locator": "locator"
+					}
+				]
+			}
+		}
+	}
+}

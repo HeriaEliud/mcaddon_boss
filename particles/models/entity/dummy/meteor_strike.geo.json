@@ -1,0 +1,57 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pixelmind.meteor_strike",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 9,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-35.2772, -35.2772, -35.2772],
+							"size": [70.5544, 70.5544, 70.5544],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [71, 71]},
+								"east": {"uv": [0, 72], "uv_size": [71, 71]},
+								"south": {"uv": [72, 0], "uv_size": [71, 71]},
+								"west": {"uv": [72, 72], "uv_size": [71, 71]},
+								"up": {"uv": [0, 144], "uv_size": [71, 71]},
+								"down": {"uv": [144, 71], "uv_size": [71, -71]}
+							}
+						},
+						{
+							"origin": [-35.2772, -35.2772, -35.2772],
+							"size": [70.5544, 70.5544, 70.5544],
+							"pivot": [0, 0, 0],
+							"rotation": [-45, 45, 0],
+							"uv": {
+								"north": {"uv": [72, 144], "uv_size": [71, 71]},
+								"east": {"uv": [144, 72], "uv_size": [71, 71]},
+								"south": {"uv": [144, 144], "uv_size": [71, 71]},
+								"west": {"uv": [0, 216], "uv_size": [71, 71]},
+								"up": {"uv": [216, 0], "uv_size": [71, 71]},
+								"down": {"uv": [72, 287], "uv_size": [71, -71]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fx1",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"fx1": [0, 0, 0]
+					}
+				}
+			]
+		}
+	]
+}

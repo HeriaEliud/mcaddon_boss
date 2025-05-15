@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "pixelmind:volcano_boss_sting_out_4",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particle/pixelmind_volcano_boss_sting_out_4"
+			}
+		},
+		"curves": {
+			"variable.size1": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [3.2, 1, 1, 0]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 40,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1.5
+			},
+			"minecraft:emitter_shape_disc": {
+				"radius": 1,
+				"direction": ["math.random(-0.3,0.3)", "math.random(0.5,1)", "math.random(-0.3,0.3)"]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.3,0.5)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(0,360)"
+			},
+			"minecraft:particle_initial_speed": "math.random(25,15)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [0, -20, 0],
+				"linear_drag_coefficient": 4
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["1*variable.size1*variable.particle_random_1", "1*variable.size1*variable.particle_random_1"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 9,
+					"texture_height": 9,
+					"uv": [0, 0],
+					"uv_size": [9, 9]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [1, 0.43922, 0.22353, 1]
+			}
+		}
+	}
+}

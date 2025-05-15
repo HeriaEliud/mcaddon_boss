@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shayu": {
+			"animation_length": 14.0833,
+			"bones": {
+				"shayu": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"14.0833": [0, -720, 0]
+					}
+				},
+				"shayu3": {
+					"rotation": [-360, 0, -180],
+					"position": [-128, 29, 0]
+				},
+				"shayu2": {
+					"rotation": [-360, -90, -180],
+					"position": [0, 29, 128]
+				},
+				"shayu4": {
+					"rotation": [-540, 0, -360],
+					"position": [128, 29, 0]
+				},
+				"shayu1": {
+					"rotation": [0, 90, 180],
+					"position": [0, 29, -128]
+				},
+				"shayu_root": {
+					"rotation": [0, "-q.body_y_rotation", 0]
+				}
+			},
+			"particle_effects": {
+				"2.25": [
+					{
+						"effect": "water_raid_domain_9",
+						"locator": "shayu1"
+					},
+					{
+						"effect": "water_raid_domain_9",
+						"locator": "shayu2"
+					},
+					{
+						"effect": "water_raid_domain_9",
+						"locator": "shayu3"
+					},
+					{
+						"effect": "water_raid_domain_9",
+						"locator": "shayu4"
+					},
+					{
+						"effect": "water_raid_domain_10",
+						"locator": "shayu1"
+					},
+					{
+						"effect": "water_raid_domain_10",
+						"locator": "shayu2"
+					},
+					{
+						"effect": "water_raid_domain_10",
+						"locator": "shayu3"
+					},
+					{
+						"effect": "water_raid_domain_10",
+						"locator": "shayu4"
+					}
+				]
+			}
+		}
+	}
+}

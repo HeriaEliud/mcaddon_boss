@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "geometry": {
+        "default": "geometry.boss_expansion.kraken_sword"
+      },
+      "animations": {
+        "root.fp": "controller.animation.boss_expansion.kraken_sword.fp",
+        "fpp_idle": "animation.boss_expansion.kraken_sword.fpp_idle",
+        "tpp_idle": "animation.boss_expansion.kraken_sword.tpp_idle",
+        "fpp_attack1": "animation.boss_expansion.kraken_sword.fpp_attack1",
+        "fpp_attack2": "animation.boss_expansion.kraken_sword.fpp_attack2"
+      },
+      "particle_effects": {
+        "kraken_sword_attack2_01": "sz_workshop:kraken_sword_attack2_01",
+        "kraken_sword_attack2_02": "sz_workshop:kraken_sword_attack2_02",
+        "kraken_sword_attack2_03": "sz_workshop:kraken_sword_attack2_03",
+        "kraken_sword_attack2_04": "sz_workshop:kraken_sword_attack2_04",
+        "kraken_sword_attack2_05": "sz_workshop:kraken_sword_attack2_05",
+        "kraken_sword_attack2_06": "sz_workshop:kraken_sword_attack2_06",
+        "kraken_sword_attack2_07": "sz_workshop:kraken_sword_attack2_07"
+      },
+      "scripts": {
+        "animate": [
+          {"root.fp": "c.is_first_person"},
+          {"tpp_idle": "!c.is_first_person"}
+        ]
+      },
+      "identifier": "sz_workshop:kraken_sword",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "armor_enchanted"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "textures": {
+        "default": "textures/sz/be/attachable/kraken_sword",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      }
+    }
+  }
+}

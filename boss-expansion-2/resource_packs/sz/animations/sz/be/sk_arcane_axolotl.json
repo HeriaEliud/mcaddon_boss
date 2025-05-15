@@ -1,0 +1,77 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.boss_expansion.projectile.arcane_axolotl.attack1": {
+      "loop": true,
+      "animation_length": 1.2,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "arcane_water_control_bullet_01",
+            "locator": "locator"
+          },
+          {
+            "effect": "arcane_water_control_bullet_02",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.boss_expansion.projectile.arcane_axolotl.attack2": {
+      "loop": true,
+      "animation_length": 1.2,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "arcane_water_explosion_bullet_01",
+            "locator": "locator"
+          },
+          {
+            "effect": "arcane_water_explosion_bullet_02",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.boss_expansion.projectile.arcane_axolotl.skill1": {
+      "loop": true,
+      "animation_length": 1.2,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "arcane_water_missile_01",
+            "locator": "locator"
+          },
+          {
+            "effect": "arcane_water_missile_02",
+            "locator": "locator"
+          }
+        ]
+      }
+    },
+    "animation.boss_expansion.detector.arcane_axolotl.skill5": {
+      "loop": false,
+      "animation_length": 1.2,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "arcane_bubble_trap_qiu_01",
+            "locator": "locator"
+          },
+          {
+            "effect": "arcane_bubble_trap_qiu_02",
+            "locator": "locator"
+          },
+          {
+            "effect": "arcane_bubble_trap_qiu_03",
+            "locator": "locator"
+          },
+          {
+            "effect": "arcane_bubble_trap_qiu_04",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

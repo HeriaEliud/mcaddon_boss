@@ -1,0 +1,28 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "boss_expansion:craft_pharoah_coffin"
+    },
+    "key": {
+      "1": {"item": "minecraft:gold_ingot"},
+      "2": {"item": "minecraft:lapis_lazuli"},
+      "3": {"item": "minecraft:mossy_cobblestone"},
+      "4": {"item": "minecraft:obsidian"},
+      "5": {"item": "minecraft:gold_block"},
+      "6": {"item": "minecraft:nether_brick"}
+    },
+    "pattern": [
+      "424",
+      "515",
+      "363"
+    ],
+    "result": {
+      "count": 1,
+      "item": "sz_workshop:pharoah_coffin"
+    },
+    "tags": [
+      "crafting_table"
+    ]
+  }
+}

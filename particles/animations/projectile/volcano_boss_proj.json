@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.pixelmind.volcano_boss.meteor": {
+      "override_previous_animation": true,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "volcano_boss_the_meteor_5",
+            "locator": "locator"
+          },
+          {
+            "effect": "volcano_boss_the_meteor_6",
+            "locator": "locator"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "pixelmind:forest_boss_attack_5",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particle/pixelmind_forest_boss_attack_5"
+			}
+		},
+		"curves": {
+			"variable.size1": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [3.86, 1, 1, 0]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 12
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1.5
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.6,0.35)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(0,360)",
+				"rotation_rate": "math.random(-360,360)"
+			},
+			"minecraft:particle_initial_speed": "math.random(25,35)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_drag_coefficient": 4,
+				"rotation_acceleration": 300
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["2*variable.particle_random_1*variable.size1", "2*variable.particle_random_1*variable.size1"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 4,
+					"texture_height": 4,
+					"uv": [0, 0],
+					"uv_size": [4, 4]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [0.87843, 0.51373, 1, 1]
+			}
+		}
+	}
+}

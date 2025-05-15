@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "sz_workshop:pjd_pharoah_atk2",
+      "animations": {
+        "root": "animation.boss_expansion.projectile.the_pharoah.attack2"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.projectile_general"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "textures": {
+        "default": "textures/items/apple"
+      },
+      "particle_effects": {
+        "pharoah_basic_attack2_bullet_01": "sz_workshop:pharoah_basic_attack2_bullet_01",
+        "pharoah_basic_attack2_bullet_02": "sz_workshop:pharoah_basic_attack2_bullet_02",
+        "pharoah_basic_attack2_bullet_03": "sz_workshop:pharoah_basic_attack2_bullet_03"
+      }
+    }
+  }
+}

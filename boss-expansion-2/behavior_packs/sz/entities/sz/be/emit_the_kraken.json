@@ -1,0 +1,268 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "components": {
+      "minecraft:boss": {"should_darken_sky": true, "hud_range": 55, "name": "§cEmit The Kraken"},
+      "minecraft:experience_reward": {"on_death": 500},
+      "minecraft:follow_range": {"value": 128},
+      "minecraft:behavior.hurt_by_target": {"priority": 1}
+    },
+    "description": {
+      "identifier": "sz_workshop:emit_the_kraken",
+      "is_experimental": false,
+      "is_spawnable": true,
+      "is_summonable": true,
+      "animations": {
+        "root": "controller.animation.boss_expansion.emit_the_kraken.target_test",
+        "combat": "controller.animation.boss_expansion.boss_entity.combat"
+      },
+      "scripts": {
+        "animate": [
+          "root",
+          "combat"
+        ]
+      }
+    },
+    "component_groups": {
+      "comp:base": {
+        "minecraft:jump.static": {},
+        "minecraft:movement.basic": {},
+        "minecraft:physics": {},
+        "minecraft:nameable": {
+          "allow_name_tag_renaming": true,
+          "always_show": true
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        }
+      },
+      "comp:behaviour": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 3,
+          "must_see": true,
+          "entity_types": [
+            {"filters": {"subject": "other", "test": "is_family", "value": "player"}}
+          ]
+        }
+      },
+      "comp:config": {
+        "minecraft:knockback_resistance": {"value": 1},
+        "minecraft:attack": {"damage": 1},
+        "minecraft:health": {
+          // CHANGE: 生命值：提升至 600
+          // "max": 500,
+          // "value": 500
+          "max": 600,
+          "value": 600
+        },
+        "minecraft:collision_box": {
+          "width": 4.5,
+          "height": 9
+        },
+        "minecraft:movement": {
+          "value": 0.0001
+        },
+        "minecraft:type_family": {
+          "family": ["mob", "monster", "boss"]
+        }
+      },
+      "comp:sensor": {
+        "minecraft:on_target_acquired": {
+          "event": "event:on_target_acquired",
+          "target": "self"
+        },
+        "minecraft:on_target_escape": {
+          "event": "event:on_target_escape",
+          "target": "self"
+        }
+      },
+      "comp:on_death": {
+        "minecraft:is_sheared": {},
+        "minecraft:timer": {"looping": false, "time": 3.0, "time_down_event": {"event": "event:despawn"}}
+      },
+      "comp:despawn": {
+        "minecraft:equipment": {"table": "loot_tables/sz/be/emit_the_kraken.json"},
+        "minecraft:transformation": {"into": "sz_workshop:void", "delay": {"value": 0.01}, "drop_equipment": true}
+      },
+      "comp:no_attackable_target": {
+        "minecraft:is_stunned": {}
+      },
+      "comp:set_awake": {
+        "minecraft:navigation.walk": {
+          "avoid_water": true,
+          "is_amphibious": true
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 9,
+          "probability": 0.02,
+          "target_distance": 6.0
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 11
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 10,
+          "speed_multiplier": 1.0
+        }
+      },
+      "comp:immune_death": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "deals_damage": false,
+            "on_damage": {
+              "filters": {"test": "has_damage", "value": "fatal"},
+              "event": "event:on_death",
+              "target": "self"
+            }
+          }
+        }
+      },
+      "comp:search_attack": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 5,
+          "speed_multiplier": 1.0,
+          "track_target": true,
+          "reach_multiplier": 0.0
+        }
+      },
+      "comp:can_use_ability": {
+        "minecraft:behavior.summon_entity": {
+          "priority": 4,
+          "summon_choices": [
+            {
+              "weight": 1,
+              "min_activation_range": 1.0,
+              "max_activation_range": 16.0,
+              "cooldown_time": 10.0,
+              "cast_duration": 30.0,
+              "sequence": [
+                {"entity_type": "sz_workshop:void"}
+              ]
+            }
+          ]
+        }
+      },
+      "comp:health_05_state": {
+        "minecraft:movement": {
+          "value": 0.3
+        }
+      },
+      "comp:health_01_state": {
+        "minecraft:movement": {
+          "value": 0.15
+        }
+      },
+      "comp:set_charge_hit": {"minecraft:mark_variant": {"value": 1}},
+      "comp:reset_charge_hit": {"minecraft:mark_variant": {"value": 0}},
+      "comp:reset_ability": {
+        "minecraft:variant": {"value": 0}
+      },
+      "comp:use_attack1": {
+        "minecraft:variant": {"value": 10}
+      },
+      "comp:use_attack2": {
+        "minecraft:variant": {"value": 20}
+      },
+      "comp:use_skill1": {
+        "minecraft:variant": {"value": 100}
+      },
+      "comp:use_skill2": {
+        "minecraft:variant": {"value": 200}
+      },
+      "comp:use_skill3": {
+        "minecraft:variant": {"value": 300}
+      },
+      "comp:use_skill4": {
+        "minecraft:variant": {"value": 400}
+      },
+      "comp:use_skill5": {
+        "minecraft:variant": {"value": 500}
+      },
+      "comp:use_skill6": {
+        "minecraft:variant": {"value": 600}
+      },
+      "comp:spawn_entity": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "spawn_entity": "sz_workshop:kratiny",
+              "single_use": true,
+              "min_wait_time": 0,
+              "max_wait_time": 0,
+              "num_to_spawn": 4,
+              "spawn_event": "minecraft:entity_spawned"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "comp:base", "comp:config", "comp:behaviour",
+            "comp:sensor",
+            "comp:no_attackable_target",
+            "comp:search_attack",
+            "comp:spawn_entity"
+          ]
+        }
+      },
+      "event:despawn": {"add": {"component_groups": ["comp:despawn"]}},
+      "event:on_death": {
+        "sequence": [
+          {
+            "filters": {"test": "has_component", "value": "minecraft:is_sheared", "operator": "!="},
+            "add": {"component_groups": ["comp:on_death"]}
+          },
+          {
+            "remove": {
+              "component_groups": [
+                "comp:set_awake",
+                "comp:behaviour"
+              ]
+            }
+          }
+        ]
+      },
+      "event:set_awake": {
+        "add": {
+          "component_groups": [
+            "comp:set_awake",
+            "comp:immune_death",
+            "comp:can_use_ability"
+          ]
+        }
+      },
+      "event:on_target_acquired": {"remove": {"component_groups": ["comp:no_attackable_target"]}},
+      "event:on_target_escape": {},
+      "event:health_05_state": {"add": {"component_groups": ["comp:health_05_state"]}},
+      "event:health_01_state": {"add": {"component_groups": ["comp:health_01_state"]}},
+      "event:try_active_ability": {},
+      "event:on_active_ability": {},
+      "event:reset_ability": {
+        "sequence": [
+          {"remove": {"component_groups": ["comp:can_use_ability"]}},
+          {"add": {"component_groups": ["comp:reset_ability"]}},
+          {
+            "filters": {"test": "has_component", "value": "minecraft:is_sheared", "operator": "!="},
+            "add": {"component_groups": ["comp:search_attack"]}
+          }
+        ]
+      },
+      "event:can_use_ability": {"add": {"component_groups": ["comp:can_use_ability"]}},
+      "event:set_charge_hit": {"add": {"component_groups": ["comp:set_charge_hit"]}},
+      "event:reset_charge_hit": {"add": {"component_groups": ["comp:reset_charge_hit"]}},
+      "event:set_use_attack1": {"add": {"component_groups": ["comp:use_attack1"]}},
+      "event:set_use_attack2": {"add": {"component_groups": ["comp:use_attack2"]}},
+      "event:set_use_skill1": {"add": {"component_groups": ["comp:use_skill1"]}},
+      "event:set_use_skill2": {"add": {"component_groups": ["comp:use_skill2"]}},
+      "event:set_use_skill3": {"add": {"component_groups": ["comp:use_skill3"]}},
+      "event:set_use_skill4": {"add": {"component_groups": ["comp:use_skill4"]}},
+      "event:set_use_skill5": {"add": {"component_groups": ["comp:use_skill5"]}},
+      "event:set_use_skill6": {"add": {"component_groups": ["comp:use_skill6"]}},
+      "event:spawn_entity": {}
+    }
+  }
+}

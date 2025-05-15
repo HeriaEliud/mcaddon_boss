@@ -1,0 +1,101 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:client_entity": {
+    "description": {
+      "animations": {
+        "root": "controller.animation.boss_expansion.arcane_axolotl.root",
+        "idle": "animation.boss_expansion.arcane_axolotl.idle",
+        "hostile": "animation.boss_expansion.arcane_axolotl.hostile",
+        "walk": "animation.boss_expansion.arcane_axolotl.walk",
+        "water_control": "animation.boss_expansion.arcane_axolotl.water_control",
+        "water_explosion": "animation.boss_expansion.arcane_axolotl.water_explosion",
+        "water_missile": "animation.boss_expansion.arcane_axolotl.water_missile",
+        "water_shield": "animation.boss_expansion.arcane_axolotl.water_shield",
+        "water_jet": "animation.boss_expansion.arcane_axolotl.water_jet",
+        "geyser_explosion": "animation.boss_expansion.arcane_axolotl.geyser_explosion",
+        "bubble_trap": "animation.boss_expansion.arcane_axolotl.bubble_trap",
+        "water_spin": "animation.boss_expansion.arcane_axolotl.water_spin",
+        "navy": "animation.boss_expansion.arcane_axolotl.navy",
+        "life_of_water": "animation.boss_expansion.arcane_axolotl.life_of_water",
+        "fx": "animation.boss_expansion.arcane_axolotl.fx"
+      },
+      "geometry": {
+        "default": "geometry.boss_expansion.arcane_axolotl"
+      },
+      "identifier": "sz_workshop:arcane_axolotl",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.health_rate = query.health / query.max_health;"
+        ],
+        "animate": [
+          "root", "fx"
+        ]
+      },
+      "spawn_egg": {
+        "texture": "sz_workshop:arcane_axolotl_spawn_egg"
+      },
+      "textures": {
+        "default": "textures/sz/be/entity/arcane_axolotl"
+      },
+      "particle_effects": {
+        "arcane_axolotl_1": "sz_workshop:arcane_axolotl_1",
+        "arcane_axolotl_2": "sz_workshop:arcane_axolotl_2",
+        "arcane_axolotl_3": "sz_workshop:arcane_axolotl_3",
+        "arcane_axolotl_4": "sz_workshop:arcane_axolotl_4",
+        "arcane_axolotl_5": "sz_workshop:arcane_axolotl_5",
+        "arcane_axolotl_6": "sz_workshop:arcane_axolotl_6",
+        "arcane_axolotl_7": "sz_workshop:arcane_axolotl_7",
+        "arcane_axolotl_8": "sz_workshop:arcane_axolotl_8",
+        "arcane_axolotl_9": "sz_workshop:arcane_axolotl_9",
+        "geyser_explosion_03": "sz_workshop:geyser_explosion_03",
+        "navy_01": "sz_workshop:navy_01",
+        "navy_02": "sz_workshop:navy_02",
+        "water_jet_04": "sz_workshop:water_jet_04",
+        "geyser_explosion_04": "sz_workshop:geyser_explosion_04",
+        "water_jet_05": "sz_workshop:water_jet_05",
+        "arcane_water_explosion_01": "sz_workshop:arcane_water_explosion_01",
+        "geyser_explosion_01": "sz_workshop:geyser_explosion_01",
+        "arcane_water_explosion_bullet_01": "sz_workshop:arcane_water_explosion_bullet_01",
+        "arcane_bubble_trap_02": "sz_workshop:arcane_bubble_trap_02",
+        "arcane_bubble_trap_01": "sz_workshop:arcane_bubble_trap_01",
+        "arcane_water_explosion_bullet_02": "sz_workshop:arcane_water_explosion_bullet_02",
+        "arcane_axolotl_idle_01": "sz_workshop:arcane_axolotl_idle_01",
+        "arcane_axolotl_idle_02": "sz_workshop:arcane_axolotl_idle_02",
+        "arcane_axolotl_idle_03": "sz_workshop:arcane_axolotl_idle_03",
+        "arcane_water_control_01": "sz_workshop:arcane_water_control_01",
+        "geyser_explosion_02": "sz_workshop:geyser_explosion_02",
+        "arcane_xuanwo_02": "sz_workshop:arcane_xuanwo_02",
+        "arcane_xuanwo_01": "sz_workshop:arcane_xuanwo_01",
+        "arcane_life_of_water_03": "sz_workshop:arcane_life_of_water_03",
+        "arcane_life_of_water_02": "sz_workshop:arcane_life_of_water_02",
+        "arcane_life_of_water_01": "sz_workshop:arcane_life_of_water_01",
+        "water_jet_03": "sz_workshop:water_jet_03",
+        "water_jet_01": "sz_workshop:water_jet_01",
+        "water_jet_02": "sz_workshop:water_jet_02",
+        "arcane_life_of_water_04": "sz_workshop:arcane_life_of_water_04",
+        "effect_arcane_water_explosion_hit_02": "sz_workshop:effect_arcane_water_explosion_hit_02",
+        "effect_arcane_water_explosion_hit_03": "sz_workshop:effect_arcane_water_explosion_hit_03"
+      },
+      "sound_effects": {
+        "arcane_axolotl_bubble_trap": "sz_workshop.arcane_axolotl_bubble_trap",
+        "arcane_axolotl_geyser_explosion": "sz_workshop.arcane_axolotl_geyser_explosion",
+        "arcane_axolotl_hostile": "sz_workshop.arcane_axolotl_hostile",
+        "arcane_axolotl_life_of_water": "sz_workshop.arcane_axolotl_life_of_water",
+        "arcane_axolotl_navy": "sz_workshop.arcane_axolotl_navy",
+        "arcane_axolotl_walk": "sz_workshop.arcane_axolotl_walk",
+        "arcane_axolotl_water_control": "sz_workshop.arcane_axolotl_water_control",
+        "arcane_axolotl_water_explosion": "sz_workshop.arcane_axolotl_water_explosion",
+        "arcane_axolotl_water_jet": "sz_workshop.arcane_axolotl_water_jet",
+        "arcane_axolotl_water_missile": "sz_workshop.arcane_axolotl_water_missile",
+        "arcane_axolotl_water_shield": "sz_workshop.arcane_axolotl_water_shield",
+        "arcane_axolotl_water_spin": "sz_workshop.arcane_axolotl_water_spin"
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sz_workshop:pjd_pharoah_atk1",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "on_impact": "animation.sz_workshop.pjd_pharoah_atk1.on_impact",
+        "launch": "animation.sz_workshop.pjd_pharoah_atk1.launch"
+      },
+      "scripts": {
+        "animate": [
+          {"on_impact": "query.is_sheared"},
+          "launch"
+        ]
+      }
+    },
+    "component_groups": {
+      "comp:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "comp:explode": {
+        "minecraft:is_sheared": {}
+      },
+      "comp:timedown": {
+        "minecraft:timer": {
+          "time": 1.2,
+          "looping": false,
+          "time_down_event": {
+            "event": "event:expire",
+            "target": "self"
+          }
+        }
+      },
+      "comp:projectile": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "event:expire",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              // 基础攻击 1 - 伤害提升至每个投射物 6 点伤害
+              // "damage": 5,
+              "damage": 6,
+              "filter": "player",
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "is_dangerous": false,
+          "power": 0.5,
+          "gravity": 0.05,
+          "uncertainty_base": 16,
+          "uncertainty_multiplier": 4,
+          "anchor": 1,
+          "should_bounce": false,
+          "offset": [0, 0, 0]
+        }
+      }
+    },
+    "components": {
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:type_family": {
+        "family": [
+          "projectile",
+          "illuminate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:fire_immune": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": ["comp:timedown", "comp:projectile"]
+        }
+      },
+      "event:expire": {
+        "add": {
+          "component_groups": [
+            "comp:explode"
+          ]
+        }
+      },
+      "event:despawn": {
+        "add": {
+          "component_groups": [
+            "comp:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

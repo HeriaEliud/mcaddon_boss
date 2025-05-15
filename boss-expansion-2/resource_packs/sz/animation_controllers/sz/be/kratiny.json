@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.boss_expansion.kratiny.root": {
+			"initial_state": "spawn",
+			"states": {
+				"spawn": {
+					"animations": ["spawn"],
+					"transitions": [
+						{"idle": "query.any_animation_finished"}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"idle": {
+					"animations": ["idle"],
+					"transitions": [
+						{"attack": "query.is_delayed_attacking"},
+						{"death": "query.is_sheared"}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"attack": {
+					"animations": ["attack"],
+					"transitions": [
+						{"idle": "query.any_animation_finished"},
+						{"death": "query.any_animation_finished && query.is_sheared"}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"death": {
+					"animations": ["death"],
+					"transitions": [
+						{"idle": "(0.0)"}
+					]
+				}
+			}
+		}
+	}
+}
