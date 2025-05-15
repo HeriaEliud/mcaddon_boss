@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "mutated_boss_project Behavior  Pack",
+        "description": "mutated_boss_project自动生成包",
+        "uuid": "865d3bdb-7330-4470-975a-68d378f98564",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 80]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "513b51ce-f2d1-4f02-ae15-374f253242aa",
+            "version": [1, 0, 0]
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "pixelmind:mutated_boss",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/mutated_boss"
+      },
+      "geometry": {
+        "default": "geometry.pixelmind.mutated_boss"
+      },
+      "render_controllers": ["controller.render.default"],
+      "spawn_egg": {
+        "base_color": "#5a326f",
+        "overlay_color": "#1345c6"
+      },
+      "scripts": {
+        "pre_animation": ["variable.attack = query.is_delayed_attacking;", "variable.walk = query.ground_speed;"],
+        "animate": ["controller.animation.pixelmind.mutated_boss"]
+      },
+      "animations": {
+        "walk": "animation.pixelmind.mutated_boss.walk",
+        "idle": "animation.pixelmind.mutated_boss.idle",
+        "attack": "animation.pixelmind.mutated_boss.attack",
+        "basic_attack": "animation.pixelmind.mutated_boss.basic_attack",
+        "amorphosis": "animation.pixelmind.mutated_boss.amorphosis",
+        "throw": "animation.pixelmind.mutated_boss.throw",
+        "death": "animation.pixelmind.mutated_boss.death",
+        "transition": "animation.pixelmind.mutated_boss.transition",
+        "zaisheng": "animation.pixelmind.mutated_boss.zaisheng",
+        "cover": "animation.pixelmind.mutated_boss.cover",
+        "look_target_plus": "animation.pixelmind.mutated_boss.look_target_plus",
+        "physical_skills": "animation.pixelmind.mutated_boss.physical_skills",
+        "skill2": "animation.pixelmind.mutated_boss.skill2",
+        "controller.animation.pixelmind.mutated_boss": "controller.animation.pixelmind.mutated_boss"
+      }
+    }
+
+
+  }
+}
