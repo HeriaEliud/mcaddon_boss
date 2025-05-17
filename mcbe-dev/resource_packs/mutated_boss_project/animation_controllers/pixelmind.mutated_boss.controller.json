@@ -5,16 +5,24 @@
       "initial_state": "default",
       "states": {
         "default": {
-          "transitions": [{ "walk": "query.is_moving" }, { "attack": "variable.attack" }],
-          "animations": ["animation.pixelmind.mutated_boss.idle"]
+          "transitions": [
+            { "walk": "query.is_moving" },
+            { "attack": "variable.attack" }
+          ],
+          "animations": ["idle"]
         },
         "walk": {
-          "transitions": [{ "attack": "variable.attack" }, { "default": "!query.is_moving" }],
-          "animations": ["animation.pixelmind.mutated_boss.walk"]
+          "transitions": [
+            { "attack": "variable.attack" },
+            { "default": "!query.is_moving" }
+          ],
+          "animations": ["walk"]
         },
         "attack": {
-          "transitions": [{ "default": "!variable.attack" }],
-          "animations": ["animation.pixelmind.mutated_boss.attack"]
+          "transitions": [
+            { "default": "query.anim_time >= 0.95" }
+          ],
+          "animations": ["basic_attack"]
         }
       }
     }

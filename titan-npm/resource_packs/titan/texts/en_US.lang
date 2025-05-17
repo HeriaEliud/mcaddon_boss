@@ -1,0 +1,4 @@
+entity.titan:earth_titan.name=Earth Titan
+item.spawn_egg.entity.titan:entity.earth_titan=Spawn Earth Titan
+item.titan:sharp_claw=Sharp Claw
+item.titan:undead_bone=Undead Bone

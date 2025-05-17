@@ -1,0 +1,21 @@
+{
+  "name": "titan-npm",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "just clean compile",
+    "clean": "just clean",
+    "local-deploy": "just local-deploy",
+    "watch": "just watch"
+  },
+  "devDependencies": {
+    "@minecraft/core-build-tasks": "^5.0.0",
+    "gulp": "^4.0.2",
+    "just-scripts": "^2.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@minecraft/server": "^1.13.0",
+    "@minecraft/server-ui": "^1.2.0"
+  }
+}

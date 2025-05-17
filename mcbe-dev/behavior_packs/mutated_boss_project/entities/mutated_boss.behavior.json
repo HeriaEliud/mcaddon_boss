@@ -15,14 +15,14 @@
         "always_show": true
       },
       "minecraft:health": {
-        "value": 200,
-        "max": 200
+        "value": 40,
+        "max": 40
       },
       "minecraft:attack": {
-        "damage": 20
+        "damage": 6
       },
       "minecraft:experience_reward": {
-        "on_death": "query.last_hit_by_player ? 50 : 0"
+        "on_death": "query.last_hit_by_player ? 15 : 0"
       },
       "minecraft:physics": {
         "has_gravity": true,
@@ -44,15 +44,15 @@
       "minecraft:behavior.delayed_attack": {
         "priority": 4,
         "attack_once": false,
-        "attack_duration": 1.0,
-        "reach_multiplier": 2.0,
+        "attack_duration": 0.8,
+        "reach_multiplier": 3.0,
         "track_target": true,
         "hit_delay_pct": 0.5,
         "speed_multiplier": 1.0
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
-        "within_radius": 32,
+        "within_radius": 16,
         "entity_types": [
           {
             "filters": {
@@ -60,15 +60,16 @@
               "subject": "other",
               "value": "player"
             },
-            "max_dist": 32
+            "max_dist": 16
           }
         ]
       },
       "minecraft:behavior.random_stroll": {
-        "priority": 6
+        "priority": 6,
+        "speed_multiplier": 0.8
       },
       "minecraft:attack_cooldown": {
-        "attack_cooldown_time": 1.5,
+        "attack_cooldown_time": 1.2,
         "attack_cooldown_complete_event": {
           "event": "minecraft:attack_cooldown_complete"
         }

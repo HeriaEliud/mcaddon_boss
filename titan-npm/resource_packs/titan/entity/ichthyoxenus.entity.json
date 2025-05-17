@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "titan:earth_titan",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ichthyoxenus"
+      },
+      "geometry": {
+        "default": "geometry.ichthyoxenus"
+      },
+      "render_controllers": ["controller.render.default"],
+      "spawn_egg": {
+        "base_color": "#5a326f",
+        "overlay_color": "#1345c6"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.attack = query.is_delayed_attacking;",
+          "variable.walk = query.ground_speed;"
+        ],
+        "animate": ["controller.animation.pixelmind.ichthyoxenus"]
+      },
+
+      "animations": {
+        "idle": "animation.pixelmind.ichthyoxenus.idle",
+        "walk": "animation.pixelmind.ichthyoxenus.walk",
+        "attack": "animation.pixelmind.ichthyoxenus.attack",
+        "groundslam": "animation.pixelmind.ichthyoxenus.groundslam",
+        "controller.animation.pixelmind.ichthyoxenus": "controller.animation.pixelmind.ichthyoxenus"
+      }
+    }
+  }
+}

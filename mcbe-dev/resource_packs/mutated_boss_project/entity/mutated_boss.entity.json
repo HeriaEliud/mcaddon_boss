@@ -7,7 +7,7 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/mutated_boss"
+        "default": "textures/entity/mutated_boss"
       },
       "geometry": {
         "default": "geometry.pixelmind.mutated_boss"
@@ -38,7 +38,5 @@
         "controller.animation.pixelmind.mutated_boss": "controller.animation.pixelmind.mutated_boss"
       }
     }
-
-
   }
 }

@@ -1,0 +1,13 @@
+{
+  "resource_pack_name": "titan",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "sharp_claw": {
+      "textures": "textures/items/sharp_claw"
+    },
+    "undead_bone": {
+      "textures": "textures/items/undead_bone"
+    }
+  }
+}
+  

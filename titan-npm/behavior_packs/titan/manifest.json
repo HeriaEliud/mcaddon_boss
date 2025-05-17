@@ -1,0 +1,41 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "titan",
+        "description": "titan Behavior Pack",
+        "uuid": "41e9ed6f-93cd-4f74-b0a9-b94d6fa1b597",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 30]
+    },
+    "metadata": {
+        "generated_with": {
+            "blockbench_entity_wizard": ["1.7.0"]
+        }
+    },
+    "modules": [
+        {
+            "description": "Behavior",
+            "version": [1, 0, 0],
+            "uuid": "58ceca90-db44-4e14-bb23-abaf2b0e0f14",
+            "type": "data"
+        },
+        {
+            "description": "Gameplay",
+            "language": "javascript",
+            "type": "script",
+            "uuid": "592d98bd-4669-4a2a-a8ba-c07f3e7f8ef0",
+            "version": [1, 0, 0],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "41258979-3dd6-428c-9334-8a285013542d",
+            "version": [1, 0, 0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.8.0"
+        }
+    ]
+}

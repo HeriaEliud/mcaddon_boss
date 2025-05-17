@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.pixelmind.ichthyoxenus": {
+      "initial_state": "spawning",
+      "states": {
+        "spawning": {
+          "animations": ["groundslam"],
+          "transitions": [
+            {
+              "default": "query.anim_time('groundslam') >= 1.5"
+            }
+          ]
+        },
+        "default": {
+          "animations": ["idle"],
+          "transitions": [
+            { "attacking": "variable.attack > 0.0" },
+            { "walking": "variable.walk > 0.0" }
+          ]
+        },
+        "walking": {
+          "animations": ["walk"],
+          "transitions": [
+            { "attacking": "variable.attack > 0.0" },
+            { "default": "variable.walk <= 0.0" }
+          ]
+        },
+        "attacking": {
+          "animations": ["attack"], 
+          "transitions": [
+            {
+              "default": "query.anim_time('attack') >= 0.99"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
