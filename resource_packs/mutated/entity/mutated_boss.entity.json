@@ -22,7 +22,15 @@
         "animate": ["controller.animation.pixelmind.mutated_boss"]
       },
       "particle_effects": {
-        "mutated_boss_attack_1": "mutate:mutated_boss_attack_1"
+        "mutated_boss_attack_1": "mutate:mutated_boss_attack_1",
+        "mutated_boss_zaisheng_1": "mutate:zaisheng_1",
+        "mutated_boss_zaisheng_2": "mutate:zaisheng_2",
+        "mutated_boss_amorphosis_1": "mutate:mutated_boss_amorphosis_1",
+        "mutated_boss_steve_side_kick_1": "mutate:steve_side_kick_1",
+        "mutated_boss_steve_side_kick_2": "mutate:steve_side_kick_2",
+        "mutated_boss_steve_side_kick_3": "mutate:steve_side_kick_3",
+        "mutated_boss_death_1": "mutate:mutated_boss_death_1",
+        "mutated_boss_death_2": "mutate:mutated_boss_death_2"
       },
       "animations": {
         "walk": "animation.pixelmind.mutated_boss.walk",

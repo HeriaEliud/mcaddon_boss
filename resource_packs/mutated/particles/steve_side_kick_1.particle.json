@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "particle_effect": {
     "description": {
-      "identifier": "steve_side_kick_1",
+      "identifier": "mutate:steve_side_kick_1",
       "basic_render_parameters": {
         "material": "particles_add",
         "texture": "textures/particle/steve_side_kick_1"
