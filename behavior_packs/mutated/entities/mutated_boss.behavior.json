@@ -7,6 +7,24 @@
       "is_summonable": true,
       "is_experimental": false
     },
+    "component_groups": {
+      "comp:idle": {
+        "minecraft:behavior.random_stroll": {
+          "priority": 6,
+          "speed_multiplier": 0.8,
+          "xz_dist": 8,
+          "interval": 90
+        }
+      },
+      "comp:fight": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 1,
+          "speed_multiplier": 1.2,
+          "track_target": true,
+          "reach_multiplier": 0.8
+        }
+      }
+    },
     "components": {
       "minecraft:type_family": {
         "family": ["monster", "mutated_boss"]
@@ -17,9 +35,6 @@
       "minecraft:health": {
         "value": 40,
         "max": 40
-      },
-      "minecraft:attack": {
-        "damage": 6
       },
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? 15 : 0"
@@ -41,14 +56,8 @@
         "avoid_water": false,
         "can_walk": true
       },
-      "minecraft:behavior.delayed_attack": {
-        "priority": 4,
-        "attack_once": false,
-        "attack_duration": 0.8,
-        "reach_multiplier": 3.0,
-        "track_target": true,
-        "hit_delay_pct": 0.5,
-        "speed_multiplier": 1.0
+      "minecraft:attack": {
+        "damage": 0
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
@@ -64,17 +73,50 @@
           }
         ]
       },
-      "minecraft:behavior.random_stroll": {
-        "priority": 6,
-        "speed_multiplier": 0.8
+      "minecraft:on_target_acquired": {
+        "event": "event:on_target_acquired",
+        "target": "self"
       },
-      "minecraft:attack_cooldown": {
-        "attack_cooldown_time": 1.2,
-        "attack_cooldown_complete_event": {
-          "event": "minecraft:attack_cooldown_complete"
-        }
+      "minecraft:on_target_escape": {
+        "event": "event:on_target_escape",
+        "target": "self"
       },
       "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "comp:idle"
+          ]
+        }
+      },
+      "event:on_target_acquired": {
+        "remove": {
+          "component_groups": [
+            "comp:idle"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "comp:fight"
+          ]
+        }
+      },
+      "event:on_target_escape": {
+        "remove": {
+          "component_groups": [
+            "comp:fight"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "comp:idle"
+          ]
+        }
+      },
+      "basic_attack_start": {},
+      "basic_attack_end": {}
     }
   }
 }

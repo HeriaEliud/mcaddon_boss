@@ -18,11 +18,20 @@
         "overlay_color": "#1345c6"
       },
       "scripts": {
-        "pre_animation": ["variable.attack = query.is_delayed_attacking;", "variable.walk = query.ground_speed;"],
-        "animate": ["controller.animation.pixelmind.mutated_boss"]
+         "animate": [
+          {
+            "idle": "query.modified_move_speed <= 0.05"
+          },
+          {
+            "walk": "query.modified_move_speed > 0.05"
+          }
+        ]
       },
       "particle_effects": {
-        "mutated_boss_attack_1": "mutate:mutated_boss_attack_1"
+        "mutated_boss_attack_1": "mutate:mutated_boss_attack_1",
+        "steve_side_kick_1": "mutate:steve_side_kick_1",
+        "steve_side_kick_2": "mutate:steve_side_kick_2",
+        "steve_side_kick_3": "mutate:steve_side_kick_3"
       },
       "animations": {
         "walk": "animation.pixelmind.mutated_boss.walk",
@@ -37,8 +46,7 @@
         "cover": "animation.pixelmind.mutated_boss.cover",
         "look_target_plus": "animation.pixelmind.mutated_boss.look_target_plus",
         "physical_skills": "animation.pixelmind.mutated_boss.physical_skills",
-        "skill2": "animation.pixelmind.mutated_boss.skill2",
-        "controller.animation.pixelmind.mutated_boss": "controller.animation.pixelmind.mutated_boss"
+        "skill2": "animation.pixelmind.mutated_boss.skill2"
       }
     }
   }
