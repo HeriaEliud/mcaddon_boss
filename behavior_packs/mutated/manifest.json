@@ -1,0 +1,41 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "mutated_boss_project Behavior Pack",
+        "description": "mutated_boss_project",
+        "uuid": "40b3a644-18f2-4329-9f72-d74ec67360bd",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 30]
+    },
+    "metadata": {
+        "generated_with": {
+            "blockbench_entity_wizard": ["1.7.0"]
+        }
+    },
+    "modules": [
+        {
+            "description": "Behavior",
+            "version": [1, 0, 0],
+            "uuid": "924d0421-9028-4abd-be33-d15ebb42dfd5",
+            "type": "data"
+        },
+        {
+            "description": "Gameplay",
+            "language": "javascript",
+            "type": "script",
+            "uuid": "ca2077f2-0ea8-40c3-933e-9530a360df2c",
+            "version": [1, 0, 0],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "89a64d67-3b40-4621-92bd-0297cbfd1787",
+            "version": [1, 0, 0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.8.0"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.mutated_boss.iron_gloem_attack": {
+      "loop": false,
+      "bones": {
+        "arm0": {
+          "rotation": [
+            "-114 + ((1.5 * math.abs(math.mod(variable.attack_time - query.frame_alpha, 10) - 5) - 2.5) / 5) * 57.3",
+            0.0,
+            0.0
+          ]
+        },
+        "arm1": {
+          "rotation": [
+            "-114 + ((1.5 * math.abs(math.mod(variable.attack_time - query.frame_alpha, 10) - 5) - 2.5) / 5) * 57.3",
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

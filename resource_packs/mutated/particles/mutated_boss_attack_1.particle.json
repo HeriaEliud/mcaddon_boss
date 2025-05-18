@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "mutate:mutated_boss_attack_1",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particle/pixelmind_mutated_boss_attack_1"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 10
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": [0.7, 0.7, 0.3],
+				"direction": [0, 0, 1]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.1,0.2)"
+			},
+			"minecraft:particle_initial_speed": "math.random(5,25)",
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["1*variable.particle_random_1", "0.05*variable.particle_random_1"],
+				"facing_camera_mode": "lookat_direction",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [0, 0],
+					"uv_size": [16, 16]
+				}
+			}
+		}
+	}
+}

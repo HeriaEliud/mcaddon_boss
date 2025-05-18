@@ -1,0 +1,24 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "mutated_boss_project Resource Pack",
+		"description": "mutated_boss_project",
+		"uuid": "c710fce6-1912-4767-ba2a-397e549fa285",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 20, 30]
+	},
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.7.0"]
+		}
+	},
+	"modules": [
+		{
+			"description": "mutated_boss_project Resource Pack",
+			"type": "resources",
+			"uuid": "6335c9e4-34f9-4dc4-a8a9-bbc54cd7eb8e",
+			"version": [1, 0, 0]
+		}
+	]
+}
+
