@@ -933,15 +933,15 @@
       "particle_effects": {
         "0.4583": [
           {
-            "effect": "steve_side_kick_1",
+            "effect": "mutated_boss_steve_side_kick_1",
             "locator": "locator"
           },
           {
-            "effect": "steve_side_kick_2",
+            "effect": "mutated_boss_steve_side_kick_2",
             "locator": "locator"
           },
           {
-            "effect": "steve_side_kick_3",
+            "effect": "mutated_boss_steve_side_kick_3",
             "locator": "locator"
           }
         ]
@@ -2530,10 +2530,10 @@
       "particle_effects": {
         "0.0": [
           {
-            "effect": "zaisheng_1"
+            "effect": "mutated_boss_zaisheng_1"
           },
           {
-            "effect": "zaisheng_2"
+            "effect": "mutated_boss_zaisheng_2"
           }
         ]
       }

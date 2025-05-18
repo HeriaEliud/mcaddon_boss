@@ -22,7 +22,7 @@
           "transitions": [
             { "default": "query.anim_time('attack') >= 0.99" }
           ],
-          "animations": ["attack"]
+          "animations": ["death"]
         }
       }
     }
