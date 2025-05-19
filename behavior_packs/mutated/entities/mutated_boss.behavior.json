@@ -23,6 +23,16 @@
           "track_target": true,
           "reach_multiplier": 0.8
         }
+      },
+      "comp:spawning": {
+        "minecraft:timer": {
+          "time": [1.625, 1.625],
+          "looping": false,
+          "time_down_event": {
+            "event": "event:spawn_animation_complete",
+            "target": "self"
+          }
+        }
       }
     },
     "components": {
@@ -87,8 +97,30 @@
       "minecraft:entity_spawned": {
         "add": {
           "component_groups": [
-            "comp:idle"
+            "comp:idle",
+            "comp:spawning"
           ]
+        }
+      },
+      "event:spawn_animation_complete": {
+        "remove": {
+          "component_groups": [
+            "comp:spawning"
+          ]
+        }
+      },
+      "event:disable_combat": {
+        "remove": {
+        "component_groups": 
+        ["comp:fight",
+          "comp:idle" ]
+        }
+      },
+      "event:enable_combat": {
+        "add": {
+        "component_groups":
+        ["comp:fight",
+          "comp:idle" ]
         }
       },
       "event:on_target_acquired": {

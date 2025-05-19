@@ -1,2 +1,2 @@
-entity.mutate:mutated.name=mutated
-item.spawn_egg.entity.mutate:mutated_boss=Spawn mutated
+entity.mutate:mutated_boss.name=Mutated Boss
+item.spawn_egg.entity.mutate:mutated_boss.name=Mutated_Boss_spawn_egg

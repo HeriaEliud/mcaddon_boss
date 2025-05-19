@@ -2,7 +2,7 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "pixelmind:mutated_boss_amorphosis_1",
+			"identifier": "mutate:mutated_boss_amorphosis_1",
 			"basic_render_parameters": {
 				"material": "particles_blend",
 				"texture": "textures/particle/pixelmind_mutated_boss_amorphosis_1"
