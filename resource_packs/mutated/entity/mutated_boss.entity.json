@@ -34,7 +34,9 @@
         "steve_side_kick_3": "mutate:steve_side_kick_3",
         "mutated_boss_amorphosis_1": "mutate:mutated_boss_amorphosis_1",
         "zaisheng_1":"mutate:zaisheng_1",
-        "zaisheng_2":"mutate:zaisheng_2"
+        "zaisheng_2":"mutate:zaisheng_2",
+        "mutated_boss_death_1":"mutate:mutated_boss_death_1",
+        "mutated_boss_death_2":"mutate:mutated_boss_death_2"
       },
       "animations": {
         "walk": "animation.pixelmind.mutated_boss.walk",

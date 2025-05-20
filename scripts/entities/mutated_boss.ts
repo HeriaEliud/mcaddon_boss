@@ -6,6 +6,8 @@ import { EntityDamageCause } from "@minecraft/server";
 // 实体标识符
 const MUTATED_BOSS_ID = "mutate:mutated_boss";
 
+const IS_DYING_DP = "is_dying";
+
 // 技能的冷却时间(ticks)
 const BASIC_ATTACK_COOLDOWN = 100; // 5秒
 
@@ -19,6 +21,7 @@ const ANIMATION_LENGTHS = {
   basic_attack: 1.25, 
   amorphosis: 1.625,
   zaisheng: 5.0,
+  death: 2.7,
 };
 
 // 监听实体生成
@@ -268,6 +271,37 @@ system.runInterval(() => {
     type: MUTATED_BOSS_ID
   })) {
     if (!entity.isValid()) continue;
+
+    // 死亡判断 - 检测 is_sheared 组件
+    if (entity.getComponent("minecraft:is_sheared")) {
+      // 如果已经标记为正在死亡，跳过后续处理
+      if (entity.getDynamicProperty(IS_DYING_DP)) {
+        continue;
+      }
+      // 第一次检测到死亡标记时执行
+      console.warn("检测到死亡状态: minecraft:is_sheared - 开始死亡动画");
+      entity.setDynamicProperty(IS_DYING_DP, true);
+      entity.setDynamicProperty(DURING_SKILL_DP, true);
+      
+      // 播放死亡动画
+      entity.playAnimation("animation.pixelmind.mutated_boss.death");
+      
+      // 通知玩家
+      world.getPlayers().forEach(player => {
+        player.sendMessage(`变异怪物被击败了!`);
+      });
+      
+      // 动画完成后强制移除实体
+      system.runTimeout(() => {
+        if (entity.isValid()) {
+          console.warn("死亡动画结束，移除实体");
+          entity.remove();
+        }
+      }, ANIMATION_LENGTHS.death * 20);
+      
+      // 跳过其他处理
+      continue;
+    }
     
     // 如果正在执行技能，跳过
     if (entity.getDynamicProperty(DURING_SKILL_DP)) continue;
