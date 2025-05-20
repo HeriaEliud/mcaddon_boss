@@ -17,11 +17,12 @@
         }
       },
       "comp:fight": {
-        "minecraft:behavior.melee_attack": {
+        "minecraft:behavior.ranged_attack": {
           "priority": 1,
           "speed_multiplier": 1.2,
-          "track_target": true,
-          "reach_multiplier": 0.8
+          "attack_interval_min": 1,
+          "attack_interval_max": 1,
+          "attack_radius": 1
         }
       },
       "comp:spawning": {
@@ -49,7 +50,11 @@
           "has_collision": true
         },
         "minecraft:pushable": {
-          "is_pushable": false
+          "is_pushable": true
+        },
+        "minecraft:collision_box": {
+          "width": 0.9,
+          "height": 1.8
         },
         "minecraft:movement": {
           "value": 0
@@ -64,8 +69,8 @@
         "always_show": true
       },
       "minecraft:health": {
-        "value": 40,
-        "max": 40
+        "value": 200,
+        "max": 200
       },
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? 15 : 0"
@@ -81,19 +86,17 @@
         "value": 1
       },
       "minecraft:damage_sensor": {
-          "triggers": [
-          {
-            "deals_damage": false,
-            "on_damage": {
-              "filters": {
-                "test": "has_damage",
-                "value": "fatal"
-              },
-              "event": "event:death",
-              "target": "self"
-            }
+        "triggers": {
+          "deals_damage": false,  
+          "on_damage": {
+            "filters": {
+              "test": "has_damage",
+              "value": "fatal"
+            },
+            "event": "event:death",
+            "target": "self"
           }
-        ]
+        }
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
@@ -103,7 +106,10 @@
         "can_walk": true
       },
       "minecraft:attack": {
-        "damage": 0
+        "damage": {
+          "range_min": 0,
+          "range_max": 0
+        }
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
