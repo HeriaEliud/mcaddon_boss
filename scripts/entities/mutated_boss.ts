@@ -1,10 +1,11 @@
-import { world, system, Entity, GameMode, Player } from '@minecraft/server';
+import { world, system, Entity, GameMode, Player,Vector3  } from '@minecraft/server';
 import { Vector3Utils } from '@minecraft/math';
 import { getNearbyEntities, getViewCuboidEntities } from '../utils/vector_utils';
 import { EntityDamageCause } from "@minecraft/server";
 
 // 实体标识符
 const MUTATED_BOSS_ID = "mutate:mutated_boss";
+const MUTATED_BOSS_IRON_GOLEM_ID = "minecraft:iron_golem";
 
 const IS_DYING_DP = "is_dying";
 
@@ -230,6 +231,141 @@ function performRegenerate(entity: Entity) {
   }, 100); // 动画时长(约5秒)
 }
 
+
+ // 定义变身数据接口 
+interface TransformData {
+    health: number;
+    transformPosition: Vector3; // 仅记录变身时的位置 
+}
+ 
+// 技能：变身为铁傀儡攻击玩家，5秒后变回 
+function performTransformIntoIronGolem(entity: Entity) {
+    // 1. 初始验证 
+    if (!entity?.isValid()) {
+        console.warn(" 变身失败：无效实体");
+        return;
+    }
+ 
+    try {
+        // 2. 记录变身时boss的位置和血量 
+        const transformPosition = entity.location; 
+        const transformData: TransformData = {
+            health: entity.getComponent("health")?.currentValue  || 100,
+            transformPosition: transformPosition 
+        };
+        console.log(` 开始变身，位置：${JSON.stringify(transformPosition)}`); 
+ 
+        
+        
+        // 3. 播放变身动画 
+        //减速 
+        try {
+            entity.addEffect("slowness", 20, { amplifier: 255, showParticles: false });
+        } catch (err) {}
+
+        entity.playAnimation("animation.pixelmind.mutated_boss.transition"); 
+        console.log(" 变身动画开始播放");
+ 
+        // 4. 延迟触发变身（等待动画关键帧）
+        system.runTimeout(()  => {
+            try {
+                // 5. 二次验证实体状态 
+                if (!entity.isValid())  {
+                    console.warn(" 变身失败：动画过程中实体无效");
+                    return;
+                }
+ 
+                // 6. 存储变身数据 
+                entity.setDynamicProperty("transform_data",  JSON.stringify(transformData)); 
+ 
+                // 7. 触发行为包变身事件 
+                entity.triggerEvent("event:transform_trigger"); 
+                console.log(" 已触发变身事件");
+ 
+                // 8. 查找变身后的铁傀儡 
+                const maxAttempts = 5;
+                let attempts = 0;
+                
+                const checkForGolem = () => {
+                    try {
+                        const dimension = world.getDimension("overworld"); 
+                        const golems = dimension.getEntities({ 
+                            type: "mutate:boss_iron_golem",
+                            location: transformPosition, // 使用记录的变身位置 
+                            maxDistance: 5 
+                        });
+ 
+                        if (golems.length  > 0) {
+                            const golem = golems[0];
+                            golem.nameTag  = "§c临时铁傀儡";
+                            //golem.triggerEvent("mutate:rage");
+
+                            // 将变身数据复制到铁傀儡 
+                            golem.setDynamicProperty("transform_data",  JSON.stringify(transformData)); 
+ 
+                            // 9. 设置5秒后自动变回 
+                            system.runTimeout(()  => {
+                                if (golem.isValid())  {
+                                    // 解析存储的变身数据 
+                                    const dataStr = golem.getDynamicProperty("transform_data")  as string;
+                                    const restoreData: TransformData = dataStr ? 
+                                        JSON.parse(dataStr)  : {
+                                            health: 100,
+                                            transformPosition: golem.location  
+                                        };
+ 
+                                    // 在铁傀儡当前位置恢复Boss 
+                                    const newBoss = dimension.spawnEntity( 
+                                        "mutate:mutated_boss",
+                                        golem.location  // 使用记录的变身位置 
+                                    );
+ 
+                                    // 继承血量 
+                                    const healthComponent = newBoss.getComponent("health"); 
+                                    if (healthComponent) {
+                                        healthComponent.setCurrentValue(restoreData.health); 
+                                    }
+ 
+                                    // 移除铁傀儡 
+                                    golem.remove(); 
+                                    console.log(" 成功在5秒后恢复Boss");
+                                }
+                            }, 5 * 20);
+                        } else {
+                            attempts++;
+                            if (attempts < maxAttempts) {
+                                // 如果没找到，稍后再试 
+                                system.runTimeout(checkForGolem,  10);
+                            } else {
+                                console.error(" 多次尝试后仍未找到铁傀儡");
+                                 
+                                // 后备方案：在变身位置重新生成Boss 
+                                const newBoss = dimension.spawnEntity( 
+                                    "mutate:mutated_boss",
+                                    transformPosition 
+                                );
+                                const healthComponent = newBoss.getComponent("health"); 
+                                if (healthComponent) {
+                                    healthComponent.setCurrentValue(transformData.health); 
+                                }
+                            }
+                        }
+                    } catch (error) {
+                        console.error(" 铁傀儡处理错误:", error);
+                    }
+                };
+                
+                // 首次检查 
+                system.runTimeout(checkForGolem,  30);
+            } catch (error) {
+                console.error(" 变身过程错误:", error);
+            }
+        }, 20);
+    } catch (error) {
+        console.error(" 动画播放错误:", error);
+    }
+}
+
 // 定义技能数据
 const skillData = [
   {
@@ -261,8 +397,26 @@ const skillData = [
     cd: 150, // 冷却
     weight: 3  // 优先级高，当血量低时优先考虑
   }
+  ,
+  {
+    name: "变身为铁傀儡",
+    skill: performTransformIntoIronGolem,
+    condition: (entity: Entity, player: Entity) => {
+      // 获取当前生命值和最大生命值
+      const health = entity.getComponent("health");
+      if (!health) return false;
+      
+      // 当生命值低于50%时才使用再生技能
+      const healthPercentage = health.currentValue / health.defaultValue;
+      return healthPercentage <= 1;
+    },
+    cd: 100, // 冷却
+    weight: 4 // 优先级高，当血量低时优先考虑
+  }
   // 未来可以添加更多技能
 ];
+
+
 
 
 // 主循环

@@ -8,6 +8,13 @@
       "is_experimental": false
     },
     "component_groups": {
+      "comp:transform_to_golem": {
+        "minecraft:transformation": {
+          "into": "mutate:boss_iron_golem",
+          "delay": 0 
+        }
+      },
+
       "comp:idle": {
         "minecraft:behavior.random_stroll": {
           "priority": 6,
@@ -83,7 +90,7 @@
       "minecraft:damage_sensor": {
           "triggers": [
           {
-            "deals_damage": false,
+            "deals_damage": "no",
             "on_damage": {
               "filters": {
                 "test": "has_damage",
@@ -130,6 +137,11 @@
       "minecraft:conditional_bandwidth_optimization": {}
     },
     "events": {
+      "event:transform_trigger": {
+        "add": {
+          "component_groups": ["comp:transform_to_golem"]
+        }
+      },
       "minecraft:entity_spawned": {
         "add": {
           "component_groups": [
@@ -201,3 +213,4 @@
     }
   }
 }
+
