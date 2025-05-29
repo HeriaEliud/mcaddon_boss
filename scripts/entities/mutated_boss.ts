@@ -294,12 +294,12 @@ function performRegenerate(entity: Entity) {
     }
 
     // 计算再生效果参数
-    const amplifier = 1; // 再生IV
+    const amplifier = 3; // 再生
     const duration = Math.ceil(healTarget * 3 / (amplifier + 1)); // 持续时间(秒)
 
     try {
       // 应用再生效果
-      entity.addEffect("regeneration", duration * 20, { amplifier: amplifier, showParticles: true });
+      entity.addEffect("regeneration", duration * 20, { amplifier: amplifier, showParticles: false});
     } catch (err) {
       console.warn(`[回血错误] 应用效果失败: ${err}`);
     }
@@ -309,6 +309,12 @@ function performRegenerate(entity: Entity) {
   // 结束技能
   system.runTimeout(() => {
     if (entity.isValid()) {
+      // 【新增】强制移除再生效果
+      try {
+        entity.removeEffect("regeneration");
+      } catch (err) {
+        console.warn(`[回血] 移除效果失败: ${err}`);
+      }
       entity.setDynamicProperty(DURING_SKILL_DP, false);
       entity.setDynamicProperty(CD_DP, system.currentTick + 150); // 冷却时间
     }
