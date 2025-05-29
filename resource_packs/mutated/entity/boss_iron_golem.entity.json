@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mutate:boss_iron_golem",
+      "materials": {
+        "default": "iron_golem"
+      },
+      "textures": {
+        "default": "textures/entity/iron_golem"
+      },
+      "geometry": {
+        "default": "geometry.irongolem"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);",
+          "variable.attack_animation_tick = variable.attack_time > 0.0 ? query.life_time * 20.0 : 0.0;",
+          "variable.offer_flower_tick = 0.0;"
+        ],
+        "animate": [
+          "look_at_target",
+          { "attack": "variable.attack_time > 0.0" },
+          { "walk": "query.modified_move_speed > 0.01" }
+        ]
+      },
+      "animations": {
+        "walk": "animation.iron_golem.walk",
+        "move": "animation.iron_golem.move",
+        "attack": "animation.iron_golem.attack",
+        "look_at_target": "animation.common.look_at_target",
+        "move_to_target": "animation.iron_golem.move_to_target",
+        "walk_to_target": "animation.iron_golem.walk_to_target"
+      },
+      "render_controllers": ["controller.render.default"],
+      "spawn_egg": {
+        "base_color": "#C1C1C1",
+        "overlay_color": "#730C0C"
+      }
+    }
+  }
+}

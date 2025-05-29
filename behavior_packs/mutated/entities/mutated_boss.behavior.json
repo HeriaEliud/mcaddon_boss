@@ -27,7 +27,10 @@
       },
       "comp:spawning": {
         "minecraft:timer": {
-          "time": [1.625, 1.625],
+          "time": [
+            1.625,
+            1.625
+          ],
           "looping": false,
           "time_down_event": {
             "event": "event:spawn_animation_complete",
@@ -38,7 +41,10 @@
       "comp:death": {
         "minecraft:is_sheared": {},
         "minecraft:timer": {
-          "time": [3.0417, 3.0417],
+          "time": [
+            3.0417,
+            3.0417
+          ],
           "looping": false,
           "time_down_event": {
             "event": "event:despawn",
@@ -58,12 +64,35 @@
         },
         "minecraft:movement": {
           "value": 0
-          }
         }
+      },
+      "comp:transform_to_golem": {
+        "minecraft:transformation": {
+          "into": "mutate:boss_iron_golem",
+          "delay": 0.1,
+          "drop_equipment": false,
+          "keep_owner": true
+        }
+      },
+      "comp:transform_to_blaze": {
+        "minecraft:transformation": {
+          "into": "mutate:boss_blaze",
+          "delay": 0
+        }
+      },
+      "comp:transform_to_enderman": {
+        "minecraft:transformation": {
+          "into": "mutate:boss_enderman",
+          "delay": 0
+        }
+      }
     },
     "components": {
       "minecraft:type_family": {
-        "family": ["monster", "mutated_boss"]
+        "family": [
+          "monster",
+          "mutated_boss"
+        ]
       },
       "minecraft:nameable": {
         "always_show": true
@@ -87,7 +116,7 @@
       },
       "minecraft:damage_sensor": {
         "triggers": {
-          "deals_damage": false,  
+          "deals_damage": false,
           "on_damage": {
             "filters": {
               "test": "has_damage",
@@ -153,16 +182,18 @@
       },
       "event:disable_combat": {
         "remove": {
-        "component_groups": 
-        ["comp:fight",
-          "comp:idle" ]
+          "component_groups": [
+            "comp:fight",
+            "comp:idle"
+          ]
         }
       },
       "event:enable_combat": {
         "add": {
-        "component_groups":
-        ["comp:fight",
-          "comp:idle" ]
+          "component_groups": [
+            "comp:fight",
+            "comp:idle"
+          ]
         }
       },
       "event:on_target_acquired": {
@@ -200,6 +231,23 @@
             "comp:idle",
             "comp:fight"
           ]
+        }
+      },
+      "event:transform_iron_golem": {
+        "add": {
+          "component_groups": [
+            "comp:transform_to_golem"
+          ]
+        }
+      },
+      "event:transform_to_enderman": {
+        "add": {
+          "component_groups": ["comp:transform_to_enderman"]
+        }
+      },
+      "event:transform_to_blaze": {
+        "add": {
+          "component_groups": ["comp:transform_to_blaze"]
         }
       },
       "basic_attack_start": {},

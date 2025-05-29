@@ -1,4 +1,4 @@
-import { world, system, Entity, GameMode, Player } from '@minecraft/server';
+import { world, system, Entity, GameMode, Player, Vector3 } from '@minecraft/server';
 import { Vector3Utils } from '@minecraft/math';
 import { getNearbyEntities, getViewCuboidEntities } from '../utils/vector_utils';
 import { EntityDamageCause } from "@minecraft/server";
@@ -36,11 +36,6 @@ world.afterEvents.entitySpawn.subscribe(event => {
   entity.setDynamicProperty(CD_DP, 0);
   entity.setDynamicProperty(DURING_SKILL_DP, false);
 
-  // 实体生成时通知玩家
-  world.getPlayers().forEach(player => {
-    player.sendMessage(`变异怪物出现在: ${entity.location.x.toFixed(1)}, ${entity.location.y.toFixed(1)}, ${entity.location.z.toFixed(1)}`);
-  });
-
   // 播放生成动画 (amorphosis)
   playSpawnAnimation(entity);
 });
@@ -63,11 +58,6 @@ function playSpawnAnimation(entity: Entity) {
     try {
       entity.addEffect("slowness", ANIMATION_LENGTHS.amorphosis * 20, { amplifier: 255, showParticles: false });
     } catch (err) { }
-
-    // 通知玩家
-    world.getPlayers().forEach(player => {
-      player.sendMessage(`变异怪物苏醒了`);
-    });
 
     entity.playAnimation("animation.pixelmind.mutated_boss.amorphosis");
 
@@ -313,7 +303,7 @@ function performRegenerate(entity: Entity) {
     } catch (err) {
       console.warn(`[回血错误] 应用效果失败: ${err}`);
     }
-    
+
   }, 40); // 效果开始时间点
 
   // 结束技能
@@ -325,6 +315,414 @@ function performRegenerate(entity: Entity) {
   }, 100); // 动画时长(约5秒)
 }
 
+// 定义变身数据接口 
+interface TransformData {
+  health: number;
+  transformPosition: Vector3; // 仅记录变身时的位置 
+}
+
+// 技能：变身为铁傀儡，5秒后变回
+function performTransformIntoIronGolem(entity: Entity) {
+  // 1. 初始验证
+  if (!entity?.isValid()) {
+    console.warn(" 变身失败：无效实体");
+    return;
+  }
+
+  try {
+    // 2. 记录变身时boss的位置和血量
+    const transformPosition = entity.location;
+    const currentHealth = entity.getComponent("health")?.currentValue || 100;
+
+    console.warn(`开始变身为铁傀儡，当前血量: ${Math.floor(currentHealth)}`);
+
+    // 3. 播放变身动画
+    try {
+      entity.addEffect("slowness", 20, { amplifier: 255, showParticles: false });
+    } catch (err) { }
+
+    entity.playAnimation("animation.pixelmind.mutated_boss.transition");
+
+    // 4. 延迟触发变身
+    system.runTimeout(() => {
+      try {
+
+        // 5. 存储血量数据
+        entity.setDynamicProperty("transform_health", currentHealth);
+
+        // 6. 触发变身事件
+        entity.triggerEvent("event:transform_iron_golem");
+
+        // 7. 查找变身后的铁傀儡
+        const maxAttempts = 5;
+        let attempts = 0;
+        let found = false; // 避免重复生成
+
+        const checkForGolem = () => {
+          if (found) return;
+          try {
+            const dimension = world.getDimension("overworld");
+            const golems = dimension.getEntities({
+              type: "mutate:boss_iron_golem",
+              location: transformPosition,
+              maxDistance: 100
+            });
+
+            if (golems.length > 0) {
+              found = true;
+              const golem = golems[0];
+
+              // 8. 设置铁傀儡血量
+              const golemHealth = golem.getComponent("health");
+              if (golemHealth) {
+                console.warn(`铁傀儡血量: ${Math.floor(currentHealth)}`);
+                golemHealth.setCurrentValue(currentHealth);
+              }
+
+              // 存储血量数据
+              golem.setDynamicProperty("transform_health", currentHealth);
+
+              // 9. 设置5秒后自动变回
+              system.runTimeout(() => {
+                if (golem.isValid()) {
+                  // 获取当前血量
+                  const golemCurrentHealth = golem.getComponent("health")?.currentValue || currentHealth;
+                  console.warn(`变回前铁傀儡血量: ${Math.floor(golemCurrentHealth)}`);
+                  // 保存当前位置
+                  const currentPosition = golem.location;
+                  // 保存血量
+                  golem.setDynamicProperty("transform_health", golemCurrentHealth);
+                  // 触发变形事件
+                  golem.triggerEvent("mutate:revert");
+
+                  // 延迟一点时间找到新生成的mutated_boss实体
+                  system.runTimeout(() => {
+                    const dimension = world.getDimension("overworld");
+                    const newBosses = dimension.getEntities({
+                      type: "mutate:mutated_boss",
+                      location: currentPosition,
+                      maxDistance: 5
+                    });
+
+                    if (newBosses.length > 0) {
+                      const newBoss = newBosses[0];
+
+                      // 设置血量
+                      const newBossHealth = newBoss.getComponent("health");
+                      if (newBossHealth) {
+                        console.warn(`变回boss血量: ${Math.floor(golemCurrentHealth)}`);
+                        newBossHealth.setCurrentValue(golemCurrentHealth);
+                      }
+
+                      // 在新实体上播放变身动画
+                      newBoss.playAnimation("animation.pixelmind.mutated_boss.transition");
+
+                      // 设置状态属性
+                      newBoss.setDynamicProperty(DURING_SKILL_DP, false);
+                      newBoss.setDynamicProperty(CD_DP, system.currentTick + 150);
+
+                      // 通知玩家
+                      world.getPlayers().forEach(player => {
+                        player.sendMessage("变异怪物恢复了原形！");
+                      });
+                    }
+                  }, 5); // 给实体变形一点时间
+
+                  console.log("health:", golem.getComponent("health")?.currentValue);
+                }
+              }, 5 * 20);
+            } else {
+              attempts++;
+              if (attempts < maxAttempts) {
+                system.runTimeout(checkForGolem, 10);
+              } else {
+                console.error(" 多次尝试后仍未找到铁傀儡");
+              }
+            }
+          } catch (error) {
+            console.error(" 铁傀儡处理错误:", error);
+          }
+        };
+
+        system.runTimeout(checkForGolem, 30);
+      } catch (error) {
+        console.error(" 变身过程错误:", error);
+      }
+    }, 20);
+  } catch (error) {
+    console.error(" 动画播放错误:", error);
+  }
+}
+
+// 技能：变身末影人，5秒后变回
+function performTransformIntoEnderMan(entity: Entity) {
+  // 1. 初始验证
+  if (!entity?.isValid()) {
+    console.warn(" 变身失败：无效实体");
+    return;
+  }
+
+  try {
+    // 2. 记录变身时boss的位置和血量
+    const transformPosition = entity.location;
+    const currentHealth = entity.getComponent("health")?.currentValue || 200;
+
+    console.warn(`变身为末影人，当前血量: ${Math.floor(currentHealth)}`);
+
+    // 3. 播放变身动画
+    try {
+      entity.addEffect("slowness", 20, { amplifier: 255, showParticles: false });
+    } catch (err) { }
+
+    entity.playAnimation("animation.pixelmind.mutated_boss.transition");
+
+    // 4. 延迟触发变身（等待动画关键帧）
+    system.runTimeout(() => {
+      try {
+        if (!entity.isValid()) {
+          return;
+        }
+
+        // 5. 存储血量数据
+        entity.setDynamicProperty("transform_health", currentHealth);
+
+        // 6. 触发变身事件
+        entity.triggerEvent("event:transform_to_enderman");
+
+        // 7. 查找变身后的末影人
+        const maxAttempts = 5;
+        let attempts = 0;
+        let found = false;
+
+        const checkForEnderMan = () => {
+          if (found) return;
+          try {
+            const dimension = world.getDimension("overworld");
+            const endermans = dimension.getEntities({
+              type: "mutate:boss_enderman",
+              location: transformPosition,
+              maxDistance: 100
+            });
+
+            if (endermans.length > 0) {
+              found = true;
+              const enderman = endermans[0];
+
+              enderman.triggerEvent("minecraft:entity_spawned");
+
+              // 8. 设置末影人血量
+              const endermanHealth = enderman.getComponent("health");
+              if (endermanHealth) {
+                console.warn(`设置末影人血量: ${Math.floor(currentHealth)}`);
+                endermanHealth.setCurrentValue(currentHealth);
+              }
+              // 存储血量数据
+              enderman.setDynamicProperty("transform_health", currentHealth);
+              // 9. 设置5秒后自动变回
+              system.runTimeout(() => {
+                if (enderman.isValid()) {
+                  // 获取当前血量
+                  const endermanCurrentHealth = enderman.getComponent("health")?.currentValue || currentHealth;
+                  console.warn(`变回前末影人血量: ${Math.floor(endermanCurrentHealth)}`);
+
+                  // 保存当前位置
+                  const currentPosition = enderman.location;
+
+                  // 保存血量
+                  enderman.setDynamicProperty("transform_health", endermanCurrentHealth);
+                  enderman.triggerEvent("mutate:revert");
+
+                  // 查找变回后的boss
+                  system.runTimeout(() => {
+                    const newBosses = dimension.getEntities({
+                      type: "mutate:mutated_boss",
+                      location: currentPosition,
+                      maxDistance: 5
+                    });
+
+                    if (newBosses.length > 0) {
+                      const newBoss = newBosses[0];
+
+                      // 设置血量
+                      const newBossHealth = newBoss.getComponent("health");
+                      if (newBossHealth) {
+                        console.warn(`设置变回boss血量: ${Math.floor(endermanCurrentHealth)}`);
+                        newBossHealth.setCurrentValue(endermanCurrentHealth);
+                      }
+
+                      // 播放变身动画
+                      newBoss.playAnimation("animation.pixelmind.mutated_boss.transition");
+
+                      // 重置状态
+                      newBoss.setDynamicProperty(DURING_SKILL_DP, false);
+                      newBoss.setDynamicProperty(CD_DP, system.currentTick + 150);
+
+                      // 通知玩家
+                      world.getPlayers().forEach(player => {
+                        player.sendMessage("变异怪物恢复了原形！");
+                      });
+                    }
+                  }, 5);
+                }
+              }, 5 * 20);
+            } else {
+              attempts++;
+              if (attempts < maxAttempts) {
+                system.runTimeout(checkForEnderMan, 10);
+              } else {
+                console.error(" 多次尝试后仍未找到末影人");
+              }
+            }
+          } catch (error) {
+            console.error(" 末影人处理错误:", error);
+          }
+        };
+
+        system.runTimeout(checkForEnderMan, 30);
+      } catch (error) {
+        console.error(" 变身过程错误:", error);
+      }
+    }, 20);
+  } catch (error) {
+    console.error(" 动画播放错误:", error);
+  }
+}
+
+// 变身为烈焰人，5秒后变回
+function performTransformIntoBlaze(entity: Entity) {
+  // 1. 初始验证
+  if (!entity?.isValid()) {
+    console.warn("[变身] 无效实体");
+    return;
+  }
+
+  try {
+    // 2. 记录变身时boss的位置和血量
+    const transformPosition = entity.location;
+    const currentHealth = entity.getComponent("health")?.currentValue || 200;
+
+    console.warn(`变身为烈焰人，当前血量: ${Math.floor(currentHealth)}`);
+
+    // 3. 播放变身动画
+    try {
+      entity.addEffect("slowness", 20, { amplifier: 255, showParticles: false });
+    } catch (err) { }
+
+    entity.playAnimation("animation.pixelmind.mutated_boss.transition");
+
+    // 4. 延迟触发变身
+    system.runTimeout(() => {
+      try {
+        if (!entity.isValid()) return;
+
+        // 5. 存储血量数据
+        entity.setDynamicProperty("transform_health", currentHealth);
+
+        // 6. 触发变身事件
+        entity.triggerEvent("event:transform_to_blaze");
+
+        // 7. 查找变身后的烈焰人
+        const maxAttempts = 5;
+        let attempts = 0;
+        let found = false;
+
+        const checkForBlaze = () => {
+          if (found) return;
+          try {
+            const dimension = world.getDimension("overworld");
+            const blazes = dimension.getEntities({
+              type: "mutate:boss_blaze",
+              location: transformPosition,
+              maxDistance: 10
+            });
+
+            if (blazes.length > 0) {
+              found = true;
+              const blaze = blazes[0];
+
+              blaze.triggerEvent("minecraft:entity_spawned");
+
+              // 8. 设置烈焰人血量
+              const blazeHealth = blaze.getComponent("health");
+              if (blazeHealth) {
+                console.warn(`设置烈焰人血量: ${Math.floor(currentHealth)}`);
+                blazeHealth.setCurrentValue(currentHealth);
+              }
+
+              // 存储血量数据
+              blaze.setDynamicProperty("transform_health", currentHealth);
+
+              // 9. 设置5秒后变回
+              system.runTimeout(() => {
+                if (!blaze.isValid()) return;
+
+                // 获取当前血量
+                const blazeCurrentHealth = blaze.getComponent("health")?.currentValue || currentHealth;
+                console.warn(`变回前烈焰人血量: ${Math.floor(blazeCurrentHealth)}`);
+
+                // 保存当前位置
+                const currentPosition = blaze.location;
+
+                // 保存血量
+                blaze.setDynamicProperty("transform_health", blazeCurrentHealth);
+
+                // 触发变形事件
+                blaze.triggerEvent("mutate:revert");
+
+                // 查找变回后的boss
+                system.runTimeout(() => {
+                  const newBosses = dimension.getEntities({
+                    type: "mutate:mutated_boss",
+                    location: currentPosition,
+                    maxDistance: 5
+                  });
+
+                  if (newBosses.length > 0) {
+                    const newBoss = newBosses[0];
+
+                    // 设置血量
+                    const newBossHealth = newBoss.getComponent("health");
+                    if (newBossHealth) {
+                      console.warn(`设置变回boss血量: ${Math.floor(blazeCurrentHealth)}`);
+                      newBossHealth.setCurrentValue(blazeCurrentHealth);
+                    }
+
+                    // 播放变身动画
+                    newBoss.playAnimation("animation.pixelmind.mutated_boss.transition");
+
+                    // 重置状态
+                    newBoss.setDynamicProperty(DURING_SKILL_DP, false);
+                    newBoss.setDynamicProperty(CD_DP, system.currentTick + 150);
+
+                    // 通知玩家
+                    world.getPlayers().forEach(player => {
+                      player.sendMessage("变异怪物恢复了原形！");
+                    });
+                  }
+                }, 5);
+              }, 5 * 20);
+            } else {
+              attempts++;
+              if (attempts < maxAttempts) {
+                system.runTimeout(checkForBlaze, 10);
+              } else {
+                console.error("未找到烈焰人");
+              }
+            }
+          } catch (error) {
+            console.error(`[变身] 错误: ${error}`);
+          }
+        };
+
+        system.runTimeout(checkForBlaze, 30);
+      } catch (error) {
+        console.error(`[变身] 错误: ${error}`);
+      }
+    }, 20);
+  } catch (error) {
+    console.error(`[变身] 错误: ${error}`);
+  }
+}
 // 定义技能数据
 const skillData = [
   {
@@ -365,9 +763,42 @@ const skillData = [
       return distance >= 0 && distance <= 8;
     },
     cd: 100, // 5秒冷却
-    weight: 3  // 测试用权重
+    weight: 3  // 权重
+  },
+  {
+    name: "铁傀儡变身",
+    skill: performTransformIntoIronGolem,
+    condition: (entity: Entity, player: Entity) => {
+      // 在距离中等范围时使用变身技能
+      const distance = Vector3Utils.distance(entity.location, player.location);
+      return distance >= 3 && distance <= 15;
+    },
+    cd: 300, // 冷却
+    weight: 3 // 权重
+  },
+  {
+    name: "变身为末影人",
+    skill: performTransformIntoEnderMan,
+    condition: (entity: Entity, player: Entity) => {
+      // 在距离中等范围时使用变身技能
+      const distance = Vector3Utils.distance(entity.location, player.location);
+      return distance >= 3 && distance <= 15;
+    },
+    cd: 300, // 冷却
+    weight: 3 // 权重
+  },
+  {
+    name: "变身为烈焰人",
+    skill: performTransformIntoBlaze,
+    condition: (entity: Entity, player: Entity) => {
+      // 在距离中等范围时使用变身技能
+      const distance = Vector3Utils.distance(entity.location, player.location);
+      return distance >= 3 && distance <= 20; // 烈焰人适合远距离，所以范围略大
+    },
+    cd: 300, // 15秒冷却
+    weight: 3 // 权重
   }
-  // 未来可以添加更多技能
+  // 添加更多技能
 ];
 
 
