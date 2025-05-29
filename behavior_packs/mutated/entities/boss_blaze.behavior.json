@@ -55,6 +55,11 @@
       }
     },
     "components": {
+      "minecraft:boss": {
+        "hud_range": 125,
+        "name": "MUTATED BLAZE",
+        "should_darken_sky": false
+      },
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? 10 : 0"

@@ -41,8 +41,13 @@
     },
 
     "components": {
+      "minecraft:boss": {
+        "hud_range": 125,
+        "name": "Mutated Iron Golem",
+        "should_darken_sky": false
+      },
       "minecraft:type_family": {
-        "family": [ "irongolem", "monster", "mutated_boss" ]
+        "family": ["irongolem", "monster", "mutated_boss"]
       },
       "minecraft:nameable": {
         "always_show": true,
@@ -59,7 +64,12 @@
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
           {
-            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
             "cause": "lava",
             "damage_per_tick": 4
           }
@@ -73,12 +83,9 @@
         "avoid_water": false,
         "can_walk": true
       },
-      "minecraft:movement.basic": {
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:knockback_resistance": {
         "value": 1.0
       },
@@ -100,8 +107,7 @@
           }
         ]
       },
-      "minecraft:physics": {
-      },
+      "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": false,
         "is_pushable_by_piston": true
@@ -140,40 +146,29 @@
         "event": "event:on_target_escape",
         "target": "self"
       },
-      "minecraft:conditional_bandwidth_optimization": {
-      }
+      "minecraft:conditional_bandwidth_optimization": {}
     },
 
     "events": {
       "minecraft:entity_spawned": {
         "add": {
-          "component_groups": [
-            "comp:idle"
-          ]
+          "component_groups": ["comp:idle"]
         }
       },
       "event:on_target_acquired": {
         "remove": {
-          "component_groups": [
-            "comp:idle"
-          ]
+          "component_groups": ["comp:idle"]
         },
         "add": {
-          "component_groups": [
-            "comp:fight"
-          ]
+          "component_groups": ["comp:fight"]
         }
       },
       "event:on_target_escape": {
         "remove": {
-          "component_groups": [
-            "comp:fight"
-          ]
+          "component_groups": ["comp:fight"]
         },
         "add": {
-          "component_groups": [
-            "comp:idle"
-          ]
+          "component_groups": ["comp:idle"]
         }
       },
       "mutate:revert": {

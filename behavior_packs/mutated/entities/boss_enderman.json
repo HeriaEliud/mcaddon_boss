@@ -92,6 +92,11 @@
     },
 
     "components": {
+      "minecraft:boss": {
+        "hud_range": 125,
+        "name": "MUTATED ENDERMAN",
+        "should_darken_sky": false
+      },
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:renders_when_invisible": {},
       "minecraft:experience_reward": {
@@ -119,7 +124,6 @@
             "cause": "lava",
             "damage_per_tick": 4
           }
-
         ]
       },
       "minecraft:attack": {

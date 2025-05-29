@@ -9,7 +9,7 @@ const MUTATED_BOSS_ID = "mutate:mutated_boss";
 const IS_DYING_DP = "is_dying";
 
 // 技能的冷却时间(ticks)
-const BASIC_ATTACK_COOLDOWN = 100; // 5秒
+const s = 20; // 1秒
 
 // 技能冷却和状态
 const CD_DP = "cd";

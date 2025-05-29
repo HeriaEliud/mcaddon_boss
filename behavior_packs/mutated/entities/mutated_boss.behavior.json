@@ -88,6 +88,11 @@
       }
     },
     "components": {
+      "minecraft:boss": {
+        "hud_range": 125,
+        "name": "MUTATED BOSS",
+        "should_darken_sky": false
+      },
       "minecraft:type_family": {
         "family": [
           "monster",
