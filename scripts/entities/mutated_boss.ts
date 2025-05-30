@@ -777,7 +777,7 @@ const skillData = [
     condition: (entity: Entity, player: Entity) => {
       // 在距离中等范围时使用变身技能
       const distance = Vector3Utils.distance(entity.location, player.location);
-      return distance >= 3 && distance <= 15;
+      return distance >= 1 && distance <= 15;
     },
     cd: 300, // 冷却
     weight: 3 // 权重
@@ -788,7 +788,7 @@ const skillData = [
     condition: (entity: Entity, player: Entity) => {
       // 在距离中等范围时使用变身技能
       const distance = Vector3Utils.distance(entity.location, player.location);
-      return distance >= 3 && distance <= 15;
+      return distance >= 1 && distance <= 15;
     },
     cd: 300, // 冷却
     weight: 3 // 权重
@@ -799,7 +799,7 @@ const skillData = [
     condition: (entity: Entity, player: Entity) => {
       // 在距离中等范围时使用变身技能
       const distance = Vector3Utils.distance(entity.location, player.location);
-      return distance >= 3 && distance <= 20; // 烈焰人适合远距离，所以范围略大
+      return distance >= 1 && distance <= 20; // 烈焰人适合远距离，所以范围略大
     },
     cd: 300, // 15秒冷却
     weight: 3 // 权重
