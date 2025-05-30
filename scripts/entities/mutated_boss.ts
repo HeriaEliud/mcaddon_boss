@@ -450,7 +450,7 @@ function performTransformIntoIronGolem(entity: Entity) {
           }
         };
 
-        system.runTimeout(checkForGolem, 30);
+        system.runTimeout(checkForGolem, 5);
       } catch (error) {
         console.error(" 变身过程错误:", error);
       }
@@ -584,7 +584,7 @@ function performTransformIntoEnderMan(entity: Entity) {
           }
         };
 
-        system.runTimeout(checkForEnderMan, 30);
+        system.runTimeout(checkForEnderMan, 5);
       } catch (error) {
         console.error(" 变身过程错误:", error);
       }
@@ -720,7 +720,7 @@ function performTransformIntoBlaze(entity: Entity) {
           }
         };
 
-        system.runTimeout(checkForBlaze, 30);
+        system.runTimeout(checkForBlaze, 5);
       } catch (error) {
         console.error(`[变身] 错误: ${error}`);
       }

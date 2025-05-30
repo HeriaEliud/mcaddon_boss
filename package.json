@@ -5,6 +5,7 @@
     "build": "just clean compile",
     "clean": "just clean",
     "local-deploy": "just local-deploy",
+    "mcaddon": "just-scripts mcaddon",
     "watch": "just watch"
   },
   "devDependencies": {
